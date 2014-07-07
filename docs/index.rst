@@ -5,6 +5,11 @@
 
 Welcome to Exchange Format's documentation!
 ===========================================
+Summary:
+
+Exchange formats for the CCHDO CTD and bottle data are described. 
+The WHP-exchange formats provide simplified exchange and improved readability of hydrogrpahic data.
+WHP-Exchange data files carry the essential information from CTD and water sample profiles in rigorously-descrived comma-delimited (csv) ASCII formats designed to ease data exchange and simplifiy data import.
 
 Contents:
 
