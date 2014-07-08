@@ -79,7 +79,7 @@ For example, it is not necessary that a bottle data file contain columns for CFC
 
 The order of the header and bottle data parameters in a _hy1.csv file is preferred to be similar to that shown in the example "a24_hy1.csv", especially for the first 13 columns, but is not strictly required.
 Although the _hy1.csv files should be as consistent as feasible in this regard, data users are urged to use "read" statements that are sensitive to parameter names rather than position of the parameter in the data files.
-Here is the order used in " a24_hy1.csv"::
+Here is the order used in " a24_hy1.csv"
 
   EXPOCODE, SECT_ID, STNNBR, CASTNO, SAMPNO, BTLNBR, BTLNBR_FLAG_W, DATE, TIME, LATITUDE, LONGITUDE, DEPTH, CTDPRS, CTDTMP, CTDSAL, CTDSAL_FLAG_W, SALNTY, SALNTY_FLAG_W, CTDOXY, CTDOXY_FLAG_W, OXYGEN, OXYGEN_FLAG_W, SILCAT,  SILCAT_FLAG_W, NITRAT, NITRAT_FLAG_W, NITRIT, NITRIT_FLAG_W, PHSPHT, PHSPHT_FLAG_W, CFC-11, CFC-11_FLAG_W, CFC-12, CFC-12_FLAG_W, TRITUM, TRITUM_FLAG_W, HELIUM, HELIUM_FLAG_W, DELHE3, DELHE3_FLAG_W, TCARBN, TCARBN_FLAG_W, PCO2, PCO2_FLAG_W, ALKALI, ALKALI_FLAG_W, PH, PH_FLAG_W, PCO2TMP, CTDRAW, HELIER, DELHER, THETA, TRITER
 
