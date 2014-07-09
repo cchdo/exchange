@@ -140,5 +140,84 @@ The value -999 was chosen because it is out of range for all WOCE-era parameters
   Within a _hy1.csv file it is very strongly preferred that data from each station be contiguous, it is recommended that data from each cast at a station be contiguous, and it is preferred that the data from each cast be sorted from lowest pressure to highest pressure.
 
 
+.. csv-table:: Table 2. _hy1.csv header columns
+  :file: table2.csv
+  :widths: 1,1,10
+  :header-rows: 1
+
+
+.. csv-table:: Table 3. WHP-Exchange bottle file parameter names, units, and comments
+  :file: table3.csv
+  :widths: 1,1,1,10
+  :header-rows: 1
+
+
+.. csv-table:: Table 3a. Other bottle parameters which have been submitted to the WHPO or CCHDO 
+  :file: table3b.csv
+  :header-rows: 2
+
+Format description for WHP-exchange CTD data ( 8-character suffix _ct1.csv for single CTD profiles and _ct1.zip for a zipped directory containing one or more _ct1.csv files)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. note::
+ To better understand this section please refer to document "example_ct1.csv" available from < http://cchdo.ucsd.edu/formats/exchange/example_ct1.csv >.
+ It is recommended that the reader examine "example_ct1.csv" in a text editor application in order to see all characters and also in a spreadsheet application in order to view overall layout.
+
+
+The overall layout of a _ct1.csv CTD data file is described in Table 4.
+
+The first line of a WHP-exchange format file is a single word which describes the file type, in this case "CTD", followed by a comma and a date/time stamp.
+
+The format next provides for 0-N optional information lines, each beginning with a "#" character, near the beginning of a _ct1.csv file.
+The CCHDO intends to use the "#" lines to hold file history information.
+
+Next is a line indicating the number of header lines (counting the present line and those following), usually 10 in WHP CTD data in WHP-exchange format.
+
+Next are the remaining 9 lines (usually) of header information. These mostly match the description of the similar information in a _hy1.csv file.
+
+Next are the remaining 9 lines (usually) of header information. These mostly match the description of the similar information in a _hy1.csv file.
+
+A line with "END_DATA" signals the end of the data lines.
+
+After that line, a CTD data file may hold other file-specific documentation.
+The primary documentation for WHP data will, however, remain in the ".doc" file (or zipped directory).
+
+General rules for WHP-exchange _ct1.csv data files:
+```````````````````````````````````````````````````
+Each line must end with a carriage return or end-of-line.
+
+With the exception of the file type line, lines starting with a "#" character, the 10 header lines, or including and following a line which reads "END_DATA", each line in a _ct1.csv file must have exactly the same number of commas as do all other lines in that file.
+
+The order of the parameters in the header lines in a _ct1.csv file should follow the order listed (and in "example_ct1.csv") to make it simplest for users to import files.
+All _ct1.csv files prepared by the CCHDO will adhere to the header parameter line order shown in "example_ct1.csv".
+Still, CTD data users are urged to use "read" statements that are sensitive to parameter names rather than position of the parameter in the data files.
+
+It is not necessary that a CTD data file contain a column for CTD oxygen probe measurements (CTDOXY) when there are no CTD oxygen probe data.
+
+If other parameters are included in the CTD data stream, they, and their quality flags, can be included in the _ct1.csv data file, following the overall protocols.
+
+When a quality flag is available for a CTD parameter, that quality flag shall be placed in the column immediately to the right of the parameter.
+
+The name of a quality flag always begins with the name of the parameter with which it is associated, followed by an underscore character, followed by "FLAG", followed by an underscore, and then followed by an alphanumeric character indicating the flag type.
+(Also see Appendix, "Parameter Quality Codes".)
+
+The "missing value" for a data value is always defined as -999, but written in the decimal place format of the parameter in question.
+For example, a missing salinity would be written -999.0000.
+
+The value -999 was chosen because it is out of range for all WHP parameters.
+
+Each data parameter listed in Table 5 - except for all flags, which are "I1" - will be listed in "F9.x" floating point format, where "x" indicates the number of decimal places.
+For each parameter, the CCHDO will pad with meaningless zeros data received with fewer decimal places and round data received with extra decimal places to the number of decimal places specified in Table 5.
+
+
+.. csv-table:: Table 4. General description of _ct1.csv file layout.
+  :file: table4.csv
+  :widths: 1,10
+
+
+.. csv-table:: Table 5. _ct1.csv WHP parameter names, units, and comments.
+  :file: table5.csv
+  :widths: 1,1,1,10
+  :header-rows: 1
 .. toctree::
    :maxdepth: 2

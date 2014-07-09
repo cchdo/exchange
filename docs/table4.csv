@@ -1,0 +1,33 @@
+1st line,"File type, here CTD, followed by a comma and a DATE_TIME stamp
+
+YYYYMMDDdivINSwho
+   
+YYYY    4 digit year 
+
+MM      2 digit month 
+
+DD      2 digit day 
+
+div     division of Institution 
+
+INS     Institution name 
+
+who     initials of responsible person
+
+example:   20000711WHPSIOSCD"
+#lines,"A file may include 0-N optional lines at the start of a data file, each beginning with a ""#"" character and each ending with carriage return or end-of-line. Information relevant to file change/update history may be included here, for example."
+2nd line,NUMBER_HEADERS = n (n = 10 in this table and the example_ct1.csv file.)
+3rd line,EXPOCODE = [expocode] (see Table 2 for definition)
+4th line,SECT = [section] (see Table 2 for definition)
+5th line,STNNBR = [station] (see Table 2 for definition)
+6th line,CASTNO = [cast] (see Table 2 for definition)
+7th line,DATE = [date] (see Table 2 for definition)
+8th line,TIME = [time] (see Table 2 for definition)
+9th line,LATITUDE = [latitude] (see Table 2 for definition)
+10th line,LONGITUDE = [longitude] (see Table 2 for definition)
+11th line,DEPTH = [bottom] (see Table 2 for definition)
+next lines,"Parameter headings. A list of CTD parameter headings approved and used by the CCHDO is found in Table 5. Data originators are urged, however, to be careful to supply their correct column headings rather than to simply copy 'approved' column headings into their files."
+next lines,"Units. A list of parameter units used by the CCHDO is found in Table 5. Data originators are urged, however, to be careful to supply their correct units rather than to simply copy the units used by the WHP."
+data lines,"A single _ct1.csv CTD data file will normally contain data lines for one CTD cast. Generally these will be what is called a ""2 decibar"" file, i.e. there will be a 2-decibar interval between data lines, and each line will lay at either even or odd whole decibars.  ""1 decibar"" files are also in common use and are acceptable."
+END_DATA ,"The line after the last data line must read END_DATA, and be followed by a carriage return or end of line."
+other lines,"Users may include any information they wish in 0-N optional lines at the end of a data file, after the END_DATA line."

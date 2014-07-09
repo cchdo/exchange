@@ -1,0 +1,46 @@
+Column Heading,,Units,,Reporting Precision,
+Parameter,Mnemonic,Scientific,Mnemonic,Range,FORTRAN Format
+39Argon,AR-39,% modern,PCTMOD,100,F9.1
+Argon,ARGON,μmol/kg,UMOL/KG,"5,25",F9.2
+Abundance of bacteria,BACT,cells´108/kg,CELL/KG,,
+Barium,BARIUM,,,,
+Methane,CH4,nmol/kg,NMOL/KG,"1,20",F9.2
+Chlorophyll a,CHLORA,μg/kg,UG/KG,"0,9",F9.2
+Carbon monoxide,COMON,μmol/kg,UMOL/KG,,
+137Cesium,CS-137,dpm/100 kg,DM/.1MG,100,F9.2
+Nitrogen (dissolved organic),DON,μumol/kg,UMOL/KG,200900,F9.1
+Iodate,IODATE,nmol/kg,NMOL/KG,200600,F9.3
+Iodide,IODIDE,nmol/kg,NMOL/KG,300,F9.3
+85Krypton,KR-85,dpm/1000 kg,DM/MG,"0,5",F9.2
+Nitrous oxide,N2O,nmol/kg,NMOL/KG,1200,F9.2
+Neon,NEON,nmol/kg,NMOL/KG,"0,10",F9.3
+Ammonium,NH4,μmol/kg,UMOL/KG,,
+Particulate organic carbon,POC,μg/kg,UG/KG,,
+Particulate organic nitrogen,PON,μg/kg,UG/KG,,
+Phaeophytin,PPHYTN,μg/kg,UG/KG,"0,9",F9.2
+226Radium,RA-226,dpm/100 kg,DM/.1MG,"3,80",F9.2
+228Radium,RA-228,dpm/100 kg,DM/.1MG,"–1,10",F9.2
+90Strontium,SR-90,dpm/100 kg,DM/.1MG,100,F9.2
+Aluminum,ALUMIN,,,,
+Apparent Oxygen Utilization,AOU,,,,
+concentration of arabanose after hydrolysis,ARAB,,,,
+Calcium,CALCIUM,,,,
+Copper,CU,,,,
+Dissolved Combined Neutral Sugars ,DCNS,,(a20_2003),,
+Dissolved Inorganic Nitrogen,DIN,,,,
+Biogenic sulfur compounds (DMS or DMSP) ,DMS,,,,
+Fluorescence (total chlorophyll & phaeopigments),FLUOR,mg/m3 ,MG/CUM,"0,50",
+concentration of fucose after hydrolyses ,FUC,,,,
+concentration of galactose after hydrolysis,GAL,,,,
+concentration of glucose after hydrolysis,GLU,,,,
+Iodine 129,I-129,,,,
+concentration of Mannose after hydrolysis,MAN,,,,
+methyl chloroform ,MCHFRM,,,,
+Nickel,NI,,,,
+pigmented picoeukaryotes ,PEUK,,(cell /L) ,,
+Prochlorophytes ,PRO,,,,
+concentration of rhamnose after hydrolysis ,RHAM,,,,
+Sulfur Hexafluoride,SF6,,,,
+Synechococcus,SYN,,(cell /L) ,,
+Total Organic Carbon,TOC,,,,
+Transmissometer,XMISS,%light transmitted,%TRANS,100,
