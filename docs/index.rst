@@ -14,7 +14,7 @@ WHP-exchange data files carry the essential information from CTD and water sampl
 
 
 Overview of WHP-exchange file formats
--------------------------------------
+`````````````````````````````````````
 The WHP-exchange bottle and CTD data formats include these features:
 
 * ASCII, spreadsheet-like
