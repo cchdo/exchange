@@ -14,7 +14,7 @@ Unix style line endings (LF) are preferred, DOS line endings (CR+LF) are accepta
   Be careful if editing or creating files on Windows as the default text encoduing is UTF-16.
   UTF-16 is not compatable with UTF-8 or ASCII.
 
-For both CTD and Bottle the first two elements must be the following and in the presented order:
+For both CTD and Bottle files the first rows must be the following and in the presented order:
 
 1) A REQUIRED `File Identification Stamp`_
 2) Optional `comment line(s)`_
@@ -78,7 +78,7 @@ An example of the begining of a file, including the `File Identification Stamp`_
   This is a convention often used by the CCHDO to record when changes were made to files
 
 .. warning::
-  Comment may contain non-ASCII charicters, especially in proper names that may be present with data citation information.
+  Comments may contain non-ASCII charicters, especially in proper names that may be present with data citation information.
   If writing your own WHP-exchange reader, ensure that it can handle non-ASCII charicters or have it skip comment lines without trying to read them.
 
 Parameter and Units Lines
@@ -86,6 +86,8 @@ Parameter and Units Lines
 .. warning::
   There are additional headers specific to CTD WHP-exchange files.
   See the :ref:`CTD Specific` section for details on these additional headers.
+
+
 
 Data Lines
 ----------

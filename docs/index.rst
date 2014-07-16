@@ -14,4 +14,5 @@ Description of the WHP-Exchange Format
    quality
    parameters
    extended
+   changelog
    :maxdepth: 2
