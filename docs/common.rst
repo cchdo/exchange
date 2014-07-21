@@ -5,7 +5,7 @@ All WHP-exchange text files must be UTF-8 encoded.
 Unix style line endings (LF) are preferred, DOS line endings (CR+LF) are acceptable, other line endings should be avoided.
 
 .. note::
-  UTF-8 was choisen as the encoding for WHP-Exchange files because it is backwards compatable with ASCII.
+  UTF-8 was chosen as the encoding for WHP-Exchange files because it is backwards compatable with ASCII.
   Valid ASCII files are also valid UTF-8 files.
   UTF-8 allows for the full range of unicode points to display non ASCII text.
   Non ASCII text should only be encountered in the comment lines of an enchnage file.
