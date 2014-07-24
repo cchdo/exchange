@@ -1,3 +1,5 @@
+.. _Quality Codes:
+
 Quality Codes
 =============
 
