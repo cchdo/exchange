@@ -6,6 +6,14 @@
 Description of the WHP-Exchange Format
 ======================================
 
+.. danger::
+  This document is a work in progress, do not use it as a reference for the Exchange format until this warning is removed.
+  Please use the current format description at: `http://cchdo.ucsd.edu/WHP_Exchange_Description.pdf`__.
+
+__ http://cchdo.ucsd.edu/WHP_Exchange_Description.pdf
+
+
+
 .. toctree::
    introduction
    common
