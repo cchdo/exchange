@@ -92,15 +92,20 @@ The parameter names are first, units are second.
 
 Parameter names are comma (``,``) seperated values that define the columns the exchange file will contain.
 The names must be unique, capitalized, contain no empty fields, and not end with a trailing comma.
-The parameter names must contain only ASCII letters, numbers or the special charicters of the forward slash (``/``), underscore (``_``), and hyphen (``-``).
+The parameter names must contain only ASCII letters, numbers, and symbols with the exception of a comma (``,``).
 Certain parameter names, or parameter combinations, are required to be present.
 See the respective sections on :ref:`bottle required headers` and :ref:`CTD required headers` for information specific to each format.
 
 The unit line contains information for the units of each parameter listed in the parameter line.
 The unit line, like the paramters, are comma seperated values.
-Like the parameter names, units must contain only ASCII letters, numbers or the special charicters of the forward slash (``/``), underscore (``_``), and hyphen (``-``).
+Like the parameter names, units must contain only ASCII letters, numbers, and symbols with the exception of a comma(``,``).
 Units may contain empty fields if the parameter has no units.
 Units for a paramter must be in the same column as that paramter, essentialy, the sname number of commas occur before the parameter name and its unit.
+
+.. warning::
+  Parameter names and units MUST NOT have commas.
+  Commas are reserved for seperating the, names, units, and data into columns.
+
 
 The parameter and unit lines of a CTD file might look like this::
 
@@ -117,9 +122,8 @@ The parameter and units could very easially have looked like::
 
 .. note::
   Some technical details for formatting the whitespace.
-  While not strictly requiered, parameter, units, and data lines will contain white space matching the length of the print format of the paramter.
-  This is a convention followed by the CCHDO to ease reading of files when using software the relies on the position of the data.
-  It is preferered that the paramter, units, and data be right aligned when the whitespace convention is being followed.
+  While not strictly requiered, parameter, units, and data lines may contain white space matching the length of the print format of the paramter.
+  This is a convention followed by the CCHDO to ease reading of files by humans.
   Quality flag columns usually have a 1 charicter width which will often cause the parameter/units and data to not be aligned into pretty columns.
 
 Data Lines
