@@ -79,9 +79,9 @@ An example of the begining of a file, including the `File Identification Stamp`_
 
 .. warning::
   Comments may contain non-ASCII charicters, especially in proper names that may be present with data citation information.
-  If writing your own WHP-exchange reader, ensure that it can handle non-ASCII charicters or have it skip comment lines without trying to read them.
+  If writing your own WHP-exchange reader, ensure that it can handle non-ASCII UTF-8 charicters or have it skip comment lines without trying to read them.
 
-Parameter and Units Lines
+Parameter and Unit Lines
 -------------------------
 .. warning::
   There are additional headers specific to CTD WHP-exchange files.
@@ -92,14 +92,14 @@ The parameter names are first, units are second.
 
 Parameter names are comma (``,``) seperated values that define the columns the exchange file will contain.
 The names must be unique, capitalized, contain no empty fields, and not end with a trailing comma.
-The parameter names must contain only ASCII letters, numbers, and symbols with the exception of a comma (``,``).
+The parameter names must contain only ASCII letters, numbers, and symbols with the exception of a comma.
 A trailing comma, or a comma that occurs at the end of the line with nothing else after it, MUST NOT be included on the parameter line.
 Certain parameter names, or parameter combinations, are required to be present.
 See the respective sections on :ref:`bottle required headers` and :ref:`CTD required headers` for information specific to each format.
 
 The unit line contains information for the units of each parameter listed in the parameter line.
 The unit line, like the paramters, are comma seperated values.
-Like the parameter names, units must contain only ASCII letters, numbers, and symbols with the exception of a comma (``,``).
+Like the parameter names, units must contain only ASCII letters, numbers, and symbols with the exception of a comma.
 A trailing comma MUST NOT be included in the unit line.
 Units may contain empty fields if the parameter has no units.
 Units for a paramter must be in the same column as that paramter, essentialy, the sname number of commas occur before the parameter name and its unit.
@@ -131,6 +131,50 @@ The parameter and units could very easially have looked like::
 
 Data Lines
 ----------
+The data lines occur directly after the unit line.
+Each line of data contains comma (``,``) seperated values of related data.
+Each data point of the data line may contain any combination of ASCII letter, numbers, and symbols with the exception of a comma.
+Like the `Parameter and Unit Lines`_, a trailing comma MUST NOT be included at the end of each line.
+Data points for each parameter of the `Parameter and Unit Lines`_ must be in the same column as that paratemer, i.e. the same number of commas occur before the parameter label and the datum.
+
+Numeric data which occurs on the data lines MUST only contain numbers, spaces, an optional decimal marker, and an optional negative sign.
+All whitespace within numerical data is ignored and has no meaning.
+Integers may be represented as bare numerals with no decimal marker.
+All real numeric data (i.e. data that are real numbers) MUST be decimal and MUST represent their decimal mark using an ASCII period (``.``).
+For both negative real numbers and integers, prepend an ASCII hyphen (``-``) to the numeric portion, positive real numbers MUST not be prefixed by a plus sign (``+``).
+
+The validity of each datum is determined by the parameter column in which it occurs.
+For example, the `EXPOCODE` column may contain any combination of letter, numbers, or symbols (except a comma).
+A `CTDPRS` column may only contain real decimal numbers using an ASCII period (``.``) as the decimal mark.
+
+.. note::
+  Parameters may have a different precision depending on how the measurement was made.
+  The CCHDO maintains a list of parameter names which includes precisions for historic reasons.
+  Previous versions of the Exchange format specification stated the CCHDO would pad "meaningless" zeros to the end of any data without enough precision.
+  Newer software allows the CCHDO to keep the precision as reported, both less and more precise.
+  For these and other reasons, a mix of precisions may occur in a column of data.
+  
+  Always report the precision as measured.
+
+After all datalines, the end of the data is indicated by a line containing only ``END_DATA``.
+Here is a short example of what exchange data might look like::
+
+  2.0,2,  19.1840,  34.6935,    220.8
+  4.0,2,  19.1992,  34.6924,    220.7
+  6.0,2,  19.2002,  34.6922,    220.5
+  8.0,2,  19.2022,  34.6920,    220.5
+  END_DATA
+
 
 Post Data Content
 -----------------
+After the ``END_DATA`` line, any additional content may be included without format restriction.
+Additional content after ``END_DATA`` MUST continue to be UTF-8 encoded.
+
+
+Examples
+--------
+Full examples of data in exchange format are presented in their speciifc sections:
+
+* :ref:`Example Bottle Data`
+* :ref:`Example CTD Data`

@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2014-08-18
+----------
+* Less restrictive paramter names and units.
+* Specify how numerical data should appear.
+* CCHDO now keeps numerical precsion of data found in files
+
 2014-07-24
 ----------
 * Require parameter names in an exchange file to be unique.
