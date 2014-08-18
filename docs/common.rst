@@ -93,17 +93,19 @@ The parameter names are first, units are second.
 Parameter names are comma (``,``) seperated values that define the columns the exchange file will contain.
 The names must be unique, capitalized, contain no empty fields, and not end with a trailing comma.
 The parameter names must contain only ASCII letters, numbers, and symbols with the exception of a comma (``,``).
+A trailing comma, or a comma that occurs at the end of the line with nothing else after it, MUST NOT be included on the parameter line.
 Certain parameter names, or parameter combinations, are required to be present.
 See the respective sections on :ref:`bottle required headers` and :ref:`CTD required headers` for information specific to each format.
 
 The unit line contains information for the units of each parameter listed in the parameter line.
 The unit line, like the paramters, are comma seperated values.
-Like the parameter names, units must contain only ASCII letters, numbers, and symbols with the exception of a comma(``,``).
+Like the parameter names, units must contain only ASCII letters, numbers, and symbols with the exception of a comma (``,``).
+A trailing comma MUST NOT be included in the unit line.
 Units may contain empty fields if the parameter has no units.
 Units for a paramter must be in the same column as that paramter, essentialy, the sname number of commas occur before the parameter name and its unit.
 
 .. warning::
-  Parameter names and units MUST NOT have commas.
+  Parameter names and units MUST NOT contain commas as part of the name or unit.
   Commas are reserved for seperating the, names, units, and data into columns.
 
 
@@ -112,7 +114,7 @@ The parameter and unit lines of a CTD file might look like this::
   CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDSAL,CTDOXY
   DBAR,,ITS-90,PSS-78,UMOL/KG
 
-Notice the presence of quality flag column (suffixed with ``_FLAG_W``) which has the corrisponding units of nothing denoted by two commas next to each other.
+Note the presence of quality flag column (suffixed with ``_FLAG_W``) which has the corrisponding units of nothing denoted by two commas next to each other.
 For more information on quality flags, see the :ref:`Quality Codes` section.
 White space has no meaning in the exchange format and can be included for purly asthetic reasons.
 The parameter and units could very easially have looked like::
@@ -122,6 +124,7 @@ The parameter and units could very easially have looked like::
 
 .. note::
   Some technical details for formatting the whitespace.
+
   While not strictly requiered, parameter, units, and data lines may contain white space matching the length of the print format of the paramter.
   This is a convention followed by the CCHDO to ease reading of files by humans.
   Quality flag columns usually have a 1 charicter width which will often cause the parameter/units and data to not be aligned into pretty columns.
