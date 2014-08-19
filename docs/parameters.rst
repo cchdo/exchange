@@ -45,7 +45,7 @@ Common Paramters
   * PCO2_TMP
   * PH
   * PH_TMP
-  * PH_SCAPE
+  * PH_SCALE
   * DOC
   * TDN
 
@@ -55,7 +55,7 @@ EXPOCODE
 =============== =========
 Units           None
 Format          A14
-Qualiy Flags    None
+Quality Flags   None
 Required        YES
 =============== =========
 
@@ -68,7 +68,7 @@ SECT_ID
 =============== =========
 Units           None
 Format          A6
-Qualiy Flags    None
+Quality Flags   None
 Required        NO
 =============== =========
 
@@ -80,7 +80,7 @@ STNNBR
 =============== =========
 Units           None
 Format          A6
-Qualiy Flags    None
+Quality Flags   None
 Required        YES
 =============== =========
 
