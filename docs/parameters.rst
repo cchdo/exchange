@@ -1,8 +1,9 @@
 Parameters
 ==========
 
-Common Paramters
-----------------
+
+Common Parameters
+-----------------
 
 .. hlist::
   :columns: 3
@@ -10,44 +11,44 @@ Common Paramters
   * EXPOCODE_
   * SECT_ID_
   * STNNBR_
-  * CASNO
-  * SAMPNO
-  * BTLNBR
-  * DATE
-  * TIME
-  * LATITUDE
-  * LONGITUDE
-  * DEPTH
-  * CTDPRS
-  * CTDTMP
-  * CTDSAL
-  * SALNTY
-  * CTDOXY
-  * OXYGEN
-  * SILCAT
-  * NITRAT
-  * NO2+NO3
-  * NITRIT
-  * PHSPHT
-  * CFC-11
-  * CFC-12
-  * CFC113
-  * CCL4
-  * TRITUM
-  * HELIUM
-  * DELHE3
-  * DELC14
-  * DELC13
-  * O18O16
-  * ALKALI
-  * TCARBN
-  * PCO2
-  * PCO2_TMP
-  * PH
-  * PH_TMP
-  * PH_SCALE
-  * DOC
-  * TDN
+  * CASTNO_
+  * SAMPNO_
+  * BTLNBR_
+  * DATE_
+  * TIME_
+  * LATITUDE_
+  * LONGITUDE_
+  * DEPTH_
+  * CTDPRS_
+  * CTDTMP_
+  * CTDSAL_
+  * SALNTY_
+  * CTDOXY_
+  * OXYGEN_
+  * SILCAT_
+  * NITRAT_
+  * NO2+NO3_
+  * NITRIT_
+  * PHSPHT_
+  * CFC-11_
+  * CFC-12_
+  * CFC113_
+  * CCL4_
+  * TRITUM_
+  * HELIUM_
+  * DELHE3_
+  * DELC14_
+  * DELC13_
+  * O18O16_
+  * ALKALI_
+  * TCARBN_
+  * PCO2_
+  * PCO2_TMP_
+  * PH_
+  * PH_TMP_
+  * PH_SCALE_
+  * DOC_
+  * TDN_
 
 EXPOCODE
 ^^^^^^^^
@@ -87,3 +88,118 @@ Required        YES
 The originator's station number.
 This paramter is used for a single alphanumeric word, without spaces, commas, or "/" characters (but "_" underscore characters are OK) which is unique station identifier. 
 Numeric-only station identifiers are preferred by many data users, but provision for alphanumeric identifiers is retained to maintain compatibility with WOCE records.
+
+CASTNO
+^^^^^^
+
+SAMPNO
+^^^^^^^
+
+BTLNBR
+^^^^^^
+
+DATE
+^^^^
+
+TIME
+^^^^
+
+LATITUDE
+^^^^^^^^
+
+LONGITUDE
+^^^^^^^^^
+
+DEPTH
+^^^^^
+
+CTDPRS
+^^^^^^
+
+CTDTMP
+^^^^^^
+
+CTDSAL
+^^^^^^
+
+SALNTY
+^^^^^^
+
+CTDOXY
+^^^^^^
+
+OXYGEN
+^^^^^^
+
+SILCAT
+^^^^^^
+
+NITRAT
+^^^^^^
+
+NO2+NO3
+^^^^^^^
+
+NITRIT
+^^^^^^
+
+PHSPHT
+^^^^^^
+
+CFC-11
+^^^^^^
+
+CFC-12
+^^^^^^
+
+CFC113
+^^^^^^
+
+CCL4
+^^^^
+
+TRITUM
+^^^^^^
+
+HELIUM
+^^^^^^
+
+DELHE3
+^^^^^^
+
+DELC14
+^^^^^^
+
+DELC13
+^^^^^^
+
+O18O16
+^^^^^^
+
+ALKALI
+^^^^^^
+
+TCARBN
+^^^^^^
+
+PCO2
+^^^^
+
+PCO2_TMP
+^^^^^^^^
+
+PH
+^^
+
+PH_TMP
+^^^^^^
+
+PH_SCALE
+^^^^^^^^
+
+DOC
+^^^
+
+TDN
+^^^
+
