@@ -81,6 +81,8 @@ An example of the begining of a file, including the `File Identification Stamp`_
   Comments may contain non-ASCII charicters, especially in proper names that may be present with data citation information.
   If writing your own WHP-exchange reader, ensure that it can handle non-ASCII UTF-8 charicters or have it skip comment lines without trying to read them.
 
+.. _parameter and unit lines:
+
 Parameter and Unit Lines
 -------------------------
 .. warning::
@@ -128,6 +130,8 @@ The parameter and units could very easially have looked like::
   While not strictly requiered, parameter, units, and data lines may contain white space matching the length of the print format of the paramter.
   This is a convention followed by the CCHDO to ease reading of files by humans.
   Quality flag columns usually have a 1 charicter width which will often cause the parameter/units and data to not be aligned into pretty columns.
+
+.. _data lines:
 
 Data Lines
 ----------
