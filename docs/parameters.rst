@@ -187,7 +187,7 @@ To convert from an integer, left pad zeros to match the time format description.
   Times in netcdf files will be anywhere from 1 to 4 digits.
   E.g. a time of 6 as in integer represents 6 minutes after midnight or 0006
 
-.. note::
+.. warning::
   Time not being required is not an omission or mistake.
   If time is not present, then the temporal resolution of the data is reduced to a 24 hour period.
   It is the responsibility of the user of the data to omit files/casts which do not meet their temporal resolution requirements.
