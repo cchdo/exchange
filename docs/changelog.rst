@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2015-01-21
+----------
+* Paramters no longer will have a print format, now will just have a data type
+
 2014-08-18
 ----------
 * Less restrictive paramter names and units.
