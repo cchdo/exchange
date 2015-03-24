@@ -1,6 +1,19 @@
 {
   "parameters": [
-    {"whp_name":"", "whp_unit":"", "flag_w":"", "cf_name":"", "udunits":"", "description":"", "note":"", "warning":""}
+    {
+      "whp_name":"", 
+      "whp_unit":"", 
+      "flag_w":null, 
+      "cf_name":null, 
+      "udunits":"", 
+      "data_type":"", 
+      "numeric_min": null,
+      "numeric_max": null,
+      "string_format": "",
+      "description":"", 
+      "note":"", 
+      "warning":""
+    }
   ],
   "quality":{
     "woce_ctd":[
