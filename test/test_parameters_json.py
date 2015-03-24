@@ -21,6 +21,7 @@ class TestParametersJSON(unittest.TestCase):
             except ValueError:
                 self.fail(msg="The paramters file is not valid JSON")
 
+    # Basic Root level tests
     def testRootKeys(self):
         self.assertIn("parameters", self.p)
         self.assertIn("quality", self.p)
@@ -36,6 +37,19 @@ class TestParametersJSON(unittest.TestCase):
 
     def testFormatsKeyType(self):
         self.assertIsInstance(self.p["formats"], dict)
+
+    # Paramter key tests
+    def testParameterItemsType(self):
+        for param in self.p['parameters']:
+            self.assertIsInstance(param, dict)
+
+    def testUniqueParameterItems(self):
+        pairs = []
+        for param in self.p['parameters']:
+            pairs.append((param['whp_name'], param['whp_unit']))
+
+        self.assertEqual(len(pairs), len(set(pairs)), msg="Duplicate param "\
+        "name/unit pairs")
 
 if __name__ == "__main__":
     unittest.main()
