@@ -1,0 +1,29 @@
+{
+  "parameters": [
+    {"whp_name":"", "whp_unit":"", "flag_w":"", "cf_name":"", "udunits":"", "description":"", "note":"", "warning":""}
+  ],
+  "quality":{
+    "woce_ctd":[
+      {"value": "1", "fill":false, "description":"Not calibrated", "note":""},
+      {"value": "2", "fill":false, "description":"Acceptable measurement", "note":""},
+      {"value": "3", "fill":false, "description":"Questionable measurement", "note":""},
+      {"value": "4", "fill":false, "description":"Bad measurement", "note":""},
+      {"value": "5", "fill":true,  "description":"Not reported", "note":""},
+      {"value": "6", "fill":false, "description":"Interpolated over a pressure interval larger than 2 dbar", "note":""},
+      {"value": "7", "fill":false, "description":"Despiked", "note":""},
+      {"value": "9", "fill":true,  "description":"Not sampled", "note":""}
+    ],
+    "woce_bottle": [],
+    "woce_discrete": []
+  },
+  "formats":{
+    "exchange_ctd":{
+      "require_values":["EXPOCODE", "DATE", "STNNBR", "CASTNO", "LATITUDE", "LONGITUDE"],
+      "unique": [["CTDPRS"]]
+    },
+    "exchange_bottle":{
+      "require_values":["EXPOCODE", "DATE", "STNNBR", "CASTNO", "LATITUDE", "LONGITUDE"],
+      "unique": [["EXPOCODE", "STNNBR", "CASTNO", "BTLNBR"], ["EXPOCODE", "STNNBR", "CASTNO", "SAMPNO"]]
+    }
+  }
+}
