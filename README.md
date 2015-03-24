@@ -13,10 +13,10 @@ also uses this data.
 
 This project also contains the ICES ship codes used to generate
 expocodes from ship names. The ship name could be determined from the
-expocode as well by using this data.
+expocode as well (by using this data).
 
 The metadata are in JSON formats with a specific structure described
-here:
+here.
 
 Paramter Descriptions
 ---------------------
@@ -28,5 +28,5 @@ TODO: Write this
 
 ISO Country Codes
 -----------------
-No pull requests/accepted, TODO: Write a description of the format.
+No pull requests accepted, TODO: Write a description of the format.
 (Uses third party dataset)
