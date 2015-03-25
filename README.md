@@ -26,7 +26,18 @@ Ship/Platform Codes
 -------------------
 TODO: Write this
 
+
 ISO Country Codes
 -----------------
 No pull requests accepted, TODO: Write a description of the format.
 (Uses third party dataset)
+
+Test Suite Status
+-----------------
+Tests have been written to verify the structure and data integrity of
+the json files contained within this project, this allows for the
+automatic validation of any proposed changes (in pull requests).
+
+The following badge indicates the status of the most recent commit to
+the master branch:
+[![Build Status](https://travis-ci.org/cchdo/hdo-metadata.svg?branch=master)](https://travis-ci.org/cchdo/hdo-metadata)
