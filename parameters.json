@@ -16,6 +16,21 @@
       "whp_tier": "primary"
     },
     {
+      "whp_name":"SECT_ID", 
+      "whp_unit":"", 
+      "flag_w":null, 
+      "cf_name":null, 
+      "udunits":"", 
+      "data_type":"", 
+      "numeric_min": null,
+      "numeric_max": null,
+      "string_format": "%s11",
+      "description":"The woce section ID", 
+      "note":"", 
+      "warning":"",
+      "whp_tier": "primary"
+    },
+    {
       "whp_name":"CTDPRS", 
       "whp_unit":"DBAR", 
       "flag_w":"woce_ctd", 
