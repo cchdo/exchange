@@ -46,6 +46,36 @@
       "whp_tier": "primary"
     },
     {
+      "whp_name":"CASTNO", 
+      "whp_unit":"", 
+      "flag_w":null, 
+      "cf_name":null, 
+      "udunits":"", 
+      "data_type":"string", 
+      "numeric_min": null,
+      "numeric_max": null,
+      "string_format": "%11s",
+      "description":"", 
+      "note":"", 
+      "warning":"",
+      "whp_tier": "primary"
+    },
+    {
+      "whp_name":"SAMPNO", 
+      "whp_unit":"", 
+      "flag_w":null, 
+      "cf_name":null, 
+      "udunits":"", 
+      "data_type":"string", 
+      "numeric_min": null,
+      "numeric_max": null,
+      "string_format": "%11s",
+      "description":"", 
+      "note":"", 
+      "warning":"",
+      "whp_tier": "primary"
+    },
+    {
       "whp_name":"CTDPRS", 
       "whp_unit":"DBAR", 
       "flag_w":"woce_ctd", 
