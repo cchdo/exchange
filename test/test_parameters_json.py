@@ -51,5 +51,94 @@ class TestParametersJSON(unittest.TestCase):
         self.assertEqual(len(pairs), len(set(pairs)), msg="Duplicate param "\
         "name/unit pairs")
 
+    def testWHPNameIsUnicode(self):
+        for param in self.p['parameters']:
+            self.assertIsInstance(param['whp_name'], unicode)
+
+    def testWHPUnitIsUnicode(self):
+        for param in self.p['parameters']:
+            self.assertIsInstance(param['whp_unit'], unicode)
+
+    def testFlagWisUnicode(self):
+        for param in self.p['parameters']:
+            self.assertIsInstance(param['flag_w'], unicode)
+
+    def testFlagWinQualityList(self):
+        quality_flags = self.p['quality'].keys()
+        for param in self.p['parameters']:
+            if isinstance(param['flag_w'], unicode):
+                self.assertIn(param['flag_w'], quality_flags)
+            else:
+                assert True
+
+    def testCFNameisUnicode(self):
+        for param in self.p['parameters']:
+            self.assertIsInstance(param['cf_name'], unicode)
+
+    def testUdunitsIsUnicode(self):
+        for param in self.p['parameters']:
+            self.assertIsInstance(param['udunits'], unicode)
+
+    def testDataTypeisUnicode(self):
+        for param in self.p['parameters']:
+            self.assertIsInstance(param['data_type'], unicode)
+
+    def testDataTypeIsAllowedValue(self):
+        allowed_values = [u'string', u'integer', u'decimal']
+        for param in self.p['parameters']:
+            self.assertIn(param['data_type'], allowed_values)
+
+    def testNumericMinIsNumberOrNull(self):
+        for param in self.p['parameters']:
+            is_number = isinstance(param['numeric_min'], float)
+            is_null = param['numeric_min'] is None
+            self.assertTrue(is_number or is_null)
+
+    def testNumericMaxIsNumberOrNull(self):
+        for param in self.p['parameters']:
+            is_number = isinstance(param['numeric_max'], float)
+            is_null = param['numeric_max'] is None
+            self.assertTrue(is_number or is_null)
+
+    def testStringFormatIsUnicode(self):
+        for param in self.p['parameters']:
+            self.assertIsInstance(param['string_format'], unicode)
+
+    def testStringFormatValueIsOK(self):
+        for param in self.p['parameters']:
+            self.assertTrue(param['string_format'].startswith('%'))
+            if param['data_type'] == u'string':
+                self.assertTrue(param['string_format'].endswith('s'))
+            if param['data_type'] == u'integer':
+                self.assertTrue(param['string_format'].endswith('i'))
+            if param['data_type'] == u'decimal':
+                self.assertTrue(param['string_format'].endswith('f'))
+            try:
+                float(param['string_format'][1:-1])
+                assert True
+            except ValueError:
+                assert False
+
+    def testDescriptionIsUnicode(self):
+        for param in self.p['parameters']:
+            self.assertIsInstance(param['description'], unicode)
+
+    def testNoteIsUnicode(self):
+        for param in self.p['parameters']:
+            self.assertIsInstance(param['note'], unicode)
+
+    def testWarningIsUnicode(self):
+        for param in self.p['parameters']:
+            self.assertIsInstance(param['warning'], unicode)
+
+    def testWhpTierIsUnicode(self):
+        for param in self.p['parameters']:
+            self.assertIsInstance(param['whp_tier'], unicode)
+
+    def testWhpTierValue(self):
+        allowed_values = [u'primary', u'secondary', u'tertiary']
+        for param in self.p['parameters']:
+            self.assertIn(param['whp_tier'], allowed_values)
+
 if __name__ == "__main__":
     unittest.main()
