@@ -59,9 +59,11 @@ class TestParametersJSON(unittest.TestCase):
         for param in self.p['parameters']:
             self.assertIsInstance(param['whp_unit'], unicode)
 
-    def testFlagWisUnicode(self):
+    def testFlagWisUnicodeOrNull(self):
         for param in self.p['parameters']:
-            self.assertIsInstance(param['flag_w'], unicode)
+            is_unicode = isinstance(param['flag_w'], unicode)
+            is_null = param['flag_w'] is None
+            self.assertTrue(is_unicode or is_null)
 
     def testFlagWinQualityList(self):
         quality_flags = self.p['quality'].keys()
@@ -71,9 +73,11 @@ class TestParametersJSON(unittest.TestCase):
             else:
                 assert True
 
-    def testCFNameisUnicode(self):
+    def testCFNameisUnicodeOrNull(self):
         for param in self.p['parameters']:
-            self.assertIsInstance(param['cf_name'], unicode)
+            is_unicode = isinstance(param['cf_name'], unicode)
+            is_null = param['cf_name'] is None
+            self.assertTrue(is_unicode or is_null)
 
     def testUdunitsIsUnicode(self):
         for param in self.p['parameters']:

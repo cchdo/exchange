@@ -200,7 +200,7 @@
       "whp_unit":"ITS-90", 
       "flag_w":"woce_ctd", 
       "cf_name":null, 
-      "udunits":null, 
+      "udunits":"", 
       "data_type":"decimal", 
       "numeric_min": -2.0,
       "numeric_max": 35.0,
