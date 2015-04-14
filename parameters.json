@@ -256,6 +256,21 @@
       "whp_tier": "primary"
     }, 
     {
+      "whp_name": "CTDOXY", 
+      "whp_unit": "ML/L", 
+      "flag_w": "woce_ctd", 
+      "cf_name": null, 
+      "udunits": "", 
+      "data_type": "decimal", 
+      "numeric_min": 0.0, 
+      "numeric_max": 500.0, 
+      "string_format": "%9.4f", 
+      "description": "", 
+      "note": "", 
+      "warning": "", 
+      "whp_tier": "primary"
+    }, 
+    {
       "whp_name": "OXYGEN", 
       "whp_unit": "UMOL/KG", 
       "flag_w": "woce_discrete", 
