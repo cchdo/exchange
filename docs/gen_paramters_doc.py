@@ -88,15 +88,13 @@ for param in params['parameters']:
 {0}
 """.format(param['description'])
     if param['note'] != "":
-        output += """
-.. note::
-  {0}
-""".format(param['note'])
+        output += """\n.. note::\n"""
+        for line in param['note'].split("\n"):
+            output += "  {}\n".format(line)
     if param['warning'] != "":
-        output += """
-.. warning::
-  {0}
-""".format(param['warning'])
+        output += """\n.. warning::\n"""
+        for line in param['warning'].split("\n"):
+            output += "  {}\n".format(line)
 
 with open('parameters.rst', 'wb') as f:
     f.write(output)
