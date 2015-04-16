@@ -338,3 +338,7 @@ epub_exclude_files = ['search.html']
 #epub_use_index = True
 
 todo_include_todos = True
+
+# we are cheating to get some of our docs built
+# open to a better suggestion
+execfile('gen_paramters_doc.py')
