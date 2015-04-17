@@ -37,9 +37,6 @@ Provided with each paramter is a set of information in a table, the information 
     Specifies which set of quality flag definitions should be used to interpret a quality flag column for this paramter (if present).
     Current quality flags are: :ref:`bottle <Bottle Quality Codes>`, :ref:`water <Water Quality Codes>`, :ref:`ctd <CTD Quality Codes>`.
     See the :ref:`Quality Codes` section for more information
-* Required: 
-    Specifies if the paramter must be present (and have a value).
-    Paramters that are not required may be omitted from files (i.e. a non required paramter may be entirely absent from a file)
 
 Common Parameters
 -----------------
@@ -78,8 +75,16 @@ for param in params['parameters']:
     data_label = "Data Type"
     quality_label = "Quality Flags"
 
+    if quality_flags == "woce_ctd":
+        quality_flags = ":ref:`woce_ctd <CTD Quality Codes>`"
+    if quality_flags == "woce_discrete":
+        quality_flags = ":ref:`woce_discrete <Water Quality Codes>`"
+    if quality_flags == "woce_bottle":
+        quality_flags = ":ref:`woce_bottle <Bottle Quality Codes>`"
+
     first_col = max(len(units_label), len(data_label), len(quality_label))
     second_col = max(len(unit), len(data_type), len(quality_flags))
+
 
 
     output += "=" * first_col + ' ' + "=" * second_col + '\n'
