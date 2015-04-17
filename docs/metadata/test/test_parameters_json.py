@@ -94,15 +94,17 @@ class TestParametersJSON(unittest.TestCase):
 
     def testNumericMinIsNumberOrNull(self):
         for param in self.p['parameters']:
-            is_number = isinstance(param['numeric_min'], float)
+            is_decimal = isinstance(param['numeric_min'], float)
+            is_integer = isinstance(param['numeric_min'], int)
             is_null = param['numeric_min'] is None
-            self.assertTrue(is_number or is_null)
+            self.assertTrue(is_decimal or is_integer or is_null)
 
     def testNumericMaxIsNumberOrNull(self):
         for param in self.p['parameters']:
-            is_number = isinstance(param['numeric_max'], float)
+            is_decimal = isinstance(param['numeric_max'], float)
+            is_integer = isinstance(param['numeric_max'], int)
             is_null = param['numeric_max'] is None
-            self.assertTrue(is_number or is_null)
+            self.assertTrue(is_decimal or is_integer or is_null)
 
     def testStringFormatIsUnicode(self):
         for param in self.p['parameters']:
