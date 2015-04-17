@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Exchange Format'
-copyright = u'2014, James H. Swift, Stephen C. Diggs'
+copyright = u'2014, James H. Swift, Stephen C. Diggs, Andrew M. Barna'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -135,7 +135,7 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+#html_static_path = ['_static']
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -206,8 +206,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'ExchangeFormat.tex', u'Exchange Format Documentation',
-   u'James H. Swift, Stephen C. Diggs', 'manual'),
+  ('index', 'ExchangeFormat.tex', u'Exchange Format Description',
+   u'James H. Swift, Stephen C. Diggs, Andrew M. Barna', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -271,10 +271,10 @@ texinfo_documents = [
 # -- Options for Epub output ----------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Exchange Format'
-epub_author = u'James H. Swift, Stephen C. Diggs'
-epub_publisher = u'James H. Swift, Stephen C. Diggs'
-epub_copyright = u'2014, James H. Swift, Stephen C. Diggs'
+epub_title = u'Exchange Format Description'
+epub_author = u'James H. Swift, Stephen C. Diggs, Andrew M. Barna'
+epub_publisher = u'James H. Swift, Stephen C. Diggs, Andrew M. Barna'
+epub_copyright = u'2015, James H. Swift, Stephen C. Diggs, Andrew M. Barna'
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = u'Exchange Format'
