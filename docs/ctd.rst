@@ -21,7 +21,7 @@ Here is an example of a complete set of CTD headers (note that we have included 
 .. code-block:: ini
   :linenos:
 
-  NUMBER_HEADERS = 11
+  NUMBER_HEADERS = 10
   EXPOCODE = 318M20130321
   SECT_ID = P02W
   STNNBR = 1
@@ -31,166 +31,57 @@ Here is an example of a complete set of CTD headers (note that we have included 
   LATITUDE =  32.5068
   LONGITUDE =  133.0297
   DEPTH =   166
-  INSTRUMENT_ID = 796
 
 Notice three things: the special ``NUMBER_HEADERS`` paramter, the paramter names are all caps, and none of the paramters have units.
 
-The ``NUMBER_HEADERS`` paramter is an integer describing how many lines the headers will be before the paramter and unit lines.
-The value of ``NUMBER_HEADERS`` includes itself and MUST be the first line after any :ref:`comment line(s)`.
-The units for each parameter are defined by convention rather than explicitly stated in each file, see the :ref:`CTD required headers` for information on the units and which headers are required.
+The units for each parameter are defined by convention rather than explicitly stated in each file, see the :ref:`CTD required headers` for information on which headers are required.
 
-.. warning::
-  The most common mistake with Exchange CTD Headers is not including the ``NUMBER_HEADERS`` line in the calculation of the number of lines the headers occupy.
-  It would be incorrect in the above example to have ``NUMBER_HEADERS = 10``.
 
 .. _CTD required headers:
 
-CTD Header Descriptions
------------------------
-This list is not all inclusive, any number of user submitted headers may occur so long as the follow the ``PARAM = VALUE`` format and the ``NUMBER_HEADERS`` value all header lines.
+CTD required headers
+--------------------
 
-* NUMBER_HEADERS_
-* EXPOCODE_
-* SECT_ID_
-* STNNBR_
-* CASTNO_
-* DATE_
-* TIME_
-* LATITUDE_
-* LONGITUDE_
-* DEPTH_
+The following CTD headers are REQUIRED, see the :ref:`Parameters` section for the description of each, except for the `NUMBER_HEADERS`_ which is described below:
+
+* `NUMBER_HEADERS`_
+* :ref:`EXPOCODE`
+* :ref:`STNNBR`
+* :ref:`CASTNO`
+* :ref:`DATE`
+* :ref:`LATITUDE`
+* :ref:`LONGITUDE`
+
+.. note::
+  :ref:`TIME` is not a required paramter, this is not an omission from the list above.
+
+.. warning::
+  There is no support for including units in the CTD headers it is not reccomended that any parameters which could have multiple units be included in the CTD headers.
+
+  Usually the optional :ref:`DEPTH <DEPTH (METERS)>` parameter is the only one with units commonly found in CTD headers, it MUST be in meters when included in the CTD headers.
+
 
 NUMBER_HEADERS
 ^^^^^^^^^^^^^^
 
-=============== =========
-Units           None
-Format          I2
-Required        YES
-=============== =========
+The ``NUMBER_HEADERS`` paramter is an integer describing how many lines the headers will be before the paramter and unit lines.
+The value of ``NUMBER_HEADERS`` includes itself it is REQUIRED and MUST be the first line after any :ref:`comment line(s)`.
 
-EXPOCODE
-^^^^^^^^^^^^^^
+.. warning::
+  The most common mistake with Exchange CTD Headers is not including the ``NUMBER_HEADERS`` line in the calculation of the number of lines the headers occupy.
+  It would be incorrect in the above example to have ``NUMBER_HEADERS = 9``.
 
-=============== =========
-Units           None
-Format          A14
-Required        YES
-=============== =========
+.. _CTD Optional Headers:
 
-The expedition code for the cruise.
-See :ref:`expocode` on the paramters page for more information.
+CTD Optional Headers
+--------------------
 
+The following CTD headers are optional, but encountered frequently within ctd exchange files:
 
-SECT_ID
-^^^^^^^^^^^^^^
+* :ref:`SECT_ID`
+* :ref:`TIME`
+* :ref:`DEPTH <DEPTH (METERS)>`
 
-=============== =========
-Units           None
-Format          A6
-Required        No
-=============== =========
-
-If present, the WHP Section Identifier.
-See :ref:`sect_id` on the paramters page for more information.
-
-.. note::
-  Previous versions of the exchange format specification included both ``SECT_ID`` and ``SECT``.
-  The canonical paramter name is ``SECT_ID``.
-  However, ``SECT`` may still be encountered in exchange CTD files from the CCHDO.
-
-STNNBR
-^^^^^^^^^^^^^^
-
-=============== =========
-Units           None
-Format          A6
-Required        YES
-=============== =========
-
-The origionators station number.
-See :ref:`stnnbr` on the paramters page for more information.
-
-CASTNO
-^^^^^^^^^^^^^^
-
-=============== =========
-Units           None
-Format          A6
-Required        YES
-=============== =========
-
-The origionator's cast number.
-See :ref:`castno` on the paramters page for more information.
-
-DATE
-^^^^^^^^^^^^^^
-
-=============== =========
-Units           None
-Format          I8
-Required        YES
-=============== =========
-
-The UTC date in YYYYMMDD format.
-Usually the reported date is for the bottom of the cast.
-
-TIME
-^^^^^^^^^^^^^^
-
-=============== =========
-Units           None
-Format          I4
-Required        YES
-=============== =========
-
-The UTC time in HHMM format.
-Usually the reported time is for the bottom of the cast.
-
-LATITUDE
-^^^^^^^^^^^^^^
-
-=============== =========
-Units           None
-Format          F8.4
-Required        YES
-=============== =========
-
-The latitude in decimal degrees.
-Values are positive in the northern hemisphere, negative in the southern hemisphere.
-Must contain only numeric charicters and an ASCII hyphen (``-``) to indicate negative values.
-
-.. note::
-  Previous versions of the exchange format specification requried positions not reliable to the ten-thousandths place should be padded with zeros to conform to the format specification.
-  This changes the significant figures and is no longer reccomended, ALWAYS report data to the precision measured.
-  Implimenters of CTD exchange file readers should be able to handle any valid signed number in this field.
-
-LONGITUDE
-^^^^^^^^^^^^^^
-
-=============== =========
-Units           None
-Format          F8.4
-Required        YES
-=============== =========
-
-The longitude in decimal degrees.
-Values are positive in the eastern hemisphere, negative in the western hemisphere.
-Must contain only numeric charicters and an ASCII hyphen (``-``) to indicate negative values.
-
-DEPTH
-^^^^^^^^^^^^^^
-
-=============== =========
-Units           Meters
-Format          I4
-Required        No
-=============== =========
-
-The bottom depth in meters.
-The CCHDO preferrs corrected depths.
-Often there will be a comment field describing how the depth was calcualted.
-For example, "Depth is CTD_DEPTH + DISTANCE_ABOVE_BOTTOM at max pressure".
 
 .. _preferred order:
 
@@ -210,20 +101,19 @@ The preferred order after ``NUMBER_HEADERS`` is::
   LONGITUDE
   DEPTH
 
-Followed by any extra user submitted headers.
-  
 
 .. _example ctd data:
 
 Example CTD Data
 ----------------
-Here is an example of a complete exchange CTD file (though very short for a profile):
+Here is an example of a complete exchange CTD file (though a very shallow profile):
 
 .. code-block:: none
+  :linenos:
 
   CTD,20130709ODF
   # REPORTED CAST DEPTH IS CTD_DEPTH + DISTANCE_ABOVE_BOTTOM AT MAX PRESSURE
-  NUMBER_HEADERS = 11
+  NUMBER_HEADERS = 10
   EXPOCODE = 318M20130321
   SECT_ID = P02W
   STNNBR = 1
@@ -233,7 +123,6 @@ Here is an example of a complete exchange CTD file (though very short for a prof
   LATITUDE =  32.5068
   LONGITUDE =  133.0297
   DEPTH =   166
-  INSTRUMENT_ID = 796
   CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W
   DBAR,,ITS-90,,PSS-78,,UMOL/KG,
         2.0,2,  19.1840,2,  34.6935,2,    220.8,2
@@ -246,13 +135,13 @@ Here is an example of a complete exchange CTD file (though very short for a prof
        16.0,2,  19.2029,2,  34.6916,2,    220.6,2
   END_DATA
 
-Notice the stricture is:
+The structure is:
 
-1. :ref:`File Identification Stamp`
-2. :ref:`comment line(s)`
-3. :ref:`CTD Specific Headers` with the user defined ``INSTRUMENT_ID``
-4. :ref:`parameter and unit lines`
-5. Finally :ref:`data lines`.
+* Line 1: :ref:`File Identification Stamp`
+* Line 2: :ref:`comment line(s)`
+* Lines 3-12: :ref:`CTD Specific Headers`
+* Lines 13, 14: :ref:`parameter and unit lines`
+* Lines 15-23: :ref:`data lines`.
 
 .. _ctd zip archive:
 

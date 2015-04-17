@@ -3,7 +3,9 @@ import json
 with open("metadata/parameters.json", 'r') as f:
     params = json.load(f)
 
-output = '''Parameters
+output = '''.. _Parameters:
+
+Parameters
 ==========
 
 About Paramters
@@ -40,6 +42,8 @@ Provided with each paramter is a set of information in a table, the information 
 
 Common Parameters
 -----------------
+This section was generated automatically from a 
+:download:`machine readable list of paramters <metadata/parameters.json>`.
 
 .. hlist::
   :columns: 3
