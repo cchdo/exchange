@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2015-04-27
+----------
+* Define the structure of a ``_ct1.zip`` archive.
+
 2015-01-21
 ----------
 * Paramters no longer will have a print format, now will just have a data type

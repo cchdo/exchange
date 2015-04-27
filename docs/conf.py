@@ -193,13 +193,13 @@ latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
 #'papersize': 'letterpaper',
 'classoptions': ',openany,oneside',
-'babel': '\\usepackage[english]{babel}'
+'babel': '\\usepackage[english]{babel}',
 
 # The font size ('10pt', '11pt' or '12pt').
 #'pointsize': '10pt',
 
 # Additional stuff for the LaTeX preamble.
-#'preamble': '',
+'preamble': '\\usepackage{pdflscape}',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
