@@ -151,10 +151,44 @@ Since exchange CTD files only contain one profile, it is convient to package the
 The archve format exchange uses is zip, specifically PKZIP 2.0.
 The zip archive allows for a large varity of structure so it is nessessary to define the structure here.
 
-TODO: Confirm if documentation should be allowed in the zip archives, historicaly yes, but it might break JOA. It is easy to just say "only attempt to read the _ct1.csv files".
-
-WORKING DRAFT:
 Exchange CTD zip files MUST contain a flattened structure, that is, only files with no directory paths.
-The files within the zip should be in the same order in which the stations were done.
+The files within the zip SHOULD be in the same order in which the stations were done.
 Usually this means the filenames contain numerical information reguarding the station order.
-All the files within the zip MUST have the ``_ct1.csv`` file extention. (fix if documentation is allowed)
+All the files within the zip MUST have the ``_ct1.csv`` file extention.
+
+Here is an example a correct ctd exchange zip archive (the output of ``unzip -l``):
+
+.. code-block:: none
+
+  Archive:  33RO20131223_ct1.zip
+    Length     Date   Time    Name
+   --------    ----   ----    ----
+     401802  04-10-14 17:27   33RO20131223_00001_00002_ct1.csv
+     388950  04-10-14 17:27   33RO20131223_00002_00001_ct1.csv
+     385278  04-10-14 17:27   33RO20131223_00003_00002_ct1.csv
+     400573  04-10-14 17:27   33RO20131223_00004_00001_ct1.csv
+     395069  04-10-14 17:27   33RO20131223_00005_00002_ct1.csv
+   --------                   -------
+    1971672                   5 files
+
+Notice the lack of directory paths in the archive names, it is simply filenames.
+The following is an example of an incorrectly packaged archive, which has archive names containing directory structure (notice the ``/`` in the names):
+
+.. code-block:: none
+
+  Archive:  33RO20131223_ct1.zip
+    Length     Date   Time    Name
+   --------    ----   ----    ----
+     401802  04-10-14 17:27   33RO20131223_ct1/33RO20131223_00001_00002_ct1.csv
+     388950  04-10-14 17:27   33RO20131223_ct1/33RO20131223_00002_00001_ct1.csv
+     385278  04-10-14 17:27   33RO20131223_ct1/33RO20131223_00003_00002_ct1.csv
+     400573  04-10-14 17:27   33RO20131223_ct1/33RO20131223_00004_00001_ct1.csv
+     395069  04-10-14 17:27   33RO20131223_ct1/33RO20131223_00005_00002_ct1.csv
+   --------                   -------
+    1971672                   5 files
+
+
+
+.. note::
+  Currently, the bahavior when other files or directories are present is undefined.
+  The reccomended bahavior when encountering directories or other (non _ct1.csv) files is to ignore the extra files while warning the user of their presence.
