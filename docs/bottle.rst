@@ -1,10 +1,87 @@
 Bottle Specific
 ===============
+Exchange Bottle files follow all the common format specifications for their strucutre.
+The :ref:`File Identification Stamp` of an exchange bottle file starts with ``BOTTLE``.
+Each :ref:`data line <data lines>` in an exchange bottle file represents a single bottle closure.
+
+In bottle files, specific paramters are REQUIRED to be present and have non fill values.
 
 .. _bottle required headers:
 
 Required Bottle Parameters
 --------------------------
+
+The following paramters are REQUIRED to be present in exchange bottle files where the paramter name occurs witin the :ref:`parameter and unit lines` and their values be present in the :ref:`data lines`.
+
+* :ref:`EXPOCODE`
+* :ref:`STNNBR`
+* :ref:`CASTNO`
+* :ref:`DATE`
+* :ref:`LATITUDE`
+* :ref:`LONGITUDE`
+* :ref:`CTDPRS (DBAR)`
+
+At least one or both of the following paramters MUST be present:
+
+* :ref:`BTLNBR`
+* :ref:`SAMPNO`
+
+
+Unique Line Identification
+--------------------------
+
+Since each :ref:`data line <data lines>` of an exchange bottle file represents a single bottle closure, enough information must be present on each line to uniquiely identify closure event.
+This is to allow the integration of all the measurements of samples taken from that bottle at a later time.
+The identification is done by requireing a combination of values from specific paramters to be unique throughout the file.
+
+The following combination of paramters must have unique values:
+
+* :ref:`EXPOCODE`
+* :ref:`STNNBR`
+* :ref:`CASTNO`
+* :ref:`BTLNBR`
+
+or
+
+* :ref:`EXPOCODE`
+* :ref:`STNNBR`
+* :ref:`CASTNO`
+* :ref:`SAMPNO`
+
+Unique Line Identification Examples
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In these examples, the long paramter, unit, and data lines truncated by ``[...]``.
+
+The following example exchange bottle data is all from the same cruise
+indicated by the expocode: ``33RO20131223``, the same station: ``1``, the same cast ``2``, but the bottle number and sample numbers
+differ (``24`` and ``23``).
+
+.. code-block:: none
+  :linenos:
+
+    BOTTLE,20150327CCHSIORJL
+    # From submitted file a16s_2013_final_discrete_o2.csv: 
+    # Merged parameters: OXYGEN_FLAG_W
+    EXPOCODE,STNNBR,CASTNO,SAMPNO,BTLNBR[...]
+    ,,,,[...]
+    33RO20131223,       1,          2,         24,         24[...]
+    33RO20131223,       1,          2,         23,         23[...]
+    END_DATA
+
+The following example shows an example of duplicated unique identification paramter values.
+More than one line contains the exact same values for :ref:`EXPOCODE`, :ref:`STNNBR`, :ref:`CASTNO`, :ref:`BTLNBR`, and :ref:`SAMPNO`.
+
+.. code-block:: none
+  :linenos:
+
+    BOTTLE,20150327CCHSIORJL
+    # From submitted file a16s_2013_final_discrete_o2.csv: 
+    # Merged parameters: OXYGEN_FLAG_W
+    EXPOCODE,STNNBR,CASTNO,SAMPNO,BTLNBR[...]
+    ,,,,[...]
+    33RO20131223,       1,          2,         24,         24[...]
+    33RO20131223,       1,          2,         24,         24[...]
+    END_DATA
 
 .. _example bottle data:
 
@@ -102,7 +179,8 @@ Example Bottle Data
 
 .. only:: html
 
-  .. code::
+  .. code-block:: none
+    :linenos:
   
     BOTTLE,20150327CCHSIORJL
     # From submitted file a16s_2013_final_discrete_o2.csv: 
@@ -115,3 +193,10 @@ Example Bottle Data
     33RO20131223,       A16S,       1,          2,         21,         21,2,20131226,       0700,    -6.0016,   -24.9998,       5809,    72.1,  26.2112,  36.3044,2,  36.3055,2,    200.6,2,     201,2
     33RO20131223,       A16S,       1,          2,         20,         20,2,20131226,       0658,    -6.0016,   -24.9998,       5809,    97.5,  24.2160,  36.1165,2,  36.1258,2,    193.2,2,   190.1,2
     END_DATA
+
+The basic strucutre is:
+
+* Line 1: :ref:`File Identification Stamp` starting with ``BOTTLE``
+* Line 2, 3: :ref:`comment line(s)`
+* Lines 3, 4: :ref:`parameter and unit lines`
+* Lines 6-11: :ref:`data lines`.
