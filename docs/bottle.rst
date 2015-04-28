@@ -4,6 +4,8 @@ Exchange Bottle files follow all the common format specifications for their stru
 The :ref:`File Identification Stamp` of an exchange bottle file starts with ``BOTTLE``.
 Each :ref:`data line <data lines>` in an exchange bottle file represents a single bottle closure.
 
+When ctd paramters are encountered within exchange bottle files (e.g. :ref:`CTDPRS (DBAR)`) they represent the corrected values being read by the CTD at the time of bottle closure, usually averaged over some interval.
+
 In bottle files, specific paramters are REQUIRED to be present and have non fill values.
 
 .. _bottle required headers:
