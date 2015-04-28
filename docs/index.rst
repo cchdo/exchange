@@ -21,6 +21,5 @@ __ http://geo.hdo.ucsd.edu/documentation/WHP_Exchange_Description.pdf
    ctd
    quality
    parameters
-   extended
    changelog
    :maxdepth: 2
