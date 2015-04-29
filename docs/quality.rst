@@ -19,7 +19,7 @@ For example, the quality column for the paramter :ref:`CTDOXY (UMOL/KG)` would b
 
 The meaning of the flags is determined by the type of measurement it is.
 Bottles have `Bottle Quality Codes`_, measurements from CTD based instruments use the `CTD Quality Codes`_, and discrete measurements from bottle use the `Water Quality Codes`_.
-The quality codes to use for any specific paramter is also :ref:`listed with each paramter <Paramters>` in the paramters section.
+The quality codes to use for any specific paramter is also :ref:`listed with each paramter <Parameters>` in the paramters section.
 
 All quality flag codes are single digit integers.
 
