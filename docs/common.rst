@@ -2,7 +2,7 @@ Common Format Features
 ======================
 Certain format specifications are shared between the bottle and CTD WHP-exchange files.
 All WHP-exchange text files must be UTF-8 encoded.
-Unix style line endings (LF) are preferred, DOS line endings (CR+LF) are acceptable, other line endings should be avoided.
+Unix style line endings (U+000A [LF]) are preferred, DOS line endings (CR+LF) are acceptable, other line endings should be avoided.
 
 .. note::
   UTF-8 was chosen as the encoding for WHP-Exchange files because it is backwards compatable with ASCII.
@@ -23,7 +23,7 @@ For both CTD and Bottle files the first rows must be the following and in the pr
 
 File Identification Stamp
 ---------------------------------
-The first line of a WHP-exchange file contains the file identifier and a creation stamp seperated by a comma.
+The first line of a WHP-exchange file contains the file identifier and a creation stamp seperated by a comma (U+002C).
 The file itendifier will be either ``BOTTLE`` in the case of water samples or ``CTD`` in the case of a CTD profile.
 The creation stamp contains information on when the file was created and who created it.
 
@@ -48,7 +48,7 @@ The creation stamp contians the following information:
 3) 20140716CCH\ **SIO**\ SCD: The instituion that the group is associated with, typically three charicters.
    The CCHDO is locaded at the Scripps Instituion of Oceanography, thus SIO is used.
 4) 20140716CCHSIO\ **SCD**: The initials of the person who wrote the file, typically three charicters.
-   Use only ASCII for the initials. In this example, SCD.
+   Use only code points U+0041 to U+005A and for the initials. In this example, SCD.
 
 .. warning::
   Do not rely on the creation stamp to be the same legnth in every WHP-exchange file.
@@ -59,7 +59,7 @@ The creation stamp contians the following information:
 Optional Comment Lines
 ----------------------
 After the `File Identification Stamp`_ any number of comment line, including none may appear.
-Comment lines start with a hash or pound sign: ``#``.
+Comment lines start with a hash or pound sign: U+0023 (``#``) .
 Comment lines typically contain information about the file history and will often contain data citation information.
 
 An example::
@@ -78,8 +78,8 @@ An example of the begining of a file, including the `File Identification Stamp`_
   This is a convention often used by the CCHDO to record when changes were made to files
 
 .. warning::
-  Comments may contain non-ASCII charicters, especially in proper names that may be present with data citation information.
-  If writing your own WHP-exchange reader, ensure that it can handle non-ASCII UTF-8 charicters or have it skip comment lines without trying to read them.
+  Comments may contain UTF-8 encoded code points above U+007F, especially in proper names that may be present with data citation information.
+  If writing your own WHP-exchange reader, ensure that it can handle code points above U+007F or have it skip comment lines without trying to read them.
 
 .. _parameter and unit lines:
 
@@ -92,16 +92,16 @@ Parameter and Unit Lines
 After any format specific headers, the parameter and unit lines are next.
 The parameter names are first, units are second.
 
-Parameter names are comma (``,``) seperated values that define the columns the exchange file will contain.
+Parameter names are comma (U+002C [``,``]) seperated values that define the columns the exchange file will contain.
 The names must be unique, capitalized, contain no empty fields, and not end with a trailing comma.
-The parameter names must contain only ASCII letters, numbers, and symbols with the exception of a comma.
+The parameter names must contain only UTF-8 encoded code points in the range U+0021 to U+007E except a comma (U+002C).
 A trailing comma, or a comma that occurs at the end of the line with nothing else after it, MUST NOT be included on the parameter line.
 Certain parameter names, or parameter combinations, are required to be present.
 See the respective sections on :ref:`bottle required headers` and :ref:`CTD required headers` for information specific to each format.
 
 The unit line contains information for the units of each parameter listed in the parameter line.
 The unit line, like the paramters, are comma seperated values.
-Like the parameter names, units must contain only ASCII letters, numbers, and symbols with the exception of a comma.
+Like the parameter names, units must contain only UTF-8 encoded code points in the range U+0021 to U+007E except a comma (U+002C).
 A trailing comma MUST NOT be included in the unit line.
 Units may contain empty fields if the parameter has no units.
 Units for a paramter must be in the same column as that paramter, essentialy, the sname number of commas occur before the parameter name and its unit.
@@ -118,7 +118,7 @@ The parameter and unit lines of a CTD file might look like this::
 
 Note the presence of quality flag column (suffixed with ``_FLAG_W``) which has the corrisponding units of nothing denoted by two commas next to each other.
 For more information on quality flags, see the :ref:`Quality Codes` section.
-White space has no meaning in the exchange format and can be included for purly asthetic reasons.
+White space MUST have no meaning in the exchange format so it may be included for purly asthetic reasons.
 The parameter and units could very easially have looked like::
 
   CTDPRS, CTDPRS_FLAG_W, CTDTMP, CTDSAL, CTDOXY
@@ -127,7 +127,7 @@ The parameter and units could very easially have looked like::
 .. note::
   Some technical details for formatting the whitespace.
 
-  While not strictly requiered, parameter, units, and data lines may contain white space matching the length of the print format of the paramter.
+  While not strictly requiered, parameter, units, and data lines may contain whitespace matching the length of the print format of the paramter.
   This is a convention followed by the CCHDO to ease reading of files by humans.
   Quality flag columns usually have a 1 charicter width which will often cause the parameter/units and data to not be aligned into pretty columns.
 
@@ -136,20 +136,20 @@ The parameter and units could very easially have looked like::
 Data Lines
 ----------
 The data lines occur directly after the unit line.
-Each line of data contains comma (``,``) seperated values of related data.
-Each data point of the data line may contain any combination of ASCII letter, numbers, and symbols with the exception of a comma.
+Each line of data contains comma (U+002C [``,``]) seperated values of related data.
+Each data point of the data line may contain any combination of charicters from U+0020 to U+007F except a comma (U+002C).
 Like the `Parameter and Unit Lines`_, a trailing comma MUST NOT be included at the end of each line.
 Data points for each parameter of the `Parameter and Unit Lines`_ must be in the same column as that paratemer, i.e. the same number of commas occur before the parameter label and the datum.
 
 Numeric data which occurs on the data lines MUST only contain numbers, spaces, an optional decimal marker, and an optional negative sign.
-All whitespace within numerical data is ignored and has no meaning.
+All whitespace within data lines has no symantic meaning.
 Integers may be represented as bare numerals with no decimal marker.
-All real numeric data (i.e. data that are real numbers) MUST be decimal and MUST represent their decimal mark using an ASCII period (``.``).
-For both negative real numbers and integers, prepend an ASCII hyphen (``-``) to the numeric portion, positive real numbers MUST not be prefixed by a plus sign (``+``).
+All real numeric data (i.e. data that are real numbers) MUST be decimal and MUST represent their decimal mark using a period (U+002E [``.``]).
+For both negative real numbers and integers, prepend a hyphen (U+002D [``-``]) to the numeric portion, positive real numbers MUST not be prefixed by a plus sign (U+002B [``+``]).
 
 The validity of each datum is determined by the parameter column in which it occurs.
 For example, the `EXPOCODE` column may contain any combination of letter, numbers, or symbols (except a comma).
-A `CTDPRS` column may only contain real decimal numbers using an ASCII period (``.``) as the decimal mark.
+A `CTDPRS` column may only contain real decimal numbers (U+0030 to U+0039) using a period (U+002E [``.``]) as the decimal mark.
 
 .. note::
   Parameters may have a different precision depending on how the measurement was made.
@@ -159,6 +159,10 @@ A `CTDPRS` column may only contain real decimal numbers using an ASCII period (`
   For these and other reasons, a mix of precisions may occur in a column of data.
   
   Always report the precision as measured.
+
+.. warning::
+  The exchange format currently has no support for quoted strings within the parameter, unit, and data lines.
+  This means it is not possible for any meaningful whitespace to be included.
 
 After all datalines, the end of the data is indicated by a line containing only ``END_DATA``.
 Here is a short example of what exchange data might look like::
