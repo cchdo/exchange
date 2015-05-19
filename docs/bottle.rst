@@ -4,16 +4,16 @@ Exchange Bottle files follow all the common format specifications for their stru
 The :ref:`File Identification Stamp` of an exchange bottle file starts with ``BOTTLE``.
 Each :ref:`data line <data lines>` in an exchange bottle file represents a single bottle closure.
 
-When ctd paramters are encountered within exchange bottle files (e.g. :ref:`CTDPRS (DBAR)`) they represent the corrected values being read by the CTD at the time of bottle closure, usually averaged over some interval.
+When ctd parameters are encountered within exchange bottle files (e.g. :ref:`CTDPRS (DBAR)`) they represent the corrected values being read by the CTD at the time of bottle closure, usually averaged over some interval.
 
-In bottle files, specific paramters are REQUIRED to be present and have non fill values.
+In bottle files, specific parameters are REQUIRED to be present and have non fill values.
 
 .. _bottle required headers:
 
 Required Bottle Parameters
 --------------------------
 
-The following paramters are REQUIRED to be present in exchange bottle files where the paramter name occurs witin the :ref:`parameter and unit lines` and their values be present in the :ref:`data lines`.
+The following parameters are REQUIRED to be present in exchange bottle files where the parameter name occurs witin the :ref:`parameter and unit lines` and their values be present in the :ref:`data lines`.
 
 * :ref:`EXPOCODE`
 * :ref:`STNNBR`
@@ -23,7 +23,7 @@ The following paramters are REQUIRED to be present in exchange bottle files wher
 * :ref:`LONGITUDE`
 * :ref:`CTDPRS (DBAR)`
 
-At least one or both of the following paramters MUST be present:
+At least one or both of the following parameters MUST be present:
 
 * :ref:`BTLNBR`
 * :ref:`SAMPNO`
@@ -34,9 +34,9 @@ Unique Line Identification
 
 Since each :ref:`data line <data lines>` of an exchange bottle file represents a single bottle closure, enough information must be present on each line to uniquiely identify closure event.
 This is to allow the integration of all the measurements of samples taken from that bottle at a later time.
-The identification is done by requireing a combination of values from specific paramters to be unique throughout the file.
+The identification is done by requireing a combination of values from specific parameters to be unique throughout the file.
 
-The following combination of paramters must have unique values:
+The following combination of parameters must have unique values:
 
 * :ref:`EXPOCODE`
 * :ref:`STNNBR`
@@ -52,7 +52,7 @@ or
 
 Unique Line Identification Examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-In these examples, the long paramter, unit, and data lines truncated by ``[...]``.
+In these examples, the long parameter, unit, and data lines truncated by ``[...]``.
 
 The following example exchange bottle data is all from the same cruise
 indicated by the expocode: ``33RO20131223``, the same station: ``1``, the same cast ``2``, but the bottle number and sample numbers
@@ -70,7 +70,7 @@ differ (``24`` and ``23``).
     33RO20131223,       1,          2,         23,         23[...]
     END_DATA
 
-The following example shows an example of duplicated unique identification paramter values.
+The following example shows an example of duplicated unique identification parameter values.
 More than one line contains the exact same values for :ref:`EXPOCODE`, :ref:`STNNBR`, :ref:`CASTNO`, :ref:`BTLNBR`, and :ref:`SAMPNO`.
 
 .. code-block:: none

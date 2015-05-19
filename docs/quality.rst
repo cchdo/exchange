@@ -3,23 +3,23 @@
 Quality Codes
 =============
 
-Most paramters may also have an associated column of numeric quality flags.
-Quality flag columns appear as a normal paramter in the :ref:`parameter and unit lines`, they MUST NOT have any associated units.
-The quality flag paramter name are constructed and require parsing to determine which parmater they need to be associated with.
+Most parameters may also have an associated column of numeric quality flags.
+Quality flag columns appear as a normal parameter in the :ref:`parameter and unit lines`, they MUST NOT have any associated units.
+The quality flag parameter name are constructed and require parsing to determine which parmater they need to be associated with.
 
-The basic formula for constructing a quality flag paramter name is:
+The basic formula for constructing a quality flag parameter name is:
 
   .. code::
     
     <PARAMETER_NAME>_FLAG_W
 
-where ``<PARAMETER_NAME>`` is the paramter for which the quality flags are for.
+where ``<PARAMETER_NAME>`` is the parameter for which the quality flags are for.
 
-For example, the quality column for the paramter :ref:`CTDOXY (UMOL/KG)` would be ``CTDOXY_FLAG_W``.
+For example, the quality column for the parameter :ref:`CTDOXY (UMOL/KG)` would be ``CTDOXY_FLAG_W``.
 
 The meaning of the flags is determined by the type of measurement it is.
 Bottles have `Bottle Quality Codes`_, measurements from CTD based instruments use the `CTD Quality Codes`_, and discrete measurements from bottle use the `Water Quality Codes`_.
-The quality codes to use for any specific paramter is also :ref:`listed with each paramter <Parameters>` in the paramters section.
+The quality codes to use for any specific parameter is also :ref:`listed with each parameter <Parameters>` in the parameters section.
 
 All quality flag codes are single digit integers.
 

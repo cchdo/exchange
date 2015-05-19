@@ -100,7 +100,7 @@ Certain parameter names, or parameter combinations, are required to be present.
 See the respective sections on :ref:`bottle required headers` and :ref:`CTD required headers` for information specific to each format.
 
 The unit line contains information for the units of each parameter listed in the parameter line.
-The unit line, like the paramters, are comma seperated values.
+The unit line, like the parameters, are comma seperated values.
 Like the parameter names, units must contain only UTF-8 encoded code points in the range U+0021 to U+007E except a comma (U+002C).
 A trailing comma MUST NOT be included in the unit line.
 Units may contain empty fields if the parameter has no units.

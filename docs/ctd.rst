@@ -14,7 +14,7 @@ These headers follow the basic form::
 
   PARAM = VALUE
 
-Where the ``PARAM`` is some paramter name (e.g. ``DEPTH``) and the ``VALUE`` is the value for that paramter (e.g. ``4523``).
+Where the ``PARAM`` is some parameter name (e.g. ``DEPTH``) and the ``VALUE`` is the value for that parameter (e.g. ``4523``).
 Each param-value pair ends end with a line-ending charicter.
 Here is an example of a complete set of CTD headers (note that we have included line numbers, these are not part of the header):
 
@@ -32,7 +32,7 @@ Here is an example of a complete set of CTD headers (note that we have included 
   LONGITUDE =  133.0297
   DEPTH =   166
 
-Notice three things: the special ``NUMBER_HEADERS`` paramter, the paramter names are all caps, and none of the paramters have units.
+Notice three things: the special ``NUMBER_HEADERS`` parameter, the parameter names are all caps, and none of the parameters have units.
 
 The units for each parameter are defined by convention rather than explicitly stated in each file, see the :ref:`CTD required headers` for information on which headers are required.
 
@@ -53,7 +53,7 @@ The following CTD headers are REQUIRED, see the :ref:`Parameters` section for th
 * :ref:`LONGITUDE`
 
 .. note::
-  :ref:`TIME` is not a required paramter, this is not an omission from the list above.
+  :ref:`TIME` is not a required parameter, this is not an omission from the list above.
 
 .. warning::
   There is no support for including units in the CTD headers it is not reccomended that any parameters which could have multiple units be included in the CTD headers.
@@ -64,7 +64,7 @@ The following CTD headers are REQUIRED, see the :ref:`Parameters` section for th
 NUMBER_HEADERS
 ^^^^^^^^^^^^^^
 
-The ``NUMBER_HEADERS`` paramter is an integer describing how many lines the headers will be before the paramter and unit lines.
+The ``NUMBER_HEADERS`` parameter is an integer describing how many lines the headers will be before the parameter and unit lines.
 The value of ``NUMBER_HEADERS`` includes itself it is REQUIRED and MUST be the first line after any :ref:`comment line(s)`.
 
 .. warning::
@@ -88,7 +88,7 @@ The following CTD headers are optional, but encountered frequently within ctd ex
 Preferred Header Order
 -----------------------
 The only header which must come first is ``NUMBER_HEADERS``.
-Other header paramters may come in any order, however, there is a preferred order.
+Other header parameters may come in any order, however, there is a preferred order.
 The preferred order after ``NUMBER_HEADERS`` is::
 
   EXPOCODE
