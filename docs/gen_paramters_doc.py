@@ -16,7 +16,7 @@ Provided here is a description of many common parameters encountered in exchange
 .. warning::
   This list may not contain every parameter which may be encountered in an exchange file.
   CCHDO is working on providing a machine readable list of ALL parameters which may be encountered in all files.
-  This list will include parameters which CCHDO lacks a descirption for (known unknown parmaters).
+  This list will include parameters which CCHDO lacks a descirption for (known unknown parameters).
   When this list becomes available, we intend to tie the generation of this parameter list with the machine readable list of parameters.
 
   Until that time, parameters may appear in exchange formats from the CCHDO which are not documented here.

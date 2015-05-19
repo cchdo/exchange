@@ -5,7 +5,7 @@ Quality Codes
 
 Most parameters may also have an associated column of numeric quality flags.
 Quality flag columns appear as a normal parameter in the :ref:`parameter and unit lines`, they MUST NOT have any associated units.
-The quality flag parameter name are constructed and require parsing to determine which parmater they need to be associated with.
+The quality flag parameter name are constructed and require parsing to determine which parameter they need to be associated with.
 
 The basic formula for constructing a quality flag parameter name is:
 
