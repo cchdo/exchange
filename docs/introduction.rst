@@ -55,7 +55,7 @@ For example, the capital letter A is the 65th letter in unicode, usually written
 In the standard way of writing code points, this would be written as U+0041.
 You may notice that the unicode point for the calital letter A is the same as in ASCII, this feature was exploited to create the most common text encoding on the internet, UTF-8.
 
-Charicter encodings were created to represent, in binary, all the code points allowed within unicode.
+Character encodings were created to represent, in binary, all the code points allowed within unicode.
 One encoding in particular has become the dominant one for text on the internet [#f1]_, UTF-8.
 UTF-8 is a variable length encoding, meaning a character can take anywhere from 1 to 6 bytes to represent.
 In UTF-8 the first 127 characters of unicode are encoded with only byte.
@@ -65,7 +65,7 @@ This allows forward compatability of ASCII with UTF-8, and if containing only co
 Unicode Representation in this Document
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Charicters in this document will be defined as unicode points in the format U+#### where the # symbols are hexidecimal numbers.
+Character in this document will be defined as unicode points in the format U+#### where the # symbols are hexidecimal numbers.
 Since exchange files are defined to be UTF-8 encoded, this unambigiously specifies the exact bits which must occur in a file.
 
 .. [#f1] As of March 2015, 83.7% of the text on the internet is encoded with UTF-8.
