@@ -32,7 +32,7 @@ Provided with each parameter is a set of information in a table, the information
 * Data Type: 
     Specifies the allowed type of data in the data records for this parameter.
     There are three types of data, string (str), integers (int), and decimal.
-    String data types may be any printing charicter except a comma ``,`` which is the field seperator.
+    String data types may be any printing character except a comma ``,`` which is the field seperator.
     Integer data types may only contain numbers without a decimal point, quality flags are usually integers.
     Decimal data types may be any real number (including an integer) and may include decimal point, the precision is not specified.
 * Quality Flags: 

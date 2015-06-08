@@ -43,11 +43,11 @@ A CTD file identifier will look like::
 The creation stamp contians the following information:
 
 1) **20140716**\ CCHSIOSCD: A date stamp in the from of YYYYMMDD (ISO 8601)
-2) 20140716\ **CCH**\ SIOSCD: The division (or group) of the instituion that wrote the file, typically three charicters.
+2) 20140716\ **CCH**\ SIOSCD: The division (or group) of the instituion that wrote the file, typically three characters.
    The CCHDO uses CCH as the division.
-3) 20140716CCH\ **SIO**\ SCD: The instituion that the group is associated with, typically three charicters.
+3) 20140716CCH\ **SIO**\ SCD: The instituion that the group is associated with, typically three characters.
    The CCHDO is locaded at the Scripps Instituion of Oceanography, thus SIO is used.
-4) 20140716CCHSIO\ **SCD**: The initials of the person who wrote the file, typically three charicters.
+4) 20140716CCHSIO\ **SCD**: The initials of the person who wrote the file, typically three characters.
    Use only code points U+0041 to U+005A and for the initials. In this example, SCD.
 
 .. warning::
@@ -129,7 +129,7 @@ The parameter and units could very easially have looked like::
 
   While not strictly requiered, parameter, units, and data lines may contain whitespace matching the length of the print format of the paramter.
   This is a convention followed by the CCHDO to ease reading of files by humans.
-  Quality flag columns usually have a 1 charicter width which will often cause the parameter/units and data to not be aligned into pretty columns.
+  Quality flag columns usually have a 1 character width which will often cause the parameter/units and data to not be aligned into pretty columns.
 
 .. _data lines:
 
@@ -137,7 +137,7 @@ Data Lines
 ----------
 The data lines occur directly after the unit line.
 Each line of data contains comma (U+002C [``,``]) seperated values of related data.
-Each data point of the data line may contain any combination of charicters from U+0020 to U+007F except a comma (U+002C).
+Each data point of the data line may contain any combination of characters from U+0020 to U+007F except a comma (U+002C).
 Like the `Parameter and Unit Lines`_, a trailing comma MUST NOT be included at the end of each line.
 Data points for each parameter of the `Parameter and Unit Lines`_ must be in the same column as that paratemer, i.e. the same number of commas occur before the parameter label and the datum.
 
