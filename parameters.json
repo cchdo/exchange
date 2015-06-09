@@ -211,6 +211,21 @@
       "whp_tier": "primary"
     },
     {
+      "whp_name":"CTDTMP", 
+      "whp_unit":"IPTS-68", 
+      "flag_w":"IGOSS", 
+      "cf_name":null, 
+      "udunits":"", 
+      "data_type":"decimal", 
+      "numeric_min": -2.0,
+      "numeric_max": 35.0,
+      "string_format": "%8.4f",
+      "description":"", 
+      "note":"", 
+      "warning":"",
+      "whp_tier": "primary"
+    },
+    {
       "whp_name": "CTDSAL", 
       "whp_unit": "PSS-78", 
       "flag_w": "woce_ctd", 
