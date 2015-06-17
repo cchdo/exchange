@@ -27,8 +27,8 @@ The following descriptions of each quality code is taken from the WOCE manual.
 
 .. _Bottle Quality Codes:
 
-Bottle Quality Codes
---------------------
+WOCE Bottle Quality Codes
+-------------------------
 
 1
   Bottle information unavailable.
@@ -51,8 +51,8 @@ Bottle Quality Codes
 
 .. _Water Quality Codes:
 
-Water Sample Quality Codes
---------------------------
+WOCE Water Sample Quality Codes
+-------------------------------
 
 1
   Sample for this measurement was drawn from water bottle but analysis not received. 
@@ -78,8 +78,8 @@ Water Sample Quality Codes
 
 .. _CTD Quality Codes:
 
-CTD Quality Codes
------------------
+WOCE CTD Quality Codes
+----------------------
 
 1             
   Not calibrated.

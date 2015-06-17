@@ -77,14 +77,14 @@ for param in params['parameters']:
 
     units_label = "Units"
     data_label = "Data Type"
-    quality_label = "Quality Flags"
+    quality_label = "{}_FLAG_W Definitions".format(param['whp_name'])
 
     if quality_flags == "woce_ctd":
-        quality_flags = ":ref:`woce_ctd <CTD Quality Codes>`"
+        quality_flags = ":ref:`CTD Quality Codes`"
     if quality_flags == "woce_discrete":
-        quality_flags = ":ref:`woce_discrete <Water Quality Codes>`"
+        quality_flags = ":ref:`Water Quality Codes`"
     if quality_flags == "woce_bottle":
-        quality_flags = ":ref:`woce_bottle <Bottle Quality Codes>`"
+        quality_flags = ":ref:`Bottle Quality Codes`"
 
     first_col = max(len(units_label), len(data_label), len(quality_label))
     second_col = max(len(unit), len(data_type), len(quality_flags))
@@ -94,12 +94,20 @@ for param in params['parameters']:
     output += "=" * first_col + ' ' + "=" * second_col + '\n'
     output += units_label.ljust(first_col) + ' ' + unit + '\n'
     output += data_label.ljust(first_col) + ' ' + data_type + '\n'
-    output += quality_label.ljust(first_col) + ' ' + quality_flags + '\n'
+    if quality_flags != "None":
+        output += quality_label.ljust(first_col) + ' ' + quality_flags + '\n'
     output += "=" * first_col + ' ' + "=" * second_col + '\n'
 
     output += """
 {0}
 """.format(param['description'])
+    if quality_flags == "None":
+        output += ("\n.. warning::\n"
+                   "  ``{name}`` does not have woce quality codes."
+                   "  ``{name}_FLAG_W`` should not appear in data file"
+                   "  :ref:`parameter and unit lines`.\n").format(
+                name=param["whp_name"]
+                )
     if param['note'] != "":
         output += """\n.. note::\n"""
         for line in param['note'].split("\n"):
