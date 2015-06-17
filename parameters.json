@@ -213,7 +213,7 @@
     {
       "whp_name":"CTDTMP", 
       "whp_unit":"IPTS-68", 
-      "flag_w":"IGOSS", 
+      "flag_w":"woce_ctd", 
       "cf_name":null, 
       "udunits":"", 
       "data_type":"decimal", 
