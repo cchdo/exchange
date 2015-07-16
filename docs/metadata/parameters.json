@@ -1021,6 +1021,21 @@
       "whp_tier": "secondary"
     }, 
     {
+      "whp_name": "PAR", 
+      "whp_unit": "", 
+      "flag_w": "woce_ctd", 
+      "cf_name": null, 
+      "udunits": "", 
+      "data_type": "decimal", 
+      "numeric_min": null, 
+      "numeric_max": null, 
+      "string_format": "%8.3f", 
+      "description": "PAR/Irradiance, Biospherical/Licor", 
+      "note": "From SBE .cnv files, no units ", 
+      "warning": "", 
+      "whp_tier": "secondary"
+    }, 
+    {
       "whp_name": "I-129", 
       "whp_unit": "", 
       "flag_w": "woce_discrete", 
