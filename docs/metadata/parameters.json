@@ -1598,7 +1598,7 @@
       "whp_unit": "MG/M^3", 
       "string_format": "%9.3f", 
       "flag_w": "woce_discrete", 
-      "whp_name": "FUCO", 
+      "whp_name": "HFUCO", 
       "whp_tier": "tertiary", 
       "note": "", 
       "numeric_max": null, 
