@@ -1,8 +1,8 @@
 Common Format Features
 ======================
 Certain format specifications are shared between the bottle and CTD WHP-exchange files.
-All WHP-exchange text files must be UTF-8 encoded.
-Unix style line endings (U+000A [LF]) are preferred, DOS line endings (CR+LF) are acceptable, other line endings should be avoided.
+All WHP-exchange text files MUST be UTF-8 encoded.
+Unix style line endings (U+000A [LF]) SHOULD be used, DOS line endings (CR+LF) MAY be used, other line endings SHOULD NOT be used.
 
 .. note::
   UTF-8 was chosen as the encoding for WHP-Exchange files because it is backwards compatable with ASCII.
@@ -23,7 +23,7 @@ For both CTD and Bottle files the first rows must be the following and in the pr
 
 File Identification Stamp
 ---------------------------------
-The first line of a WHP-exchange file contains the file identifier and a creation stamp seperated by a comma (U+002C).
+The first line of a WHP-exchange file contains the file identifier and a creation stamp seperated by a :unicode_info:`,`.
 The file itendifier will be either ``BOTTLE`` in the case of water samples or ``CTD`` in the case of a CTD profile.
 The creation stamp contains information on when the file was created and who created it.
 
@@ -59,7 +59,7 @@ The creation stamp contians the following information:
 Optional Comment Lines
 ----------------------
 After the `File Identification Stamp`_ any number of comment line, including none may appear.
-Comment lines start with a hash or pound sign: U+0023 (``#``) .
+Comment lines start with a :unicode_info:`#`.
 Comment lines typically contain information about the file history and will often contain data citation information.
 
 An example::
@@ -92,9 +92,9 @@ Parameter and Unit Lines
 After any format specific headers, the parameter and unit lines are next.
 The parameter names are first, units are second.
 
-Parameter names are comma (U+002C [``,``]) seperated values that define the columns the exchange file will contain.
+Parameter names are :unicode_info:`,` seperated values that define the columns the exchange file will contain.
 The names must be unique, capitalized, contain no empty fields, and not end with a trailing comma.
-The parameter names must contain only UTF-8 encoded code points in the range U+0021 to U+007E except a comma (U+002C).
+The parameter names must contain only UTF-8 encoded code points in the range U+0021 to U+007E except a :unicode_info:`,`.
 A trailing comma, or a comma that occurs at the end of the line with nothing else after it, MUST NOT be included on the parameter line.
 Certain parameter names, or parameter combinations, are required to be present.
 See the respective sections on :ref:`bottle required headers` and :ref:`CTD required headers` for information specific to each format.
@@ -158,7 +158,7 @@ A `CTDPRS` column may only contain real decimal numbers (U+0030 to U+0039) using
   Newer software allows the CCHDO to keep the precision as reported, both less and more precise.
   For these and other reasons, a mix of precisions may occur in a column of data.
   
-  Always report the precision as measured.
+  **Always report the precision as measured.**
 
 .. warning::
   The exchange format currently has no support for quoted strings within the parameter, unit, and data lines.
