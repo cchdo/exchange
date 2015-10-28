@@ -2,7 +2,7 @@ Common Format Features
 ======================
 Certain format specifications are shared between the bottle and CTD WHP-exchange files.
 All WHP-exchange text files MUST be UTF-8 encoded.
-Unix style line endings (U+000A [LF]) SHOULD be used, DOS line endings (CR+LF) MAY be used, other line endings SHOULD NOT be used.
+Unix style line endings, LINE FEED (U+000A), SHOULD be used, DOS line endings, CARRIAGE RETURN (U+000D) followed by LINE FEED (U+000A), MAY be used, other line endings SHOULD NOT be used.
 
 .. note::
   UTF-8 was chosen as the encoding for WHP-Exchange files because it is backwards compatable with ASCII.
@@ -94,14 +94,14 @@ The parameter names are first, units are second.
 
 Parameter names are :unicode_info:`,` seperated values that define the columns the exchange file will contain.
 The names must be unique, capitalized, contain no empty fields, and not end with a trailing comma.
-The parameter names must contain only UTF-8 encoded code points in the range U+0021 to U+007E except a :unicode_info:`,`.
+The parameter names must contain only code points in the range U+0021 to U+007E except a :unicode_info:`,`.
 A trailing comma, or a comma that occurs at the end of the line with nothing else after it, MUST NOT be included on the parameter line.
 Certain parameter names, or parameter combinations, are required to be present.
 See the respective sections on :ref:`bottle required headers` and :ref:`CTD required headers` for information specific to each format.
 
 The unit line contains information for the units of each parameter listed in the parameter line.
 The unit line, like the parameters, are comma seperated values.
-Like the parameter names, units must contain only UTF-8 encoded code points in the range U+0021 to U+007E except a comma (U+002C).
+Like the parameter names, units must contain only code points in the range U+0021 to U+007E except a :unicode_info:`,`.
 A trailing comma MUST NOT be included in the unit line.
 Units may contain empty fields if the parameter has no units.
 Units for a paramter must be in the same column as that paramter, essentialy, the sname number of commas occur before the parameter name and its unit.
@@ -136,20 +136,20 @@ The parameter and units could very easially have looked like::
 Data Lines
 ----------
 The data lines occur directly after the unit line.
-Each line of data contains comma (U+002C [``,``]) seperated values of related data.
-Each data point of the data line may contain any combination of characters from U+0020 to U+007F except a comma (U+002C).
+Each line of data contains :unicode_info:`,` seperated values of related data.
+Each data point of the data line may contain any combination of characters from U+0020 to U+007F except a :unicode_info:`,`.
 Like the `Parameter and Unit Lines`_, a trailing comma MUST NOT be included at the end of each line.
 Data points for each parameter of the `Parameter and Unit Lines`_ must be in the same column as that paratemer, i.e. the same number of commas occur before the parameter label and the datum.
 
 Numeric data which occurs on the data lines MUST only contain numbers, spaces, an optional decimal marker, and an optional negative sign.
 All whitespace within data lines has no symantic meaning.
 Integers may be represented as bare numerals with no decimal marker.
-All real numeric data (i.e. data that are real numbers) MUST be decimal and MUST represent their decimal mark using a period (U+002E [``.``]).
-For both negative real numbers and integers, prepend a hyphen (U+002D [``-``]) to the numeric portion, positive real numbers MUST not be prefixed by a plus sign (U+002B [``+``]).
+All real numeric data (i.e. data that are real numbers) MUST be decimal and MUST represent their decimal mark using a :unicode_info:`.`.
+For both negative real numbers and integers, prepend a :unicode_info:`-` to the numeric portion, positive real numbers MUST NOT be prefixed by a :unicode_info:`+`.
 
 The validity of each datum is determined by the parameter column in which it occurs.
 For example, the `EXPOCODE` column may contain any combination of letter, numbers, or symbols (except a comma).
-A `CTDPRS` column may only contain real decimal numbers (U+0030 to U+0039) using a period (U+002E [``.``]) as the decimal mark.
+A `CTDPRS` column may only contain real decimal numbers (U+0030 to U+0039) using a :unicode_info:`.` as the decimal mark.
 
 .. note::
   Parameters may have a different precision depending on how the measurement was made.
