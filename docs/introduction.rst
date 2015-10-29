@@ -33,6 +33,12 @@ CTD data     _ct1.zip           Zip archive containing one or more _ct1.csv WHP-
 Bottle data  _hy1.csv           Data from one or more bottle profiles in WHP-exchange format
 ============ ================== ===========
 
+Requirement Levels
+------------------
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+"SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in 
+this document are to be interpreted as described in :rfc:`2119`.
+
 About Text Encodings and UTF-8
 ------------------------------
 

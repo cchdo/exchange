@@ -1,29 +1,43 @@
 Common Format Features
 ======================
 Certain format specifications are shared between the bottle and CTD WHP-exchange files.
-All WHP-exchange text files MUST be UTF-8 encoded.
-Unix style line endings, LINE FEED (U+000A), SHOULD be used, DOS line endings, CARRIAGE RETURN (U+000D) followed by LINE FEED (U+000A), MAY be used, other line endings SHOULD NOT be used.
+Those common features are described in this section.
+
+File Requirements
+-----------------
+
+Encoding
+````````
+WHP-exchange text files MUST be UTF-8 encoded.
 
 .. note::
   UTF-8 was chosen as the encoding for WHP-Exchange files because it is backwards compatable with ASCII.
   Valid ASCII files are also valid UTF-8 files.
   UTF-8 allows for the full range of unicode points to display non ASCII text.
-  Non ASCII text should only be encountered in the comment lines of an enchnage file.
 
 .. warning::
   Be careful if editing or creating files on Windows as the default text encoduing is UTF-16.
   UTF-16 is not compatable with UTF-8 or ASCII.
 
-For both CTD and Bottle files the first rows must be the following and in the presented order:
+Byte Order Marks
+````````````````
+The UTF-8 encoded files MUST NOT include a BYTE ORDER MARK (U+FEFF).
 
-1) A REQUIRED `File Identification Stamp`_
-2) Optional `comment line(s)`_
+.. note::
+  Not including a byte order mark ensures backwards compatability with ASCII when the file contains only code points less than U+007F.
+
+Line Endings
+````````````
+ * Lines in an exchange text file SHOULD end with a LINE FEED (U+000A).
+ * Lines MAY also end with a CARRIAGE RETURN (U+000D) followed immediatly by a LINE FEED (U+00A).
+ * Lines MUST NOT use any other form of line ending.
+
 
 .. _File Identification Stamp:
 
 File Identification Stamp
 ---------------------------------
-The first line of a WHP-exchange file contains the file identifier and a creation stamp seperated by a :unicode_info:`,`.
+The first line of a WHP-exchange file MUST contain the file identifier and a creation stamp seperated by a :unicode_info:`,`.
 The file itendifier will be either ``BOTTLE`` in the case of water samples or ``CTD`` in the case of a CTD profile.
 The creation stamp contains information on when the file was created and who created it.
 

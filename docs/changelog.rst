@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2015-10-29
+----------
+* Organized the text encoding requirements better.
+* Added note about requirement levels following RFC 2119.
+
 2015-04-27
 ----------
 * Define the structure of a ``_ct1.zip`` archive.
