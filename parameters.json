@@ -1021,6 +1021,21 @@
       "whp_tier": "secondary"
     }, 
     {
+      "whp_name": "FLUOR", 
+      "whp_unit": "0-5VDC", 
+      "flag_w": "woce_discrete", 
+      "cf_name": null, 
+      "udunits": "", 
+      "data_type": "decimal", 
+      "numeric_min": 0.0, 
+      "numeric_max": 5.0, 
+      "string_format": "%8.4f", 
+      "description": "", 
+      "note": "", 
+      "warning": "", 
+      "whp_tier": "secondary"
+    }, 
+    {
       "whp_name": "PAR", 
       "whp_unit": "", 
       "flag_w": "woce_ctd", 
@@ -1095,6 +1110,22 @@
       "warning": "", 
       "whp_tier": "secondary"
     }, 
+    {
+      "whp_name": "XMISS", 
+      "whp_unit": "0-5VDC", 
+      "flag_w": "woce_discrete", 
+      "cf_name": null, 
+      "udunits": "", 
+      "data_type": "decimal", 
+      "numeric_min": 0.0, 
+      "numeric_max": 5.0, 
+      "string_format": "%8.2f", 
+      "description": "", 
+      "note": "", 
+      "warning": "", 
+      "whp_tier": "secondary"
+    }, 
+    {
     {
       "whp_name": "AR-39", 
       "whp_unit": "PCTMOD", 
@@ -1889,6 +1920,36 @@
       "note": "", 
       "warning": "", 
       "whp_tier": "tertiary"
+    }, 
+    {
+      "whp_name": "CTDNOBS", 
+      "whp_unit": "", 
+      "flag_w": "", 
+      "cf_name": null, 
+      "udunits": "", 
+      "data_type": "integer", 
+      "numeric_min": 0, 
+      "numeric_max": 10000, 
+      "string_format": "%9d", 
+      "description": "The number of observations in CTD pressure bin", 
+      "note": "", 
+      "warning": "", 
+      "whp_tier": "secondary"
+    }, 
+    {
+      "whp_name": "CTDETIME", 
+      "whp_unit": "Seconds", 
+      "flag_w": "", 
+      "cf_name": null, 
+      "udunits": "", 
+      "data_type": "decimal", 
+      "numeric_min": 0.0, 
+      "numeric_max": 10000.0, 
+      "string_format": "%9.4f", 
+      "description": "The elapsed time of CTD pressure bin", 
+      "note": "", 
+      "warning": "", 
+      "whp_tier": "secondary"
     }, 
     {
       "whp_name": "BTL_LON", 
