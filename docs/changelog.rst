@@ -1,6 +1,15 @@
 Changelog
 =========
 
+2015-11-16 (1.0.1)
+------------------
+* Added Parameters
+
+  * XMISS [0-5VDC]
+  * FLUOR [0-5VDC]
+  * CTDNOBS
+  * CTDETIME [SECONDS]
+
 2015-10-29
 ----------
 * Organized the text encoding requirements better.
