@@ -220,8 +220,8 @@
       "numeric_min": -2.0,
       "numeric_max": 35.0,
       "string_format": "%8.4f",
-      "description":"", 
-      "note":"", 
+      "description":"The corrected temperature as measured by the CTD.", 
+      "note":"Typically does not have quality flags.", 
       "warning":"",
       "whp_tier": "primary"
     },
@@ -280,7 +280,7 @@
       "numeric_min": 0.0, 
       "numeric_max": 500.0, 
       "string_format": "%9.4f", 
-      "description": "The volume unit variant of `CTDOXY (UMOL/KG)`_.", 
+      "description": "The corrected oxygen measured by the CTD.", 
       "note": "", 
       "warning": "", 
       "whp_tier": "primary"
