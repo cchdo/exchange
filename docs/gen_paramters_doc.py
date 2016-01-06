@@ -40,6 +40,16 @@ Provided with each parameter is a set of information in a table, the information
     Current quality flags are: :ref:`bottle <Bottle Quality Codes>`, :ref:`water <Water Quality Codes>`, :ref:`ctd <CTD Quality Codes>`.
     See the :ref:`Quality Codes` section for more information
 
+Parameters with Unknown Units
+-----------------------------
+Sometimes data may have units which are not known.
+For this reason, any parameter, including ones not yet listed in the table
+bellow, MAY have the unit of ``ARBITRARY`` in the unit line.
+
+.. warning::
+    Parameters with ``ARBITRARY`` units are NOT compareable with other
+    ``ARBITRARY`` parameters, including those with the same parameter name.
+
 Common Parameters
 -----------------
 This section was generated automatically from a 

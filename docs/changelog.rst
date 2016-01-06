@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2016-01-06 (1.1)
+----------------
+* Add an ``ARBITRARY`` unit that any parameter MAY use.
+
 2015-11-16 (1.0.1)
 ------------------
 * Added Parameters
