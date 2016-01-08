@@ -187,6 +187,34 @@ Here is a short example of what exchange data might look like::
   8.0,2,  19.2022,  34.6920,    220.5
   END_DATA
 
+Missing Data Values
+```````````````````
+Missing data may occur in any position of a column of data, inlcuing all positions.
+When data are missing from a column, a fill value must be used to indicate "no data".
+The fill value in exchnage files is :unicode_info:`-` followed by three :unicode_info:`9`, i.e. ``-999``.
+No other charicters other than whitespace should occur within the missing data position.
+
+Missing data values MAY still have :ref:`Quality Codes` associated which can give information as to why the data are missing.
+
+Here is an example of exchange data with missing values::
+
+  2.0,2,  19.1840,  34.6935,    220.8
+  4.0,2,     -999,  34.6924,    220.7
+  6.0,2,  19.2002,  34.6922,     -999
+  8.0,2,  19.2022,  34.6920,    220.5
+  END_DATA
+
+.. note::
+  Previous versions of the exchange format specified that the fill value should be in the precision of the rest of the column.
+  For example, if a salinity was missing from a column, it would have the fill value of ``-999.0000``.
+  This has changed for several reasons:
+
+  * The precision of the data within a column is not fixed.
+  * A few parameters have valid range which includes -999 as a numeric value.
+
+  When encountering older exchange files, the fill value might contain the extra zeros after the decimal point.
+  In the majority of cases, these are fill values and not numeric values.
+
 
 Post Data Content
 -----------------
