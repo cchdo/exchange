@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2016-01-08 (1.2)
+----------------
+* Add section on missing values (-999).
+  This was a major ommission from the 1.0 release.
+
 2016-01-06 (1.1)
 ----------------
 * Add an ``ARBITRARY`` unit that any parameter MAY use.
