@@ -40,7 +40,7 @@
       "numeric_min": null,
       "numeric_max": null,
       "string_format": "%8s",
-      "description":"The originator's station identifier. Allowed characters are U+0041 to U+005A, U+0061 to U+007A, and U+005F (``a-z``, ``A-Z``, and ``_``)", 
+      "description":"The originator's station identifier. Allowed characters are U+0030 to U+0039, U+0041 to U+005A, U+0061 to U+007A, and U+005F (``0-9``, ``a-z``, ``A-Z``, and ``_``)", 
       "note":"Numeric-only station identifiers are preferred by many data users, but provision for non numeric station identifiers is retained to maintain compatibility with WOCE records.", 
       "warning":"",
       "whp_tier": "primary"
@@ -70,7 +70,7 @@
       "numeric_min": null,
       "numeric_max": null,
       "string_format": "%11s",
-      "description":"The sample number. Often it is the rosette position, however, groups may use their own sampling identification scheme. Allowed characters are U+0041 to U+005A, U+0061 to U+007A, and U+005F (``a-z``, ``A-Z``, and ``_``)",
+      "description":"The sample number. Often it is the rosette position, however, groups may use their own sampling identification scheme. Allowed characters are U+0030 to U+0039, U+0041 to U+005A, U+0061 to U+007A, and U+005F (``0-9``, ``a-z``, ``A-Z``, and ``_``)",
       "note":"", 
       "warning":"The value may not be numeric, ensure that any software reading the file can handle UTF-8 data of the specified allowed code points.",
       "whp_tier": "primary"
@@ -100,7 +100,7 @@
       "numeric_min": null,
       "numeric_max": null,
       "string_format": "%11s",
-      "description":"The bottle identification number. This is intended to be a permanent, unique serial number fixed to the sampling device. It may also be the an identifier fixed for the duration of a single expedition. Allowed characters are U+0041 to U+005A, U+0061 to U+007A, and U+005F (``a-z``, ``A-Z``, and ``_``)",
+      "description":"The bottle identification number. This is intended to be a permanent, unique serial number fixed to the sampling device. It may also be the an identifier fixed for the duration of a single expedition. Allowed characters are U+0030 to U+0039, U+0041 to U+005A, U+0061 to U+007A, and U+005F (``0-9``, ``a-z``, ``A-Z``, and ``_``)",
       "note":"The bottle number MAY have quality flags.", 
       "warning":"The value may not be numeric, ensure that any software reading the file can handle UTF-8 data of the specified allowed code points.",
       "whp_tier": "primary"
