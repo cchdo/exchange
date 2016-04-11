@@ -15,10 +15,15 @@ These headers follow the basic form::
   PARAM = VALUE
 
 Where the ``PARAM`` is some parameter name (e.g. ``DEPTH``) and the ``VALUE`` is the value for that parameter (e.g. ``4523``).
-The ``PARAM``, with the exception of `NUMBER_HEADERS`_, must be listed in the :ref:`Parameters` section.
+The ``PARAM``, with the exception of `NUMBER_HEADERS`_, MAY be any paramter in the :ref:`Parameters` section.
 The format of ``VALUE`` must conform to the data type listed for the parameter in the :ref:`Parameters` section.
 The ``PARAM`` and ``VALUE`` are seperated by a :unicode_info:`=`, there is no meaning to any whitespace.
 Each param-value pair ends end with a line-ending character.
+There is no limit to how many headers may be present, as long the `NUMBER_HEADERS`_ value is set correctly.
+
+.. note::
+  Any parameter which has a constant value for the entire cast MAY appear in the CTD Headers.
+
 Here is an example of a complete set of CTD headers (note that we have included line numbers, these are not part of the header):
 
 .. code-block:: ini
