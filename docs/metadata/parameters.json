@@ -76,6 +76,36 @@
       "whp_tier": "primary"
     },
     {
+      "whp_name":"GEOTR_EVENT", 
+      "whp_unit":"", 
+      "flag_w":null, 
+      "cf_name":null, 
+      "udunits":"", 
+      "data_type":"integer", 
+      "numeric_min": null,
+      "numeric_max": null,
+      "string_format": "%8i",
+      "description":"The GEOTRACES Event number. Along with the GEOTRACES sample number, it is used by the GEOTRACES comunity for sample identification.", 
+      "note":"", 
+      "warning":"",
+      "whp_tier": "primary"
+    },
+    {
+      "whp_name":"GEOTR_SAMPNO", 
+      "whp_unit":"", 
+      "flag_w":null, 
+      "cf_name":null, 
+      "udunits":"", 
+      "data_type":"integer", 
+      "numeric_min": null,
+      "numeric_max": null,
+      "string_format": "%8i",
+      "description":"The GEOTRACES Sample number. Along with the GEOTRACES Event number, it is used by the GEOTRACES comunity for sample identification.", 
+      "note":"", 
+      "warning":"",
+      "whp_tier": "primary"
+    },
+    {
       "whp_name":"BIONBR", 
       "whp_unit":"", 
       "flag_w":null, 
