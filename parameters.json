@@ -91,7 +91,7 @@
       "whp_tier": "primary"
     },
     {
-      "whp_name":"GEOTR_EVENT", 
+      "whp_name":"GEOTR_SAMPNO", 
       "whp_unit":"", 
       "flag_w":null, 
       "cf_name":null, 
