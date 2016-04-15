@@ -110,6 +110,18 @@ The preferred order after ``NUMBER_HEADERS`` is::
   DEPTH
 
 
+User Headers
+------------
+Any additional CTD headers may be included as long as they follow the ``PARAM = VALUE`` form specified above and the ``NUMBER_HEADERS`` value is set correctly.
+This may include headers which may only be of use to the data originator, or any other parameter.
+
+.. note::
+  Authors of software which both read and write exchange CTD files SHOULD pass through any undocumented headers without modification.
+
+
+
+
+
 .. _example ctd data:
 
 Example CTD Data
