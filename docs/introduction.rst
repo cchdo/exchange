@@ -17,7 +17,7 @@ The WHP-Exchange CTD and bottle data formats include these features:
 * No special meaning to blank/empty spaces
 * Station information added in the top lines for a CTD file
 * Station information added in every line for a bottle file
-* Only one missing data value defined for all parameters
+* Only one missing data value defined for all parameters **(What does this mean?)**
 * Positions in decimal degrees
 * Dates in ISO 8601 YYYYMMDD format
 
@@ -77,5 +77,8 @@ Unicode Representation in this Document
 Characters in this document will be defined as unicode code points in the format U+#### where the # symbols are hexidecimal numbers.
 Since exchange files are defined to be UTF-8 encoded, this unambigiously specifies the exact bits which may occur in a file.
 
+**(Could be helpful to have a table of the unicode code points and the character glyphs from U+0021 to U+007E as on this** `wikipedia page`_ **or this other page** http://www.utf8-chartable.de/unicode-utf8-table.pl?number=128 **)**
+
+.. _wikipedia page: https://en.wikipedia.org/wiki/List_of_Unicode_characters#Basic_Latin
 
 .. [#f1] As of March 2015, 83.7% of the text on the internet is encoded with UTF-8.

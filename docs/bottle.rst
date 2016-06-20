@@ -6,14 +6,14 @@ Each :ref:`data line <data lines>` in an exchange bottle file represents a singl
 
 When ctd parameters are encountered within exchange bottle files (e.g. :ref:`CTDPRS (DBAR)`) they represent the corrected values being read by the CTD at the time of bottle closure, usually averaged over some interval.
 
-In bottle files, specific parameters are REQUIRED to be present and have non fill values.
+In bottle files, specific parameters are REQUIRED to be present and have non fill values.  **(What does non fill value mean?  Does this mean no empty values?)**
 
 .. _bottle required headers:
 
 Required Bottle Parameters
 --------------------------
 
-The following parameters are REQUIRED to be present in exchange bottle files where the parameter name occurs within the :ref:`parameter and unit lines` and their values be present in the :ref:`data lines`.
+The following parameters are REQUIRED to be present in exchange bottle files where the parameter name occurs within the :ref:`parameter and unit lines` and their values be present in the :ref:`data lines`.  **(I don't understand this.)**
 
 * :ref:`EXPOCODE`
 * :ref:`STNNBR`

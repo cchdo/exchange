@@ -5,7 +5,7 @@ Quality Codes
 
 Most parameters may also have an associated column of numeric quality flags.
 Quality flag columns appear as a normal parameter in the :ref:`parameter and unit lines`. They MUST NOT have any associated units.
-The quality flag parameter name is constructed from the parameter name and the suffix _FLAG_W where the W stands for a WOCE flag. 
+The quality flag parameter name is constructed from the parameter name and the suffix _FLAG_W where the W stands for a WOCE flag. **(Is this correct about the meaning of W?  In the parameters section, you mention parameter names that don't have WOCE quality codes and so shouldn't have a parameter name followed by _FLAG_W such as BIONBR.  But does this mean it can have quality flags such as a suffix of _FLAG?)**
 The quality flag parameter name requires parsing to determine which parameter it needs to be associated with.
 
 The basic formula for constructing a quality flag parameter name is:

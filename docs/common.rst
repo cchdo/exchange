@@ -37,7 +37,7 @@ Line Endings
 
 File Identification Stamp
 ---------------------------------
-The first line of a WHP-Exchange file MUST contain the file identification stamp which is a file identifier (either BOTTLE or CTD) and a creation stamp seperated by a :unicode_info:`,` with no spaces.
+The first line of a WHP-Exchange file MUST contain the file identification stamp which is a file identifier (either BOTTLE or CTD) and a creation stamp seperated by a :unicode_info:`,` with no spaces **(Or can there be a space after the comma?)**.
 The file identifier will either be ``BOTTLE`` in the case of water samples or ``CTD`` in the case of a CTD profile.
 The creation stamp contains information on when the file was created and who created it.
 
@@ -57,12 +57,12 @@ A CTD file identification stamp will look like::
 The creation stamp contains the following information:
 
 1) **20140716**\ CCHSIOSCD: A date stamp in the form of YYYYMMDD (ISO 8601)
-2) 20140716\ **CCH**\ SIOSCD: The division (or group) of the instituion that wrote the file, typically three characters. 
+2) 20140716\ **CCH**\ SIOSCD: The division (or group) of the instituion that wrote the file, typically three characters. **(Should say what the character and length limits are.)**
    The CCHDO uses CCH as the division.
-3) 20140716CCH\ **SIO**\ SCD: The institution that the group is associated with, typically three characters.
+3) 20140716CCH\ **SIO**\ SCD: The institution that the group is associated with, typically three characters. **(Should say what the character and length limits are.)**
    The CCHDO is located at the Scripps Instituion of Oceanography, thus SIO is used.
 4) 20140716CCHSIO\ **SCD**: The initials of the person who wrote the file, typically three characters.
-   Use only code points U+0041 to U+005A (uppercase letters) for the initials. In this example, SCD. 
+   Use only code points U+0041 to U+005A (uppercase letters) for the initials. In this example, SCD. **(Is there a length limit to the number of characters used for initials?  Can I use SCDJR to represent Jr.?)**
 
 .. warning::
   Do not rely on the creation stamp to be the same legnth in every WHP-Exchange file.
@@ -76,6 +76,7 @@ After the `File Identification Stamp`_ any number of comment lines, including no
 Comment lines start with a :unicode_info:`#`.
 Comment lines typically contain information about the file history and will often contain data citation information.
 Comments may contain UTF-8 encoded code points above U+007F, especially in proper names that may be present with data citation information.
+** (Any limit to comment length?  Can I wrap a paragraph with one hash symbol and no line returns?) **
 
 An example of comment lines::
 
@@ -108,7 +109,7 @@ The parameter names are first and unit lines are second.
 
  * Parameter names are :unicode_info:`,` separated values that define the columns the exchange file will contain.
  * The names MUST be unique, capitalized, contain no empty fields (each parameter must have a name), and not end with a trailing comma.
- * The parameter names MUST contain only code points in the range U+0021 to U+007E excluding the lowercase range U+0061 to U+007A and excluding a :unicode_info:`,`. 
+ * The parameter names MUST contain only code points in the range U+0021 to U+007E excluding the lowercase range U+0061 to U+007A and excluding a :unicode_info:`,`.  **(These code points contain punctuation marks, numbers, brackets, basic math symbols, @, ^, `, ~, |, \, _.  Can I include all these marks for a parameter name in this code point range?  Including quotes?)**
  * A trailing comma, or a comma that occurs at the end of the line with nothing else after it, MUST NOT be included on the parameter line.
  * Certain parameter names, or parameter combinations, are required to be present.
    See the respective sections on :ref:`bottle required headers` and :ref:`CTD required headers` for information specific to each format.
@@ -116,7 +117,7 @@ The parameter names are first and unit lines are second.
 The unit line contains information for the units of each parameter listed in the parameter line.
 
  * The unit line, like the parameter names, are comma separated values.
- * Like the parameter names, units MUST contain only code points in the range U+0021 to U+007E excluding the lowercase range U+0061 to U+007A and excluding a :unicode_info:`,`. 
+ * Like the parameter names, units MUST contain only code points in the range U+0021 to U+007E excluding the lowercase range U+0061 to U+007A and excluding a :unicode_info:`,`.  **(See above question about code points to include)**
  * A trailing comma MUST NOT be included in the unit line.
  * Units may contain empty fields if the parameter has no units.
  * Units for a paramter must be in the same column as that parameter, essentialy, the same number of commas occur before the parameter name and its unit.
