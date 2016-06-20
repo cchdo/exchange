@@ -3,23 +3,37 @@
 CTD Specific
 ============
 Exchange CTD files follow all the common format specifications with the addition of some header information.
-They MUST only contain one profile per file.
+Exchange CTD files MUST only contain one CTD profile per file. 
+A zip archive can be created out of multiple CTD files for one cruise.
 
 .. _CTD Specific Headers:
 
 Additional CTD Headers
 ----------------------
-Rather than encode information which would remain constant throughout the cast with the :ref:`data lines`, Exchange CTD files store this information in headers that appear after the :ref:`comment line(s)`, but before the :ref:`parameter and unit lines`.
-These headers follow the basic form::
+Rather than encode information which would remain constant throughout the cast within the :ref:`data lines`, Exchange CTD files store this information in a block of headers that appear after the :ref:`comment line(s)`, but before the :ref:`parameter and unit lines`.
+
+.. _NUMBER_HEADERS:
+
+Each CTD header block must start with a line labeled NUMBER_HEADERS = integer number where integer number is the total number of additional CTD header lines defining constants plus 1.  
+The 1 added accounts for the NUMBER_HEADERS line itself as this count is specifying the total number of lines appearing after optional comments and before the parameter line. 
+This line takes the following form::
+
+  NUMBER_HEADERS = integer number
+
+The ``NUMBER_HEADERS`` parameter is an integer describing how many lines of headers there are before the parameter and unit lines and after any optional comments.
+The value of ``NUMBER_HEADERS`` includes itself and is REQUIRED and MUST be the first line after any :ref:`comment line(s)`.
+
+
+Additional CTD headers after the NUMBER_HEADERS count follow the basic form::
 
   PARAM = VALUE
 
 Where the ``PARAM`` is some parameter name (e.g. ``DEPTH``) and the ``VALUE`` is the value for that parameter (e.g. ``4523``).
-The ``PARAM``, with the exception of `NUMBER_HEADERS`_, MAY be any paramter in the :ref:`Parameters` section.
+The ``PARAM``, with the exception of NUMBER_HEADERS, MAY be any parameter in the :ref:`Parameters` section.
 The format of ``VALUE`` must conform to the data type listed for the parameter in the :ref:`Parameters` section.
-The ``PARAM`` and ``VALUE`` are seperated by a :unicode_info:`=`, there is no meaning to any whitespace.
-Each param-value pair ends end with a line-ending character.
-There is no limit to how many headers may be present, as long the `NUMBER_HEADERS`_ value is set correctly.
+The ``PARAM`` and ``VALUE`` are seperated by an :unicode_info:`=` and there is no meaning to any whitespace.
+Each param-value pair ends with a line-ending character.
+There is no limit to how many headers may be present, as long the NUMBER_HEADERS value is set correctly.
 
 .. note::
   Any parameter which has a constant value for the entire cast MAY appear in the CTD Headers.
@@ -40,9 +54,13 @@ Here is an example of a complete set of CTD headers (note that we have included 
   LONGITUDE =  133.0297
   DEPTH =   166
 
-Notice three things: the special ``NUMBER_HEADERS`` parameter, the parameter names are all caps, and none of the parameters have units.
+Notice three things: the special ``NUMBER_HEADERS`` parameter at the beginning of the headers block, the parameter names are all caps, and none of the parameters have units.
 
-The units for each parameter are defined by convention rather than explicitly stated in each file, see the :ref:`CTD required headers` for information on which headers are required.
+The units for each parameter are defined by convention rather than explicitly stated in each file. See the :ref:`CTD required headers` section for information on which headers are required.
+
+.. warning::
+  The most common mistake with Exchange CTD Headers is not including the ``NUMBER_HEADERS`` line in the calculation of the number of lines the headers occupy.
+  It would be incorrect in the above example to have ``NUMBER_HEADERS = 9``.
 
 
 .. _CTD required headers:
@@ -50,7 +68,7 @@ The units for each parameter are defined by convention rather than explicitly st
 CTD required headers
 --------------------
 
-The following CTD headers are REQUIRED, see the :ref:`Parameters` section for the description of each, except for the `NUMBER_HEADERS`_ which is described below:
+The following CTD headers are REQUIRED, see the :ref:`Parameters` section for the description of each, except for the `NUMBER_HEADERS`_ which is described above:
 
 * `NUMBER_HEADERS`_
 * :ref:`EXPOCODE`
@@ -64,20 +82,10 @@ The following CTD headers are REQUIRED, see the :ref:`Parameters` section for th
   :ref:`TIME` is not a required parameter, this is not an omission from the list above.
 
 .. warning::
-  There is no support for including units in the CTD headers it is not reccomended that any parameters which could have multiple units be included in the CTD headers.
+  There is no support for including units in the CTD headers and it is not reccomended that any parameters which could have multiple units be included in the CTD headers.
 
-  Usually the optional :ref:`DEPTH <DEPTH (METERS)>` parameter is the only one with units commonly found in CTD headers, it MUST be in meters when included in the CTD headers.
+  Usually the optional :ref:`DEPTH <DEPTH (METERS)>` parameter is the only one with units commonly found in CTD headers, and it MUST be in meters when included in the CTD headers.
 
-
-NUMBER_HEADERS
-^^^^^^^^^^^^^^
-
-The ``NUMBER_HEADERS`` parameter is an integer describing how many lines the headers will be before the parameter and unit lines.
-The value of ``NUMBER_HEADERS`` includes itself it is REQUIRED and MUST be the first line after any :ref:`comment line(s)`.
-
-.. warning::
-  The most common mistake with Exchange CTD Headers is not including the ``NUMBER_HEADERS`` line in the calculation of the number of lines the headers occupy.
-  It would be incorrect in the above example to have ``NUMBER_HEADERS = 9``.
 
 .. _CTD Optional Headers:
 
@@ -155,13 +163,13 @@ The structure is:
 
 Structure of ZIP CTD Archives
 -----------------------------
-Since exchange CTD files only contain one profile, it is convient to package them into entire an archive containing an entire cruise.
+Since Exchange CTD files only contain one profile, it is convient to package them into an archive containing an entire cruise.
 The archve format exchange uses is zip, specifically PKZIP 2.0.
 The zip archive allows for a large varity of structure so it is nessessary to define the structure here.
 
 Exchange CTD zip files MUST contain a flattened structure, that is, only files with no directory paths.
 The files within the zip SHOULD be in the same order in which the stations were done.
-Usually this means the filenames contain numerical information reguarding the station order.
+Usually this means the filenames contain numerical information regarding the station order.
 All the files within the zip MUST have the ``_ct1.csv`` file extention.
 
 Here is an example a correct ctd exchange zip archive (the output of ``unzip -l``):
@@ -198,5 +206,5 @@ The following is an example of an incorrectly packaged archive, which has archiv
 
 
 .. note::
-  Currently, the bahavior when other files or directories are present is undefined.
-  The reccomended bahavior when encountering directories or other (non _ct1.csv) files is to ignore the extra files while warning the user of their presence.
+  Currently, the behavior when other files or directories are present is undefined.
+  The recommended bahavior when encountering directories or other (non _ct1.csv) files is to ignore the extra files while warning the user of their presence.

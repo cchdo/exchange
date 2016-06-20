@@ -8,8 +8,8 @@ output = '''.. _Parameters:
 Parameters
 ==========
 
-About Paramters
----------------
+About Parameters
+----------------
 The CCHDO works frequently with many parameters common in hydrography.
 Provided here is a description of many common parameters encountered in exchange files.
 
@@ -24,17 +24,18 @@ Provided here is a description of many common parameters encountered in exchange
 
 Definitions
 ^^^^^^^^^^^
-Provided with each parameter is a set of information in a table, the information included in that table should be interpreted as follows:
+Provided with each parameter is a set of information in a table. The information included in that table should be interpreted as follows:
 
 * Units: 
     These are the common units encountered for this parameter as it will appear in the exchange document itself.
-    The special units of "None" means the field will be either blank or contain only whitespace.
+    The special units of "None" mean the field will either be blank or contain only whitespace.
 * Data Type: 
     Specifies the allowed type of data in the data records for this parameter.
-    There are three types of data, string (str), integers (int), and decimal.
+    There are three types of data: string (str), integer (int), and decimal.
     String data types may be any printing character except a comma ``,`` which is the field seperator.
-    Integer data types may only contain numbers without a decimal point, quality flags are usually integers.
-    Decimal data types may be any real number (including an integer) and may include decimal point, the precision is not specified.
+    Integer data types may only contain numbers without a decimal point, and quality flags are usually integers.
+    Decimal data types may be any real number (including an integer) and may include a decimal point.
+    The precision is not specified.
 * Quality Flags: 
     Specifies which set of quality flag definitions should be used to interpret a quality flag column for this parameter (if present).
     Current quality flags are: :ref:`bottle <Bottle Quality Codes>`, :ref:`water <Water Quality Codes>`, :ref:`ctd <CTD Quality Codes>`.
@@ -44,10 +45,10 @@ Parameters with Unknown Units
 -----------------------------
 Sometimes data may have units which are not known.
 For this reason, any parameter, including ones not yet listed in the table
-bellow, MAY have the unit of ``ARBITRARY`` in the unit line.
+below, MAY have the unit of ``ARBITRARY`` in the unit line.
 
 .. warning::
-    Parameters with ``ARBITRARY`` units are NOT compareable with other
+    Parameters with ``ARBITRARY`` units are NOT comparable with other
     ``ARBITRARY`` parameters, including those with the same parameter name.
 
 Common Parameters
@@ -140,8 +141,8 @@ for param in params:
 """.format(param['description'])
     if quality_flags == "None":
         output += ("\n.. warning::\n"
-                   "  ``{name}`` does not have woce quality codes."
-                   "  ``{name}_FLAG_W`` should not appear in data file"
+                   "  ``{name}`` does not have WOCE quality codes."
+                   "  ``{name}_FLAG_W`` should not appear in the data file"
                    "  :ref:`parameter and unit lines`.\n").format(
                 name=param["whp_name"]
                 )
