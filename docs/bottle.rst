@@ -13,7 +13,7 @@ In bottle files, specific parameters are REQUIRED to be present and have non fil
 Required Bottle Parameters
 --------------------------
 
-The following parameters are REQUIRED to be present in exchange bottle files where the parameter name occurs witin the :ref:`parameter and unit lines` and their values be present in the :ref:`data lines`.
+The following parameters are REQUIRED to be present in exchange bottle files where the parameter name occurs within the :ref:`parameter and unit lines` and their values be present in the :ref:`data lines`.
 
 * :ref:`EXPOCODE`
 * :ref:`STNNBR`
@@ -32,11 +32,11 @@ At least one or both of the following parameters MUST be present:
 Unique Line Identification
 --------------------------
 
-Since each :ref:`data line <data lines>` of an exchange bottle file represents a single bottle closure, enough information must be present on each line to uniquiely identify closure event.
+Since each :ref:`data line <data lines>` of an exchange bottle file represents a single bottle closure, enough information must be present on each line to uniquely identify a closure event.
 This is to allow the integration of all the measurements of samples taken from that bottle at a later time.
-The identification is done by requireing a combination of values from specific parameters to be unique throughout the file.
+The identification is done by requiring a combination of values from specific parameters to be unique throughout the file.
 
-The following combination of parameters must have unique values:
+The following combination of parameters MUST have unique values:
 
 * :ref:`EXPOCODE`
 * :ref:`STNNBR`
@@ -52,11 +52,11 @@ or
 
 Unique Line Identification Examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-In these examples, the long parameter, unit, and data lines truncated by ``[...]``.
+In these examples, the long parameter names, unit, and data lines are truncated by ``[...]``.
 
-The following example exchange bottle data is all from the same cruise
-indicated by the expocode: ``33RO20131223``, the same station: ``1``, the same cast ``2``, but the bottle number and sample numbers
-differ (``24`` and ``23``).
+.. note::
+  The following listing shows an example of a valid combination of EXPOCODE, STNNBR, CASTNO, AND SAMPNO because the combination of identification parameter values are unique for each line.
+  The following example exchange bottle data is all from the same cruise indicated by the expocode: ``33RO20131223``, the same station: ``1``, the same cast ``2``, but the bottle number and sample numbers differ (``24`` and ``23``).
 
 .. code-block:: none
   :linenos:
@@ -70,8 +70,9 @@ differ (``24`` and ``23``).
     33RO20131223,       1,          2,         23,         23[...]
     END_DATA
 
-The following example shows an example of duplicated unique identification parameter values.
-More than one line contains the exact same values for :ref:`EXPOCODE`, :ref:`STNNBR`, :ref:`CASTNO`, :ref:`BTLNBR`, and :ref:`SAMPNO`.
+.. warning::
+  The following listing shows an example of an invalid combination of EXPOCODE, STNNBR, CASTNO, AND SAMPNO because the combination of identification parameter values are duplicated for two lines and thus non-unique.
+  More than one line contains the exact same values for :ref:`EXPOCODE`, :ref:`STNNBR`, :ref:`CASTNO`, :ref:`BTLNBR`, and :ref:`SAMPNO`.
 
 .. code-block:: none
   :linenos:
@@ -196,7 +197,7 @@ Example Bottle Data
     33RO20131223,       A16S,       1,          2,         20,         20,2,20131226,       0658,    -6.0016,   -24.9998,       5809,    97.5,  24.2160,  36.1165,2,  36.1258,2,    193.2,2,   190.1,2
     END_DATA
 
-The basic strucutre is:
+The basic structure is:
 
 * Line 1: :ref:`File Identification Stamp` starting with ``BOTTLE``
 * Line 2, 3: :ref:`comment line(s)`

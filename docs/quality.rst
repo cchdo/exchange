@@ -4,8 +4,9 @@ Quality Codes
 =============
 
 Most parameters may also have an associated column of numeric quality flags.
-Quality flag columns appear as a normal parameter in the :ref:`parameter and unit lines`, they MUST NOT have any associated units.
-The quality flag parameter name are constructed and require parsing to determine which parameter they need to be associated with.
+Quality flag columns appear as a normal parameter in the :ref:`parameter and unit lines`. They MUST NOT have any associated units.
+The quality flag parameter name is constructed from the parameter name and the suffix _FLAG_W where the W stands for a WOCE flag. 
+The quality flag parameter name requires parsing to determine which parameter it needs to be associated with.
 
 The basic formula for constructing a quality flag parameter name is:
 
@@ -30,48 +31,39 @@ The following descriptions of each quality code is taken from the WOCE manual.
 WOCE Bottle Quality Codes
 -------------------------
 
-1
-  Bottle information unavailable.
-2
-  No problems noted.
-3
-  Leaking.
-4
-  Did not trip correctly.
-5
-  Not reported.
-\(6\)
-  (Significant discrepancy in measured values between Gerard and Niskin bottles.)
-\(7\)
-  (Unknown problem.)
-\(8\)
-  (Pair did not trip correctly. Note that the Niskin bottle can trip at an unplanned depth while the Gerard trips correctly and vice versa.)
-9
-  Samples not drawn from this bottle.
+======= ===========
+Code    Description
+======= ===========
+1       Bottle information unavailable.
+2       No problems noted.
+3       Leaking.
+4       Did not trip correctly.
+5       Not reported.
+\(6\)   (Significant discrepancy in measured values between Gerard and Niskin bottles.)
+\(7\)   (Unknown problem.)
+\(8\)   (Pair did not trip correctly. Note that the Niskin bottle can trip at an unplanned depth while the Gerard trips correctly and vice versa.)
+9       Samples not drawn from this bottle.
+======= ===========
+
 
 .. _Water Quality Codes:
 
 WOCE Water Sample Quality Codes
 -------------------------------
 
-1
-  Sample for this measurement was drawn from water bottle but analysis not received. 
-2
-  Acceptable measurement.
-3
-  Questionable measurement.
-4
-  Bad measurement.
-5
-  Not reported.
-6
-  Mean of replicate measurements (Number of replicates should be specified in the .DOC file and the replicate data tabulated there).
-7
-  Manual chromatographic peak measurement.
-8
-  Irregular digital chromatographic peak integration.
-9
-  Sample not drawn for this measurement from this bottle.
+======= ===========
+Code    Description
+======= ===========
+1       Sample for this measurement was drawn from water bottle but analysis not received. 
+2       Acceptable measurement.
+3       Questionable measurement.
+4       Bad measurement.
+5       Not reported.
+6       Mean of replicate measurements (Number of replicates should be specified in the .DOC file and the replicate data tabulated there).
+7       Manual chromatographic peak measurement.
+8       Irregular digital chromatographic peak integration.
+9       Sample not drawn for this measurement from this bottle.
+======= ===========
 
 .. note::
   Note that if water is drawn for any measurement from a water bottle, the quality code for that parameter should be set equal to 1 initially to help ensure that all water samples are accounted for.
@@ -81,25 +73,19 @@ WOCE Water Sample Quality Codes
 WOCE CTD Quality Codes
 ----------------------
 
-1             
-  Not calibrated.
-2
-  Acceptable measurement.
-3
-  Questionable measurement.
-4
-  Bad measurement.
-5
-  Not reported.
-6
-  Interpolated over a pressure interval larger than 2 dbar.
-7
-  Despiked.
-\(8\)
-  Not used for CTD data.
-9
-  Not sampled.
-
+======= ===========
+Code    Description
+======= ===========
+1       Not calibrated.
+2       Acceptable measurement.
+3       Questionable measurement.
+4       Bad measurement.
+5       Not reported.
+6       Interpolated over a pressure interval larger than 2 dbar.
+7       Despiked.
+\(8\)   Not used for CTD data.
+9       Not sampled.
+======= ===========
 
 ..
     .. _CTD Quality Codes:
