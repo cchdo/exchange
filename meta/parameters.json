@@ -108,7 +108,7 @@
     "whp_unit": null
   }, 
   {
-    "data_type": "string", 
+    "data_type": "decimal", 
     "description": "The longitude as a signed decimal number. By convention, is positive in the eastern hemisphere and negative in the western hemisphere. Positive values do not include a ``+`` character (U+002B), negative values are prefixed with a ``-`` character (U+002D).", 
     "field_width": 11, 
     "flag_w": null, 
@@ -764,7 +764,7 @@
     "whp_unit": "DM/.1MG"
   }, 
   {
-    "data_type": "string", 
+    "data_type": "decimal", 
     "field_width": 11, 
     "flag_w": "woce_discrete", 
     "numeric_max": 200.0, 
@@ -826,7 +826,7 @@
     "whp_unit": "PMOL/KG"
   }, 
   {
-    "data_type": "string", 
+    "data_type": "decimal", 
     "field_width": 11, 
     "flag_w": "woce_discrete", 
     "numeric_max": 600.0, 
@@ -835,7 +835,7 @@
     "whp_unit": "NMOL/KG"
   }, 
   {
-    "data_type": "string", 
+    "data_type": "decimal", 
     "field_width": 11, 
     "flag_w": "woce_discrete", 
     "numeric_max": 300.0, 
@@ -870,7 +870,7 @@
     "whp_unit": "PMOL/KG"
   }, 
   {
-    "data_type": "string", 
+    "data_type": "decimal", 
     "field_width": 11, 
     "flag_w": "woce_discrete", 
     "numeric_max": 20.0, 

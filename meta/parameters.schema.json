@@ -23,30 +23,14 @@
         "enum": ["decimal", "integer", "string"]
       },
       "numeric_min": {
-        "type": ["number"],
-        "dependencies": {
-          "data_type": {
-            "enum": ["decimal"]
-          }
-        }
+        "type": ["number"]
       },
       "numeric_max": {
-        "type": ["number"],
-        "dependencies": {
-          "data_type": {
-            "enum": ["decimal"]
-          }
-        }
+        "type": ["number"]
       },
       "numeric_precision": {
         "type": "integer",
-        "minimum": 0,
-        "dependencies": {
-          "data_type": {
-            "type": "string",
-            "enum": ["decimal"]
-          }
-        }
+        "minimum": 0
       },
       "field_width": {
         "type": "integer",
@@ -69,6 +53,32 @@
       "data_type",
       "field_width"
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+        "dependencies": {
+          "numeric_min": {
+            "properties": {
+              "data_type": {
+                "type": "string",
+                "enum": ["decimal", "integer"]
+              }
+            }
+          },
+          "numeric_max": {
+            "properties": {
+              "data_type": {
+                "type": "string",
+                "enum": ["decimal", "integer"]
+              }
+            }
+          },
+          "numeric_precision": {
+            "properties": {
+              "data_type": {
+                "type": "string",
+                "enum": ["decimal", "integer"]
+              }
+            }
+          }
+        }
   }
 }
