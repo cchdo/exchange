@@ -154,5 +154,7 @@ for param in params:
         for line in param['warning'].split("\n"):
             output += "  {}\n".format(line)
 
+    output += "\n.. raw:: html\n\n  <hr />\n"
+
 with open('parameters.rst', 'wb') as f:
     f.write(output)
