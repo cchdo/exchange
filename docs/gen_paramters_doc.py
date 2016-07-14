@@ -1,7 +1,7 @@
 import json
 
-with open("metadata/parameters.json", 'r') as f:
-    param_list = json.load(f)
+with open("../meta/parameters.json", 'r') as f:
+    parameters = json.load(f)
 
 output = '''.. _Parameters:
 
@@ -53,7 +53,10 @@ bellow, MAY have the unit of ``ARBITRARY`` in the unit line.
 Common Parameters
 -----------------
 This section was generated automatically from a 
-:download:`machine readable list of parameters <metadata/parameters.json>`.
+:download:`machine readable list of parameters <../meta/parameters.json>`,
+there is also a
+:download:`validation schema <../meta/parameters.schema.json>` for the
+parameters json.
 
 .. hlist::
   :columns: 3
@@ -61,16 +64,16 @@ This section was generated automatically from a
 '''
 import itertools
 params = []
-groups = itertools.groupby(param_list["parameters"], key=lambda x: x["whp_name"])
+groups = itertools.groupby(parameters, key=lambda x: x["whp_name"])
 for group in groups:
     first = next(group[1])
     params.append(first)
     for alt in group[1]:
         # we only care about the human readable stuff for this
         tests = [
-                alt["description"] == first["description"],
-                alt["note"] == first["note"],
-                alt["warning"] == first["warning"]
+                alt.get("description") == first.get("description"),
+                alt.get("note") == first.get("note"),
+                alt.get("warning") == first.get("warning"),
                 ]
         if all(tests):
             try:
@@ -80,15 +83,15 @@ for group in groups:
         else:
             params.append(alt)
 for param in params:
-    unit = param['whp_unit']
-    if unit == '':
+    unit = param.get('whp_unit')
+    if unit is None:
         output += "  * {0}_\n".format(param["whp_name"])
     else:
-        output += "  * `{0} ({1})`_\n".format(param["whp_name"], param['whp_unit'])
+        output += "  * `{0} ({1})`_\n".format(param["whp_name"], unit)
 
 for param in params:
-    unit = param['whp_unit']
-    if unit == '':
+    unit = param.get('whp_unit')
+    if unit is None:
         output += '''
 .. _{0}:
 
@@ -100,11 +103,10 @@ for param in params:
 {0}\n'''.format(param["whp_name"], unit)
 
     output += "^" * len(param["whp_name"]) + '\n\n'
-    if unit == '':
-        unit = "None"
     data_type = param['data_type']
     quality_flags = str(param['flag_w'])
 
+    unit = str(unit)
     units_label = "Units"
     data_label = "Data Type"
     quality_label = "{}_FLAG_W Definitions".format(param['whp_name'])
@@ -137,7 +139,8 @@ for param in params:
 
     output += """
 {0}
-""".format(param['description'])
+""".format(param.get('description', ""))
+
     if quality_flags == "None":
         output += ("\n.. warning::\n"
                    "  ``{name}`` does not have woce quality codes."
@@ -145,11 +148,11 @@ for param in params:
                    "  :ref:`parameter and unit lines`.\n").format(
                 name=param["whp_name"]
                 )
-    if param['note'] != "":
+    if param.get('note'):
         output += """\n.. note::\n"""
         for line in param['note'].split("\n"):
             output += "  {}\n".format(line)
-    if param['warning'] != "":
+    if param.get('warning'):
         output += """\n.. warning::\n"""
         for line in param['warning'].split("\n"):
             output += "  {}\n".format(line)
