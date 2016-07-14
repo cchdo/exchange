@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "whp_name": {
+        "type": "string",
+        "minLength": 2
+      },
+      "whp_unit": {
+        "type": ["string", "null"],
+        "minLength": 1
+      },
+      "flag_w": {
+        "enum": ["woce_bottle", "woce_ctd", "woce_discrete", null]
+      },
+      "cf_name": {
+        "type": ["string", "null"],
+        "minLength": 3
+      },
+      "data_type": {
+        "enum": ["decimal", "integer", "string"]
+      },
+      "numeric_min": {
+        "type": ["number"],
+        "dependencies": {
+          "data_type": {
+            "enum": ["decimal"]
+          }
+        }
+      },
+      "numeric_max": {
+        "type": ["number"],
+        "dependencies": {
+          "data_type": {
+            "enum": ["decimal"]
+          }
+        }
+      },
+      "numeric_precision": {
+        "type": "integer",
+        "minimum": 0,
+        "dependencies": {
+          "data_type": {
+            "type": "string",
+            "enum": ["decimal"]
+          }
+        }
+      },
+      "field_width": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "description": {
+        "type": ["string", "null"]
+      },
+      "note": {
+        "type": ["string", "null"]
+      },
+      "warning": {
+        "type": ["string", "null"]
+      }
+    },
+    "required": [
+      "whp_name",
+      "whp_unit",
+      "flag_w",
+      "data_type",
+      "field_width"
+    ]
+  }
+}
