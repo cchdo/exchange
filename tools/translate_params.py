@@ -1,6 +1,6 @@
 import json
 
-with open("meta/old_params.json") as f:
+with open("old_params.json") as f:
     parameters = json.load(f)
 
 new_list = []
@@ -40,11 +40,11 @@ for param in parameters:
         width, precision = string_format[1:-1].split(".")
 
         param["field_width"] = int(width)
-        param["precision"] = int(precision)
+        param["numeric_precision"] = int(precision)
 
 
 
     new_list.append(param)
 
-with open("meta/parameters.json", 'w') as f:
+with open("../meta/parameters.json", 'w') as f:
     json.dump(new_list, f, indent=2, sort_keys=True)

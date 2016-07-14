@@ -68,6 +68,7 @@
       "flag_w",
       "data_type",
       "field_width"
-    ]
+    ],
+    "additionalProperties": false
   }
 }

@@ -102,7 +102,7 @@
     "note": "Only one latitude SHOULD be reported for a cast, typically this is the ship possition when the cast is at the bottom (deepest), but this is not guaranteed.\n\nUse `BTL_LAT`_ to include positions of individual bottle closures.", 
     "numeric_max": 90, 
     "numeric_min": -90, 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "warning": "Since this parameter has no units, the positive in the northern hemisphere and negative in the southern hemisphere MUST be strcitly adhered to.\n\nThe geographic coordinate system is not currently reported.", 
     "whp_name": "LATITUDE", 
     "whp_unit": null
@@ -125,7 +125,7 @@
     "field_width": 9, 
     "flag_w": null, 
     "note": "Documentation should be provided describing how the depth was calculated/corrected, typically in the comment fields.", 
-    "precision": 1, 
+    "numeric_precision": 1, 
     "warning": "This is NOT the depth of bottle closures.", 
     "whp_name": "DEPTH", 
     "whp_unit": "METERS"
@@ -139,7 +139,7 @@
     "note": "Typically does not have quality flags.", 
     "numeric_max": 10000.0, 
     "numeric_min": 0.0, 
-    "precision": 1, 
+    "numeric_precision": 1, 
     "whp_name": "CTDPRS", 
     "whp_unit": "DBAR"
   }, 
@@ -151,7 +151,7 @@
     "note": "Typically does not have quality flags.", 
     "numeric_max": 35.0, 
     "numeric_min": -2.0, 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "whp_name": "CTDTMP", 
     "whp_unit": "ITS-90"
   }, 
@@ -163,7 +163,7 @@
     "note": "Typically does not have quality flags.", 
     "numeric_max": 35.0, 
     "numeric_min": -2.0, 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "whp_name": "CTDTMP", 
     "whp_unit": "IPTS-68"
   }, 
@@ -174,7 +174,7 @@
     "flag_w": "woce_ctd", 
     "numeric_max": 42.0, 
     "numeric_min": 0.0, 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "whp_name": "CTDSAL", 
     "whp_unit": "PSS-78"
   }, 
@@ -185,7 +185,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 42.0, 
     "numeric_min": 0.0, 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "whp_name": "SALNTY", 
     "whp_unit": "PSS-78"
   }, 
@@ -196,7 +196,7 @@
     "flag_w": "woce_ctd", 
     "numeric_max": 500.0, 
     "numeric_min": 0.0, 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "whp_name": "CTDOXY", 
     "whp_unit": "UMOL/KG"
   }, 
@@ -207,7 +207,7 @@
     "flag_w": "woce_ctd", 
     "numeric_max": 500.0, 
     "numeric_min": 0.0, 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "whp_name": "CTDOXY", 
     "whp_unit": "ML/L"
   }, 
@@ -217,7 +217,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 500.0, 
     "numeric_min": 0.0, 
-    "precision": 1, 
+    "numeric_precision": 1, 
     "whp_name": "OXYGEN", 
     "whp_unit": "UMOL/KG"
   }, 
@@ -227,7 +227,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 250.0, 
     "numeric_min": 0.0, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "SILCAT", 
     "whp_unit": "UMOL/KG"
   }, 
@@ -235,7 +235,7 @@
     "data_type": "decimal", 
     "field_width": 8, 
     "flag_w": "woce_discrete", 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "NH4", 
     "whp_unit": "UMOL/KG"
   }, 
@@ -245,7 +245,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 47.0, 
     "numeric_min": -0.1, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "NITRAT", 
     "whp_unit": "UMOL/KG"
   }, 
@@ -255,7 +255,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 15.0, 
     "numeric_min": -0.1, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "NITRIT", 
     "whp_unit": "UMOL/KG"
   }, 
@@ -265,7 +265,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 5.0, 
     "numeric_min": 0.0, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "PHSPHT", 
     "whp_unit": "UMOL/KG"
   }, 
@@ -275,7 +275,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 15.0, 
     "numeric_min": -0.1, 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "CFC-11", 
     "whp_unit": "PMOL/KG"
   }, 
@@ -285,7 +285,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 15.0, 
     "numeric_min": -0.1, 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "CFC-12", 
     "whp_unit": "PMOL/KG"
   }, 
@@ -295,7 +295,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 1.5, 
     "numeric_min": -0.1, 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "CFC113", 
     "whp_unit": "PMOL/KG"
   }, 
@@ -303,7 +303,7 @@
     "data_type": "decimal", 
     "field_width": 8, 
     "flag_w": "woce_discrete", 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "whp_name": "SF6", 
     "whp_unit": "FMOL/KG"
   }, 
@@ -313,7 +313,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 2600.0, 
     "numeric_min": 1100.0, 
-    "precision": 1, 
+    "numeric_precision": 1, 
     "whp_name": "TCARBN", 
     "whp_unit": "UMOL/KG"
   }, 
@@ -323,7 +323,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 2800.0, 
     "numeric_min": 100.0, 
-    "precision": 1, 
+    "numeric_precision": 1, 
     "whp_name": "ALKALI", 
     "whp_unit": "UMOL/KG"
   }, 
@@ -331,7 +331,7 @@
     "data_type": "decimal", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 1, 
+    "numeric_precision": 1, 
     "whp_name": "FCO2", 
     "whp_unit": "UATM"
   }, 
@@ -339,7 +339,7 @@
     "data_type": "decimal", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "FCO2TMP", 
     "whp_unit": "DEG C"
   }, 
@@ -349,7 +349,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 2000.0, 
     "numeric_min": 50.0, 
-    "precision": 1, 
+    "numeric_precision": 1, 
     "whp_name": "PCO2", 
     "whp_unit": "UATM"
   }, 
@@ -357,7 +357,7 @@
     "data_type": "decimal", 
     "field_width": 8, 
     "flag_w": "woce_discrete", 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "PCO2TMP", 
     "whp_unit": "DEG C"
   }, 
@@ -365,7 +365,7 @@
     "data_type": "decimal", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "whp_name": "PH_TOT", 
     "whp_unit": null
   }, 
@@ -373,7 +373,7 @@
     "data_type": "decimal", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "whp_name": "PH_SWS", 
     "whp_unit": null
   }, 
@@ -381,7 +381,7 @@
     "data_type": "decimal", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "PH_TMP", 
     "whp_unit": "DEG C"
   }, 
@@ -391,7 +391,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 80.0, 
     "numeric_min": 30.0, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "DOC", 
     "whp_unit": "UMOL/KG"
   }, 
@@ -401,7 +401,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 100.0, 
     "numeric_min": -1.0, 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "TRITUM", 
     "whp_unit": "TU"
   }, 
@@ -409,7 +409,7 @@
     "data_type": "decimal", 
     "field_width": 8, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "TRITER", 
     "whp_unit": "TU"
   }, 
@@ -419,7 +419,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 3.0, 
     "numeric_min": 1.0, 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "whp_name": "HELIUM", 
     "whp_unit": "NMOL/KG"
   }, 
@@ -429,7 +429,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 100.0, 
     "numeric_min": -10.0, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "DELHE3", 
     "whp_unit": "PERCNT"
   }, 
@@ -439,7 +439,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 35.0, 
     "numeric_min": -3.0, 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "whp_name": "REFTMP", 
     "whp_unit": "DEG C"
   }, 
@@ -449,7 +449,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 11000.0, 
     "numeric_min": 0.0, 
-    "precision": 1, 
+    "numeric_precision": 1, 
     "whp_name": "REVPRS", 
     "whp_unit": "DBAR"
   }, 
@@ -459,7 +459,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 35.0, 
     "numeric_min": -2.0, 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "REVTMP", 
     "whp_unit": "ITS-90"
   }, 
@@ -469,7 +469,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 5.0, 
     "numeric_min": -5.0, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "DELC13", 
     "whp_unit": "/MILLE"
   }, 
@@ -477,7 +477,7 @@
     "data_type": "decimal", 
     "field_width": 8, 
     "flag_w": "woce_discrete", 
-    "precision": 1, 
+    "numeric_precision": 1, 
     "whp_name": "C13ERR", 
     "whp_unit": "/MILLE"
   }, 
@@ -487,7 +487,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 250.0, 
     "numeric_min": -300.0, 
-    "precision": 1, 
+    "numeric_precision": 1, 
     "whp_name": "DELC14", 
     "whp_unit": "/MILLE"
   }, 
@@ -495,7 +495,7 @@
     "data_type": "decimal", 
     "field_width": 8, 
     "flag_w": "woce_discrete", 
-    "precision": 1, 
+    "numeric_precision": 1, 
     "whp_name": "C14ERR", 
     "whp_unit": "/MILLE"
   }, 
@@ -505,7 +505,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 900.0, 
     "numeric_min": 200.0, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "DON", 
     "whp_unit": "UMOL/KG"
   }, 
@@ -520,7 +520,7 @@
     "data_type": "decimal", 
     "field_width": 8, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "POC", 
     "whp_unit": "UG/KG"
   }, 
@@ -528,7 +528,7 @@
     "data_type": "decimal", 
     "field_width": 8, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "PON", 
     "whp_unit": "UG/KG"
   }, 
@@ -538,7 +538,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 20.0, 
     "numeric_min": 3.0, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "TDN", 
     "whp_unit": "UMOL/KG"
   }, 
@@ -555,7 +555,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 10.0, 
     "numeric_min": 0.0, 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "NEON", 
     "whp_unit": "NMOL/KG"
   }, 
@@ -563,7 +563,7 @@
     "data_type": "decimal", 
     "field_width": 8, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "NEONER", 
     "whp_unit": "NMOL/KG"
   }, 
@@ -573,7 +573,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 5.0, 
     "numeric_min": -6.0, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "DELO18", 
     "whp_unit": "/MILLE"
   }, 
@@ -583,7 +583,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 20.0, 
     "numeric_min": -0.1, 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "CCL4", 
     "whp_unit": "PMOL/KG"
   }, 
@@ -607,7 +607,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 25.0, 
     "numeric_min": 0.3, 
-    "precision": 1, 
+    "numeric_precision": 1, 
     "whp_name": "ALUMIN", 
     "whp_unit": "NMOL/L"
   }, 
@@ -615,7 +615,7 @@
     "data_type": "decimal", 
     "field_width": 8, 
     "flag_w": "woce_discrete", 
-    "precision": 1, 
+    "numeric_precision": 1, 
     "whp_name": "BARIUM", 
     "whp_unit": "NMOL/KG"
   }, 
@@ -632,7 +632,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 2.0, 
     "numeric_min": 0.02, 
-    "precision": 1, 
+    "numeric_precision": 1, 
     "whp_name": "FE", 
     "whp_unit": "NMOL/L"
   }, 
@@ -642,7 +642,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 5.0, 
     "numeric_min": 0.0, 
-    "precision": 1, 
+    "numeric_precision": 1, 
     "whp_name": "MN", 
     "whp_unit": "NMOL/L"
   }, 
@@ -652,7 +652,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 50.0, 
     "numeric_min": 0.0, 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "whp_name": "FLUOR", 
     "whp_unit": "MG/M^3"
   }, 
@@ -662,7 +662,7 @@
     "flag_w": "woce_ctd", 
     "numeric_max": 5.0, 
     "numeric_min": 0.0, 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "whp_name": "FLUOR", 
     "whp_unit": "0-5VDC"
   }, 
@@ -672,7 +672,7 @@
     "field_width": 8, 
     "flag_w": "woce_ctd", 
     "note": "From SBE .cnv files, no units ", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "PAR", 
     "whp_unit": null
   }, 
@@ -689,7 +689,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 80.0, 
     "numeric_min": 3.0, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "RA-226", 
     "whp_unit": "DM/.1MG"
   }, 
@@ -699,7 +699,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 10.0, 
     "numeric_min": -1.0, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "RA-228", 
     "whp_unit": "DM/.1MG"
   }, 
@@ -709,7 +709,7 @@
     "flag_w": "woce_ctd", 
     "numeric_max": 100.0, 
     "numeric_min": 0.0, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "XMISS", 
     "whp_unit": "%TRANS"
   }, 
@@ -719,7 +719,7 @@
     "flag_w": "woce_ctd", 
     "numeric_max": 5.0, 
     "numeric_min": 0.0, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "XMISS", 
     "whp_unit": "0-5VDC"
   }, 
@@ -729,7 +729,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 100.0, 
     "numeric_min": 0.0, 
-    "precision": 1, 
+    "numeric_precision": 1, 
     "whp_name": "AR-39", 
     "whp_unit": "PCTMOD"
   }, 
@@ -739,7 +739,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 100.0, 
     "numeric_min": 0.0, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "CS-137", 
     "whp_unit": "DM/.1MG"
   }, 
@@ -749,7 +749,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 5.0, 
     "numeric_min": 0.0, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "KR-85", 
     "whp_unit": "DM/MG"
   }, 
@@ -759,7 +759,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 100.0, 
     "numeric_min": 0.0, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "SR-90", 
     "whp_unit": "DM/.1MG"
   }, 
@@ -806,7 +806,7 @@
     "flag_w": "woce_ctd", 
     "numeric_max": 11000.0, 
     "numeric_min": 0.0, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "CTDRAW", 
     "whp_unit": "DBAR"
   }, 
@@ -821,7 +821,7 @@
     "data_type": "decimal", 
     "field_width": 8, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "MCHFRM", 
     "whp_unit": "PMOL/KG"
   }, 
@@ -849,7 +849,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 9.0, 
     "numeric_min": 0.0, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "CHLORA", 
     "whp_unit": "UG/KG"
   }, 
@@ -857,7 +857,7 @@
     "data_type": "decimal", 
     "field_width": 8, 
     "flag_w": "woce_discrete", 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "PPHYTN", 
     "whp_unit": "UG/KG"
   }, 
@@ -865,7 +865,7 @@
     "data_type": "decimal", 
     "field_width": 8, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "CH3CL", 
     "whp_unit": "PMOL/KG"
   }, 
@@ -905,7 +905,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 25.0, 
     "numeric_min": 5.0, 
-    "precision": 2, 
+    "numeric_precision": 2, 
     "whp_name": "ARGON", 
     "whp_unit": "UMOL/KG"
   }, 
@@ -915,7 +915,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 100.0, 
     "numeric_min": -1000.0, 
-    "precision": 1, 
+    "numeric_precision": 1, 
     "whp_name": "14C-DOC", 
     "whp_unit": "/MILLE"
   }, 
@@ -925,7 +925,7 @@
     "flag_w": "woce_discrete", 
     "numeric_max": 30.0, 
     "numeric_min": -5.0, 
-    "precision": 1, 
+    "numeric_precision": 1, 
     "whp_name": "D15N_NO3", 
     "whp_unit": null
   }, 
@@ -935,7 +935,7 @@
     "field_width": 9, 
     "flag_w": "woce_discrete", 
     "note": "A different measurement than `CHLORA`_", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "TOT_CHL_A", 
     "whp_unit": "MG/M^3"
   }, 
@@ -944,7 +944,7 @@
     "description": "HPLC  DV_Chl_b + MV_Chl_b", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "TOT_CHL_B", 
     "whp_unit": "MG/M^3"
   }, 
@@ -953,7 +953,7 @@
     "description": "HPLC chl_c1 + chl_c2 (chl_c1c2) + chl_c3", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "TOT_CHL_C", 
     "whp_unit": "MG/M^3"
   }, 
@@ -962,7 +962,7 @@
     "description": "HPLC Alpha (Beta,epsilon) + Beta (Beta,beta) Carotenes", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "ALPHA-BETA-CAR", 
     "whp_unit": "MG/M^3"
   }, 
@@ -971,7 +971,7 @@
     "description": "HPLC 19'-Butanoyloxyfucoxanthin", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "BUT-FUCO", 
     "whp_unit": "MG/M^3"
   }, 
@@ -980,7 +980,7 @@
     "description": "HPLC 19'-Hexanoyloxyfucoxanthin", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "HEX-FUCO", 
     "whp_unit": "MG/M^3"
   }, 
@@ -989,7 +989,7 @@
     "description": "HPLC Alloxanthin", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "ALLO", 
     "whp_unit": "MG/M^3"
   }, 
@@ -998,7 +998,7 @@
     "description": "HPLC Diadinoxanthin", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "DIADINO", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1007,7 +1007,7 @@
     "description": "HPLC Diatoxanthin", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "DIATO", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1016,7 +1016,7 @@
     "description": "HPLC Fucoxanthin", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "HFUCO", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1025,7 +1025,7 @@
     "description": "HPLC Peridinin", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "PERID", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1034,7 +1034,7 @@
     "description": "HPLC Zeaxanthin", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "ZEA", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1043,7 +1043,7 @@
     "description": "HPLC Monovinyl Chlorophyll a", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "MV_CHL_A", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1052,7 +1052,7 @@
     "description": "HPLC Divinyl Chlorophyll a", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "DV_CHL_A", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1061,7 +1061,7 @@
     "description": "HPLC Chlorophyllide a", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "CHLIDE_A", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1070,7 +1070,7 @@
     "description": "HPLC Monovinyl Chlorophyll b", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "MV_CHL_B", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1079,7 +1079,7 @@
     "description": "HPLC Divinyl Chlorophyll B", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "DV_CHL_B", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1088,7 +1088,7 @@
     "description": "HPLC Chlorophyll c1 + c2", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "CHL_C1C2", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1097,7 +1097,7 @@
     "description": "HPLC Chlorophyll c3", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "CHL_C3", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1106,7 +1106,7 @@
     "description": "HPLC Lutein", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "LUT", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1115,7 +1115,7 @@
     "description": "HPLC Neoxanthin", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "NEO", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1124,7 +1124,7 @@
     "description": "HPLC Violaxanthin", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "VIOLA", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1133,7 +1133,7 @@
     "description": "HPLC Pheophytin a", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "PHYTIN_A", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1142,7 +1142,7 @@
     "description": "HPLC Pheophorbide a", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "PHIDE_A", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1151,7 +1151,7 @@
     "description": "HPLC Prasinoxanthin", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "PRAS", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1160,7 +1160,7 @@
     "description": "HPLC Gyroxanthin-Diester", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 3, 
+    "numeric_precision": 3, 
     "whp_name": "GYRO", 
     "whp_unit": "MG/M^3"
   }, 
@@ -1168,7 +1168,7 @@
     "data_type": "decimal", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "whp_name": "BTL_DATE", 
     "whp_unit": null
   }, 
@@ -1176,7 +1176,7 @@
     "data_type": "decimal", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "whp_name": "BTL_TIME", 
     "whp_unit": null
   }, 
@@ -1184,7 +1184,7 @@
     "data_type": "decimal", 
     "field_width": 9, 
     "flag_w": null, 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "whp_name": "BTL_LAT", 
     "whp_unit": null
   }, 
@@ -1206,7 +1206,7 @@
     "flag_w": null, 
     "numeric_max": 10000.0, 
     "numeric_min": 0.0, 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "whp_name": "CTDETIME", 
     "whp_unit": "SECONDS"
   }, 
@@ -1214,7 +1214,7 @@
     "data_type": "decimal", 
     "field_width": 9, 
     "flag_w": "woce_discrete", 
-    "precision": 4, 
+    "numeric_precision": 4, 
     "whp_name": "BTL_LON", 
     "whp_unit": null
   }
