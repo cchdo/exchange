@@ -1,6 +1,12 @@
 language: python
 python:
-    - "2.7"
-script: 
-    - python -m unittest discover -s test
-    - sphinx-build -nW -b html -c docs -d docs/_build/doctrees docs docs/_build/html
+- '2.7'
+script:
+- python -m unittest discover -s test
+- sphinx-build -nW -b html -c docs -d docs/_build/doctrees docs docs/_build/html
+notifications:
+  slack:
+    rooms:
+      secure: Q1jEnSvldW2ipDoZwNlmXZ3lOcDy/K/KFybo83JYLaGAfmVfiixTwGSKcdNS7LG/zYxQ1+L6uRj+6/rXOHir9EyPHQ2u1tfYuSXCsNeB6iAGBMr37+XyTBgLINOZluAkE31qO7YALQnlgwyBHPkLz47KLEedNlvlO+cHwlRjkWE=
+    on_success: always
+    on_failure: always
