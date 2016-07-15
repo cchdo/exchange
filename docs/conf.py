@@ -57,13 +57,13 @@ copyright = u'2015, Andrew M. Barna, James H. Swift, Stephen C. Diggs'
 # The short X.Y version.
 try:
     import subprocess
-    version = subprocess.check_output(["git", "describe", "--abbrev=0","--tags", "--dirty"])
+    version = subprocess.check_output(["git", "describe", "--abbrev=0","--tags"])
 except:
     version = '1.0'
 # The full version, including alpha/beta/rc tags.
 try:
     import subprocess
-    release = subprocess.check_output(["git", "describe", "--dirty"])
+    release = subprocess.check_output(["git", "describe"])
 except:
     release = '1.0.1'
 
