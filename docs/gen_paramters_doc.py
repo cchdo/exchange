@@ -42,7 +42,7 @@ Provided with each parameter is a set of information in a table, the information
 
 Parameter Error
 ---------------
-Any parameter which numeric values MAY have an associated error column which takes the form:
+Any parameter with numeric values MAY have an associated error column which takes the form:
 
     .. code::
         
