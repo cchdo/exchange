@@ -40,6 +40,18 @@ Provided with each parameter is a set of information in a table, the information
     Current quality flags are: :ref:`bottle <Bottle Quality Codes>`, :ref:`water <Water Quality Codes>`, :ref:`ctd <CTD Quality Codes>`.
     See the :ref:`Quality Codes` section for more information
 
+Parameter Error
+---------------
+Any parameter which numeric values MAY have an associated error column which takes the form:
+
+    .. code::
+        
+        <PARAMETER_NAME>_ERROR
+
+The values of the error column SHOULD have the same units as the origional parameter.
+Error columns which have no values (i.e. contain only fill values), SHOULD be omitted from the data file.
+If the error column is present, not every parameter value is required to have an associated error.
+
 Parameters with Unknown Units
 -----------------------------
 Sometimes data may have units which are not known.
