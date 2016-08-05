@@ -15,9 +15,9 @@ These headers follow the basic form::
   PARAM = VALUE
 
 Where the ``PARAM`` is some parameter name (e.g. ``DEPTH``) and the ``VALUE`` is the value for that parameter (e.g. ``4523``).
-The ``PARAM``, with the exception of `NUMBER_HEADERS`_, MAY be any paramter in the :ref:`Parameters` section.
+The ``PARAM``, with the exception of `NUMBER_HEADERS`_, MAY be any parameter in the :ref:`Parameters` section.
 The format of ``VALUE`` must conform to the data type listed for the parameter in the :ref:`Parameters` section.
-The ``PARAM`` and ``VALUE`` are seperated by a :unicode_info:`=`, there is no meaning to any whitespace.
+The ``PARAM`` and ``VALUE`` are separated by a :unicode_info:`=`, there is no meaning to any whitespace.
 Each param-value pair ends end with a line-ending character.
 There is no limit to how many headers may be present, as long the `NUMBER_HEADERS`_ value is set correctly.
 
@@ -64,7 +64,7 @@ The following CTD headers are REQUIRED, see the :ref:`Parameters` section for th
   :ref:`TIME` is not a required parameter, this is not an omission from the list above.
 
 .. warning::
-  There is no support for including units in the CTD headers it is not reccomended that any parameters which could have multiple units be included in the CTD headers.
+  There is no support for including units in the CTD headers it is not recommended that any parameters which could have multiple units be included in the CTD headers.
 
   Usually the optional :ref:`DEPTH <DEPTH (METERS)>` parameter is the only one with units commonly found in CTD headers, it MUST be in meters when included in the CTD headers.
 
@@ -167,14 +167,14 @@ The structure is:
 
 Structure of ZIP CTD Archives
 -----------------------------
-Since exchange CTD files only contain one profile, it is convient to package them into entire an archive containing an entire cruise.
-The archve format exchange uses is zip, specifically PKZIP 2.0.
-The zip archive allows for a large varity of structure so it is nessessary to define the structure here.
+Since exchange CTD files only contain one profile, it is convent to package them into entire an archive containing an entire cruise.
+The archive format exchange uses is zip, specifically PKZIP 2.0.
+The zip archive allows for a large variety of structure so it is necessary to define the structure here.
 
 Exchange CTD zip files MUST contain a flattened structure, that is, only files with no directory paths.
 The files within the zip SHOULD be in the same order in which the stations were done.
-Usually this means the filenames contain numerical information reguarding the station order.
-All the files within the zip MUST have the ``_ct1.csv`` file extention.
+Usually this means the filenames contain numerical information regarding the station order.
+All the files within the zip MUST have the ``_ct1.csv`` file extension.
 
 Here is an example a correct ctd exchange zip archive (the output of ``unzip -l``):
 
@@ -210,5 +210,5 @@ The following is an example of an incorrectly packaged archive, which has archiv
 
 
 .. note::
-  Currently, the bahavior when other files or directories are present is undefined.
-  The reccomended bahavior when encountering directories or other (non _ct1.csv) files is to ignore the extra files while warning the user of their presence.
+  Currently, the behavior when other files or directories are present is undefined.
+  The recommended behavior when encountering directories or other (non _ct1.csv) files is to ignore the extra files while warning the user of their presence.

@@ -1,6 +1,6 @@
 Bottle Specific
 ===============
-Exchange Bottle files follow all the common format specifications for their strucutre.
+Exchange Bottle files follow all the common format specifications for their structure.
 The :ref:`File Identification Stamp` of an exchange bottle file starts with ``BOTTLE``.
 Each :ref:`data line <data lines>` in an exchange bottle file represents a single bottle closure.
 
@@ -13,7 +13,7 @@ In bottle files, specific parameters are REQUIRED to be present and have non fil
 Required Bottle Parameters
 --------------------------
 
-The following parameters are REQUIRED to be present in exchange bottle files where the parameter name occurs witin the :ref:`parameter and unit lines` and their values be present in the :ref:`data lines`.
+The following parameters are REQUIRED to be present in exchange bottle files where the parameter name occurs within the :ref:`parameter and unit lines` and their values be present in the :ref:`data lines`.
 
 * :ref:`EXPOCODE`
 * :ref:`STNNBR`
@@ -32,9 +32,9 @@ At least one or both of the following parameters MUST be present:
 Unique Line Identification
 --------------------------
 
-Since each :ref:`data line <data lines>` of an exchange bottle file represents a single bottle closure, enough information must be present on each line to uniquiely identify closure event.
+Since each :ref:`data line <data lines>` of an exchange bottle file represents a single bottle closure, enough information must be present on each line to uniquely identify closure event.
 This is to allow the integration of all the measurements of samples taken from that bottle at a later time.
-The identification is done by requireing a combination of values from specific parameters to be unique throughout the file.
+The identification is done by requiring a combination of values from specific parameters to be unique throughout the file.
 
 The following combination of parameters must have unique values:
 

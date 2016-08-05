@@ -11,25 +11,25 @@ Encoding
 WHP-exchange text files MUST be UTF-8 encoded.
 
 .. note::
-  UTF-8 was chosen as the encoding for WHP-Exchange files because it is backwards compatable with ASCII.
+  UTF-8 was chosen as the encoding for WHP-Exchange files because it is backwards compatible with ASCII.
   Valid ASCII files are also valid UTF-8 files.
   UTF-8 allows for the full range of unicode points to display non ASCII text.
 
 .. warning::
-  Be careful if editing or creating files on Windows as the default text encoduing is UTF-16.
-  UTF-16 is not compatable with UTF-8 or ASCII.
+  Be careful if editing or creating files on Windows as the default text encoding is UTF-16.
+  UTF-16 is not compatible with UTF-8 or ASCII.
 
 Byte Order Marks
 ````````````````
 The UTF-8 encoded files MUST NOT include a BYTE ORDER MARK (U+FEFF).
 
 .. note::
-  Not including a byte order mark ensures backwards compatability with ASCII when the file contains only code points less than U+007F.
+  Not including a byte order mark ensures backwards compatibility with ASCII when the file contains only code points less than U+007F.
 
 Line Endings
 ````````````
  * Lines in an exchange text file SHOULD end with a LINE FEED (U+000A).
- * Lines MAY also end with a CARRIAGE RETURN (U+000D) followed immediatly by a LINE FEED (U+00A).
+ * Lines MAY also end with a CARRIAGE RETURN (U+000D) followed immediately by a LINE FEED (U+00A).
  * Lines MUST NOT use any other form of line ending.
 
 
@@ -37,8 +37,8 @@ Line Endings
 
 File Identification Stamp
 ---------------------------------
-The first line of a WHP-exchange file MUST contain the file identifier and a creation stamp seperated by a :unicode_info:`,`.
-The file itendifier will be either ``BOTTLE`` in the case of water samples or ``CTD`` in the case of a CTD profile.
+The first line of a WHP-exchange file MUST contain the file identifier and a creation stamp separated by a :unicode_info:`,`.
+The file identifier will be either ``BOTTLE`` in the case of water samples or ``CTD`` in the case of a CTD profile.
 The creation stamp contains information on when the file was created and who created it.
 
 
@@ -54,19 +54,19 @@ A CTD file identifier will look like::
   If while attempting to read a WHP-exchange file and the first line does not start with ``BOTTLE`` or ``CTD`` an attempt to read the rest of the file will likely fail.
   When writing a WHP-exchange format reader, always check if this identification stamp is present and has a valid value.
 
-The creation stamp contians the following information:
+The creation stamp contains the following information:
 
 1) **20140716**\ CCHSIOSCD: A date stamp in the from of YYYYMMDD (ISO 8601)
-2) 20140716\ **CCH**\ SIOSCD: The division (or group) of the instituion that wrote the file, typically three characters.
+2) 20140716\ **CCH**\ SIOSCD: The division (or group) of the institution that wrote the file, typically three characters.
    The CCHDO uses CCH as the division.
-3) 20140716CCH\ **SIO**\ SCD: The instituion that the group is associated with, typically three characters.
-   The CCHDO is locaded at the Scripps Instituion of Oceanography, thus SIO is used.
+3) 20140716CCH\ **SIO**\ SCD: The institution that the group is associated with, typically three characters.
+   The CCHDO is located at the Scripps Institution of Oceanography, thus SIO is used.
 4) 20140716CCHSIO\ **SCD**: The initials of the person who wrote the file, typically three characters.
    Use only code points U+0041 to U+005A and for the initials. In this example, SCD.
 
 .. warning::
-  Do not rely on the creation stamp to be the same legnth in every WHP-exchange file.
-  While all the same elemnts will be present, their lengths may vary.
+  Do not rely on the creation stamp to be the same length in every WHP-exchange file.
+  While all the same elements will be present, their lengths may vary.
 
 .. _comment line(s):
 
@@ -81,7 +81,7 @@ An example::
   # This is one line of comments
   # An additional line of comments
 
-An example of the begining of a file, including the `File Identification Stamp`_::
+An example of the beginning of a file, including the `File Identification Stamp`_::
 
   BOTTLE,20140716CCHSIOSCD
   # This is a comment line
@@ -106,7 +106,7 @@ Parameter and Unit Lines
 After any format specific headers, the parameter and unit lines are next.
 The parameter names are first, units are second.
 
-Parameter names are :unicode_info:`,` seperated values that define the columns the exchange file will contain.
+Parameter names are :unicode_info:`,` separated values that define the columns the exchange file will contain.
 The names must be unique, capitalized, contain no empty fields, and not end with a trailing comma.
 The parameter names must contain only code points in the range U+0021 to U+007E except a :unicode_info:`,`.
 A trailing comma, or a comma that occurs at the end of the line with nothing else after it, MUST NOT be included on the parameter line.
@@ -114,15 +114,15 @@ Certain parameter names, or parameter combinations, are required to be present.
 See the respective sections on :ref:`bottle required headers` and :ref:`CTD required headers` for information specific to each format.
 
 The unit line contains information for the units of each parameter listed in the parameter line.
-The unit line, like the parameters, are comma seperated values.
+The unit line, like the parameters, are comma separated values.
 Like the parameter names, units must contain only code points in the range U+0021 to U+007E except a :unicode_info:`,`.
 A trailing comma MUST NOT be included in the unit line.
 Units may contain empty fields if the parameter has no units.
-Units for a paramter must be in the same column as that paramter, essentialy, the sname number of commas occur before the parameter name and its unit.
+Units for a parameter must be in the same column as that parameter, essentially, the same number of commas occur before the parameter name and its unit.
 
 .. warning::
   Parameter names and units MUST NOT contain commas as part of the name or unit.
-  Commas are reserved for seperating the, names, units, and data into columns.
+  Commas are reserved for separating the, names, units, and data into columns.
 
 
 The parameter and unit lines of a CTD file might look like this::
@@ -130,10 +130,10 @@ The parameter and unit lines of a CTD file might look like this::
   CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDSAL,CTDOXY
   DBAR,,ITS-90,PSS-78,UMOL/KG
 
-Note the presence of quality flag column (suffixed with ``_FLAG_W``) which has the corrisponding units of nothing denoted by two commas next to each other.
+Note the presence of quality flag column (suffixed with ``_FLAG_W``) which has the corresponding units of nothing denoted by two commas next to each other.
 For more information on quality flags, see the :ref:`Quality Codes` section.
-White space MUST have no meaning in the exchange format so it may be included for purly asthetic reasons.
-The parameter and units could very easially have looked like::
+White space MUST have no meaning in the exchange format so it may be included for purely aesthetic reasons.
+The parameter and units could very easily have looked like::
 
   CTDPRS, CTDPRS_FLAG_W, CTDTMP, CTDSAL, CTDOXY
     DBAR,              , ITS-90, PSS-78, UMOL/KG
@@ -141,7 +141,7 @@ The parameter and units could very easially have looked like::
 .. note::
   Some technical details for formatting the whitespace.
 
-  While not strictly requiered, parameter, units, and data lines may contain whitespace matching the length of the print format of the paramter.
+  While not strictly required, parameter, units, and data lines may contain whitespace matching the length of the print format of the parameter.
   This is a convention followed by the CCHDO to ease reading of files by humans.
   Quality flag columns usually have a 1 character width which will often cause the parameter/units and data to not be aligned into pretty columns.
 
@@ -150,13 +150,13 @@ The parameter and units could very easially have looked like::
 Data Lines
 ----------
 The data lines occur directly after the unit line.
-Each line of data contains :unicode_info:`,` seperated values of related data.
+Each line of data contains :unicode_info:`,` separated values of related data.
 Each data point of the data line may contain any combination of characters from U+0020 to U+007F except a :unicode_info:`,`.
 Like the `Parameter and Unit Lines`_, a trailing comma MUST NOT be included at the end of each line.
-Data points for each parameter of the `Parameter and Unit Lines`_ must be in the same column as that paratemer, i.e. the same number of commas occur before the parameter label and the datum.
+Data points for each parameter of the `Parameter and Unit Lines`_ must be in the same column as that parameter, i.e. the same number of commas occur before the parameter label and the datum.
 
 Numeric data which occurs on the data lines MUST only contain numbers, spaces, an optional decimal marker, and an optional negative sign.
-All whitespace within data lines has no symantic meaning.
+All whitespace within data lines has no semantic meaning.
 Integers may be represented as bare numerals with no decimal marker.
 All real numeric data (i.e. data that are real numbers) MUST be decimal and MUST represent their decimal mark using a :unicode_info:`.`.
 For both negative real numbers and integers, prepend a :unicode_info:`-` to the numeric portion, positive real numbers MUST NOT be prefixed by a :unicode_info:`+`.
@@ -178,7 +178,7 @@ A `CTDPRS` column may only contain real decimal numbers (U+0030 to U+0039) using
   The exchange format currently has no support for quoted strings within the parameter, unit, and data lines.
   This means it is not possible for any meaningful whitespace to be included.
 
-After all datalines, the end of the data is indicated by a line containing only ``END_DATA``.
+After all data lines, the end of the data is indicated by a line containing only ``END_DATA``.
 Here is a short example of what exchange data might look like::
 
   2.0,2,  19.1840,  34.6935,    220.8
@@ -189,10 +189,10 @@ Here is a short example of what exchange data might look like::
 
 Missing Data Values
 ```````````````````
-Missing data may occur in any position of a column of data, inlcuing all positions.
+Missing data may occur in any position of a column of data, including all positions.
 When data are missing from a column, a fill value must be used to indicate "no data".
-The fill value in exchnage files is :unicode_info:`-` followed by three :unicode_info:`9`, i.e. ``-999``.
-No other charicters other than whitespace should occur within the missing data position.
+The fill value in exchange files is :unicode_info:`-` followed by three :unicode_info:`9`, i.e. ``-999``.
+No other characters other than whitespace should occur within the missing data position.
 
 Missing data values MAY still have :ref:`Quality Codes` associated which can give information as to why the data are missing.
 
@@ -224,7 +224,7 @@ Additional content after ``END_DATA`` MUST continue to be UTF-8 encoded.
 
 Examples
 --------
-Full examples of data in exchange format are presented in their speciifc sections:
+Full examples of data in exchange format are presented in their specific sections:
 
 * :ref:`Example Bottle Data`
 * :ref:`Example CTD Data`
