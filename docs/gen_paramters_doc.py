@@ -43,7 +43,7 @@ Provided with each parameter is a set of information in a table, the information
 Unlisted Parameters
 -------------------
 Otherwise valid exchange files which contain parameters, units, or parameter/unit pairs that are
-not listed in the :ref:`common-parameters` list SHAL NOT cause the file to be
+not listed in the :ref:`common-parameters` list SHALL NOT cause the file to be
 invalid so long as the rest of the specification is adhered to.
 
 Pass Through
