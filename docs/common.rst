@@ -28,8 +28,8 @@ The UTF-8 encoded files MUST NOT include a BYTE ORDER MARK (U+FEFF).
 
 Line Endings
 ````````````
- * Lines in an exchange text file SHOULD end with a LINE FEED (U+000A).
- * Lines MAY also end with a CARRIAGE RETURN (U+000D) followed immediately by a LINE FEED (U+00A).
+ * Lines in an exchange text file SHOULD end with a LINE FEED (U+000A) ``\n``.
+ * Lines MAY also end with a CARRIAGE RETURN (U+000D) ``\r`` followed immediately by a LINE FEED (U+000A) ``\n``.
  * Lines MUST NOT use any other form of line ending.
 
 
