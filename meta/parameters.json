@@ -247,7 +247,8 @@
     "numeric_min": -0.1, 
     "numeric_precision": 2, 
     "whp_name": "NITRAT", 
-    "whp_unit": "UMOL/KG"
+    "whp_unit": "UMOL/KG",
+    "description": "The chemical formula for the nitrate anion is NO3-."
   }, 
   {
     "data_type": "decimal", 
@@ -257,7 +258,8 @@
     "numeric_min": -0.1, 
     "numeric_precision": 2, 
     "whp_name": "NITRIT", 
-    "whp_unit": "UMOL/KG"
+    "whp_unit": "UMOL/KG",
+    "description": "The chemical formula for the nitrite anion is NO2-."
   }, 
   {
     "data_type": "decimal", 
