@@ -649,11 +649,11 @@
   {
     "data_type": "decimal", 
     "field_width": 8, 
-    "flag_w": "woce_discrete", 
+    "flag_w": "woce_ctd", 
     "numeric_max": 50.0, 
     "numeric_min": 0.0, 
     "numeric_precision": 4, 
-    "whp_name": "FLUOR", 
+    "whp_name": "CTDFLUOR", 
     "whp_unit": "MG/M^3"
   }, 
   {
@@ -663,7 +663,7 @@
     "numeric_max": 5.0, 
     "numeric_min": 0.0, 
     "numeric_precision": 4, 
-    "whp_name": "FLUOR", 
+    "whp_name": "CTDFLUOR", 
     "whp_unit": "0-5VDC"
   }, 
   {
@@ -710,7 +710,7 @@
     "numeric_max": 100.0, 
     "numeric_min": 0.0, 
     "numeric_precision": 2, 
-    "whp_name": "XMISS", 
+    "whp_name": "CTDXMISS", 
     "whp_unit": "%TRANS"
   }, 
   {
@@ -720,7 +720,7 @@
     "numeric_max": 5.0, 
     "numeric_min": 0.0, 
     "numeric_precision": 2, 
-    "whp_name": "XMISS", 
+    "whp_name": "CTDXMISS", 
     "whp_unit": "0-5VDC"
   },
   {
