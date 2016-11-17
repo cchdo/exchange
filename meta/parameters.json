@@ -722,7 +722,16 @@
     "numeric_precision": 2, 
     "whp_name": "XMISS", 
     "whp_unit": "0-5VDC"
-  }, 
+  },
+  {
+    "data_type": "decimal",
+    "field_width": 8,
+    "flag_w": "woce_ctd", 
+    "numeric_precision": 4, 
+    "whp_name": "CTDXMISSCP",
+    "whp_unit": "/METER",
+    "description": "The beam attenuation coefficient calculated from the transmissometer; the ending 'p' refers to the fact that it is the attenuation due to suspended particles alone and the contribution of water has been subtracted (part of the calibration process)."
+  },
   {
     "data_type": "decimal", 
     "field_width": 8, 
