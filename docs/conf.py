@@ -48,7 +48,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Exchange Format'
-copyright = u'2015, Andrew M. Barna, James H. Swift, Stephen C. Diggs'
+copyright = u'2016, Andrew M. Barna, James H. Swift, Stephen C. Diggs'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -285,7 +285,7 @@ texinfo_documents = [
 epub_title = u'Exchange Format Description'
 epub_author = u'James H. Swift, Stephen C. Diggs, Andrew M. Barna'
 epub_publisher = u'James H. Swift, Stephen C. Diggs, Andrew M. Barna'
-epub_copyright = u'2015, James H. Swift, Stephen C. Diggs, Andrew M. Barna'
+epub_copyright = u'2016, James H. Swift, Stephen C. Diggs, Andrew M. Barna'
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = u'Exchange Format'
