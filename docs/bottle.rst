@@ -22,12 +22,11 @@ The following parameters are REQUIRED to be present in exchange bottle files whe
 * :ref:`LATITUDE`
 * :ref:`LONGITUDE`
 * :ref:`CTDPRS (DBAR)`
-
-At least one or both of the following parameters MUST be present:
-
-* :ref:`BTLNBR`
 * :ref:`SAMPNO`
 
+
+.. versionchanged:: 1.3
+  Removed :ref:`BTLNBR` as being one of two options for required columns.
 
 Unique Line Identification
 --------------------------
@@ -41,14 +40,10 @@ The following combination of parameters must have unique values:
 * :ref:`EXPOCODE`
 * :ref:`STNNBR`
 * :ref:`CASTNO`
-* :ref:`BTLNBR`
-
-or
-
-* :ref:`EXPOCODE`
-* :ref:`STNNBR`
-* :ref:`CASTNO`
 * :ref:`SAMPNO`
+
+.. versionchanged:: 1.3
+  Since :ref:`BTLNBR` as a being a valid identifier for samples.
 
 Unique Line Identification Examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -71,7 +66,7 @@ differ (``24`` and ``23``).
     END_DATA
 
 The following example shows an example of duplicated unique identification parameter values.
-More than one line contains the exact same values for :ref:`EXPOCODE`, :ref:`STNNBR`, :ref:`CASTNO`, :ref:`BTLNBR`, and :ref:`SAMPNO`.
+More than one line contains the exact same values for :ref:`EXPOCODE`, :ref:`STNNBR`, :ref:`CASTNO`, and :ref:`SAMPNO`.
 
 .. code-block:: none
   :linenos:
@@ -82,7 +77,7 @@ More than one line contains the exact same values for :ref:`EXPOCODE`, :ref:`STN
     EXPOCODE,STNNBR,CASTNO,SAMPNO,BTLNBR[...]
     ,,,,[...]
     33RO20131223,       1,          2,         24,         24[...]
-    33RO20131223,       1,          2,         24,         24[...]
+    33RO20131223,       1,          2,         24,         23[...]
     END_DATA
 
 .. _example bottle data:
