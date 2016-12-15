@@ -28,33 +28,37 @@ The UTF-8 encoded files MUST NOT include a BYTE ORDER MARK (U+FEFF).
 
 Line Endings
 ````````````
- * Lines in an exchange text file SHOULD end with a LINE FEED (U+000A) ``\n``.
- * Lines MAY also end with a CARRIAGE RETURN (U+000D) ``\r`` followed immediately by a LINE FEED (U+000A) ``\n``.
- * Lines MUST NOT use any other form of line ending.
+Lines in an exchange text file MUST end with a LINE FEED (U+000A) ``\n``.
+Lines MUST NOT use any other form of line ending.
+
+.. versionchanged:: 1.3
+  Disallow non "unix style" line endings.
 
 
 .. _File Identification Stamp:
 
-File Identification Stamp
+File Format Indicator
 ---------------------------------
-The first line of a WHP-exchange file MUST contain the file identifier and a creation stamp separated by a :unicode_info:`,`.
-The file identifier will be either ``BOTTLE`` in the case of water samples or ``CTD`` in the case of a CTD profile.
-The creation stamp contains information on when the file was created and who created it.
+The first bytes of a WHP-exchange file MUST contain a file identifier and SHOULD have a creation stamp separated by a :unicode_info:`,`.
 
+Bottle File Indicator
+`````````````````````
+The first bytes of a WHP-exchange bottle file must be the following 6 byte sequence ``42 4F 54 54 4C 45``.
+This is equivalent to ``BOTTLE`` when encoded in UTF-8.
 
-A bottle file identifier will look like::
-  
-  BOTTLE,20140716CCHSIOSCD
+CTD File Indicator
+``````````````````
+The first bytes of a WHP-exchange CTD file must be the following 3 byte sequence ``43 54 44``.
+This is equivalent to ``CTD`` when encoded in UTF-8.
 
-A CTD file identifier will look like::
-
-  CTD,20140716CCHSIOSCD
 
 .. note::
-  If while attempting to read a WHP-exchange file and the first line does not start with ``BOTTLE`` or ``CTD`` an attempt to read the rest of the file will likely fail.
+  If while attempting to read a WHP-exchange file and the first line does not start with either byte sequence listed above an attempt to read the rest of the file will likely fail.
   When writing a WHP-exchange format reader, always check if this identification stamp is present and has a valid value.
 
-The creation stamp contains the following information:
+Creation Stamp Convention
+`````````````````````````
+The creation stamp SHOULD contain the following information in the order presented, using the stamp ``20140716CCHSIOSCD`` as an example:
 
 1) **20140716**\ CCHSIOSCD: A date stamp in the from of YYYYMMDD (ISO 8601)
 2) 20140716\ **CCH**\ SIOSCD: The division (or group) of the institution that wrote the file, typically three characters.
@@ -66,7 +70,21 @@ The creation stamp contains the following information:
 
 .. warning::
   Do not rely on the creation stamp to be the same length in every WHP-exchange file.
-  While all the same elements will be present, their lengths may vary.
+  While all the same elements SHOULD be present, their lengths may vary.
+
+Examples
+````````
+A bottle file identifier including a creation stamp  might look like::
+  
+  BOTTLE,20140716CCHSIOSCD
+
+A CTD file identifier including a creation stamp might look like::
+
+  CTD,20140716CCHSIOSCD
+
+.. versionchanged:: 1.3
+  Made explicit the exact bytes which should appear at the start of a file.
+  Demote the file creation stamp to a strong reccomendation.
 
 .. _comment line(s):
 
