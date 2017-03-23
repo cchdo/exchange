@@ -1,4 +1,4 @@
 .DS_Store
 docs/_build
-docs/parameters.rst
+docs/_autogen_paramlist
 *.pyc

@@ -57,14 +57,14 @@ copyright = u'2016, Andrew M. Barna, James H. Swift, Stephen C. Diggs'
 # The short X.Y version.
 try:
     import subprocess
-    version = subprocess.check_output(["git", "describe", "--abbrev=0","--tags"])
+    version = subprocess.check_output(["git", "describe", "--abbrev=0","--tags"]).decode('utf-8')
     version = version.strip()
 except:
     version = '1.0'
 # The full version, including alpha/beta/rc tags.
 try:
     import subprocess
-    release = subprocess.check_output(["git", "describe"])
+    release = subprocess.check_output(["git", "describe"]).decode('utf-8')
     release = release.strip()
 except:
     release = '1.0.1'
@@ -352,4 +352,8 @@ todo_include_todos = True
 
 # we are cheating to get some of our docs built
 # open to a better suggestion
-execfile('gen_paramters_doc.py')
+try:
+    execfile('gen_paramters_doc.py')
+except NameError:
+    from runpy import run_path
+    run_path("gen_paramters_doc.py")
