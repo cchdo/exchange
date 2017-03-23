@@ -43,7 +43,7 @@ The following combination of parameters must have unique values:
 * :ref:`SAMPNO`
 
 .. versionchanged:: 1.3
-  Since :ref:`BTLNBR` as a being a valid identifier for samples.
+  Removed :ref:`BTLNBR` as a being a valid identifier for samples.
 
 Unique Line Identification Examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
