@@ -55,7 +55,7 @@ For this reason, any parameter, including ones not yet listed in the table
 bellow, MAY have the unit of ``ARBITRARY`` in the unit line.
 
 .. warning::
-    Parameters with ``ARBITRARY`` units are NOT compareable with other
+    Parameters with ``ARBITRARY`` units are NOT comparable with other
     ``ARBITRARY`` parameters, including those with the same parameter name.
 
 
