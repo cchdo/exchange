@@ -67,6 +67,8 @@ for param in params:
     data_label = "Data Type"
     quality_label = "{}_FLAG_W Definitions".format(param['whp_name'])
 
+    aliases = param.get("aliases")
+
     try:
         alternate_units = ",".join(param["alt_units"])
     except KeyError:
@@ -91,6 +93,8 @@ for param in params:
         output += quality_label.ljust(first_col) + ' ' + quality_flags + '\n'
     if "alt_units" in param:
         output += "Alternate Units".ljust(first_col) + ' ' + alternate_units + '\n'
+    if aliases:
+        output += "Aliases".ljust(first_col) + ' ' + ", ".join(aliases) + '\n'
     output += "=" * first_col + ' ' + "=" * second_col + '\n'
 
     output += """

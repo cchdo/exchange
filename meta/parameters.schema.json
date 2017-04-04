@@ -44,6 +44,14 @@
       },
       "warning": {
         "type": ["string", "null"]
+      },
+      "aliases": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "uniqueItems": true,
+        "minItems": 1
       }
     },
     "required": [
