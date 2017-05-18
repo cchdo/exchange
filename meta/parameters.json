@@ -726,7 +726,7 @@
     "whp_unit": "0-5VDC"
   },
   {
-    "cp_name": "volume_beam_attenuation_coefficient_of_radiative_flux_in_sea_water_corrected_for_pure_water_attenuance",
+    "cf_name": "volume_beam_attenuation_coefficient_of_radiative_flux_in_sea_water_corrected_for_pure_water_attenuance",
     "data_type": "decimal",
     "field_width": 8,
     "flag_w": "woce_ctd", 
