@@ -731,7 +731,7 @@
     "field_width": 8,
     "flag_w": "woce_ctd", 
     "numeric_precision": 4, 
-    "whp_name": "",
+    "whp_name": "CTDBEAMCP",
     "whp_unit": "/METER",
     "description": "Radiative flux is the sum of shortwave and longwave radiative fluxes. In accordance with common usage in geophysical disciplines, \"flux\" implies per unit area, called \"flux density\" in physics. The volume scattering/absorption/attenuation coefficient is the fractional change of radiative flux per unit path length due to the stated process. Coefficients with canonical units of m2 s-1 i.e. multiplied by density have standard names with specific_ instead of volume_. The scattering/absorption/attenuation coefficient is assumed to be an integral over all wavelengths, unless a coordinate of radiation_wavelength is included to specify the wavelength. Attenuation is the sum of absorption and scattering. Attenuation is sometimes called \"extinction\". Beam attenuation refers to the decrease of radiative flux along the direction of the incident path. It is distinguished from attenuation of the downwelling component of radiative flux from any incident direction, also called \"diffuse\" attenuation. Corrected for pure water attendance means the attenuation coefficient has been adjusted/calibrated to remove the influence of absorption/scattering from the water itself."
   },
