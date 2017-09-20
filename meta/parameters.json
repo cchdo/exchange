@@ -34,6 +34,14 @@
     "whp_name": "CASTNO", 
     "whp_unit": null
   }, 
+    {
+    "data_type": "integer", 
+    "description": "BIOS cast number.", 
+    "field_width": 8, 
+    "flag_w": null, 
+    "whp_name": "BIOS_CASTID", 
+    "whp_unit": null
+  }, 
   {
     "data_type": "string", 
     "description": "The sample number. Often it is the rosette position, however, groups may use their own sampling identification scheme. Allowed characters are U+0030 to U+0039, U+0041 to U+005A, U+0061 to U+007A, and U+005F (``0-9``, ``a-z``, ``A-Z``, and ``_``)", 
