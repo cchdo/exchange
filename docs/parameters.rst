@@ -3,7 +3,7 @@
 Parameters
 ==========
 
-About Paramters
+About Parameters
 ---------------
 The CCHDO works frequently with many parameters common in hydrography.
 Provided here is a description of many common parameters encountered in exchange files.
@@ -11,7 +11,7 @@ Provided here is a description of many common parameters encountered in exchange
 .. warning::
   This list may not contain every parameter which may be encountered in an exchange file.
   CCHDO is working on providing a machine readable list of ALL parameters which may be encountered in all files.
-  This list will include parameters which CCHDO lacks a descirption for (known unknown parameters).
+  This list will include parameters which CCHDO lacks a description for (known unknown parameters).
 
   Until that time, parameters may appear in exchange formats from the CCHDO which are not documented here.
   No undocumented parameter or field will cause data integrity or usefulness issues (i.e. all undocumented parameters may be safely ignored).
