@@ -353,7 +353,7 @@ todo_include_todos = True
 # we are cheating to get some of our docs built
 # open to a better suggestion
 try:
-    execfile('gen_paramters_doc.py')
+    exec(open("gen_paramters_doc.py").read())
 except NameError:
     from runpy import run_path
     run_path("gen_paramters_doc.py")
