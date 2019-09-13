@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "whp_name": {
+          "type": "string",
+          "minLength": 2
+        },
+        "whp_unit": {
+          "type": ["string", "null"],
+          "minLength": 1
+        },
+        "canonical_name": {
+          "type": "string",
+          "minLength": 2
+        },
+        "canonical_unit": {
+          "type": ["string", "null"],
+          "minLength": 1
+        }
+      },
+      "required": [
+        "whp_name",
+        "whp_unit",
+        "canonical_name",
+        "canonical_unit"
+      ]
+    }
+  }
+  
