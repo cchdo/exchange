@@ -481,15 +481,8 @@
     "numeric_min": -5.0, 
     "numeric_precision": 2, 
     "whp_name": "DELC13", 
-    "whp_unit": "/MILLE"
-  }, 
-  {
-    "data_type": "decimal", 
-    "field_width": 8, 
-    "flag_w": null, 
-    "numeric_precision": 1, 
-    "whp_name": "C13ERR", 
-    "whp_unit": "/MILLE"
+    "whp_unit": "/MILLE",
+    "error_name": "C13ERR"
   }, 
   {
     "data_type": "decimal", 
@@ -499,15 +492,8 @@
     "numeric_min": -300.0, 
     "numeric_precision": 1, 
     "whp_name": "DELC14", 
-    "whp_unit": "/MILLE"
-  }, 
-  {
-    "data_type": "decimal", 
-    "field_width": 8, 
-    "flag_w": null, 
-    "numeric_precision": 1, 
-    "whp_name": "C14ERR", 
-    "whp_unit": "/MILLE"
+    "whp_unit": "/MILLE",
+    "error_name": "C14ERR"
   }, 
   {
     "data_type": "decimal", 
