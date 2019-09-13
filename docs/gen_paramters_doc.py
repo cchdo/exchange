@@ -66,6 +66,8 @@ for param in params:
     units_label = "Units"
     data_label = "Data Type"
     quality_label = "{}_FLAG_W Definitions".format(param['whp_name'])
+    error_label = "Error Column Label"
+    error = param.get("error_name", "")
 
     try:
         alternate_units = ",".join(param["alt_units"])
@@ -79,8 +81,8 @@ for param in params:
     if quality_flags == "woce_bottle":
         quality_flags = ":ref:`Bottle Quality Codes`"
 
-    first_col = max(len(units_label), len(data_label), len(quality_label))
-    second_col = max(len(unit), len(data_type), len(quality_flags), len(alternate_units))
+    first_col = max(len(units_label), len(data_label), len(quality_label), len(error_label))
+    second_col = max(len(unit), len(data_type), len(quality_flags), len(alternate_units), len(error))
 
 
 
@@ -91,6 +93,9 @@ for param in params:
         output += quality_label.ljust(first_col) + ' ' + quality_flags + '\n'
     if "alt_units" in param:
         output += "Alternate Units".ljust(first_col) + ' ' + alternate_units + '\n'
+    if "error_name" in param:
+        output += error_label.ljust(first_col) + ' ' + error + '\n'
+
     output += "=" * first_col + ' ' + "=" * second_col + '\n'
 
     output += """

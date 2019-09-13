@@ -12,6 +12,9 @@
         "type": ["string", "null"],
         "minLength": 1
       },
+      "error_name":{
+        "type": ["string"]
+      },
       "flag_w": {
         "enum": ["woce_bottle", "woce_ctd", "woce_discrete", null]
       },
