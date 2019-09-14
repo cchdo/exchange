@@ -4,5 +4,89 @@
         "whp_unit": null,
         "canonical_name": "DEPTH",
         "canonical_unit": "METERS"
+    },
+    {
+        "whp_name": "CTDPRS",
+        "whp_unit": "DBARS",
+        "canonical_name": "CTDPRS",
+        "canonical_unit": "DBAR"
+    },
+    {
+        "whp_name": "CTDPRS",
+        "whp_unit": "DBR",
+        "canonical_name": "CTDPRS",
+        "canonical_unit": "DBAR"
+    },
+    {
+        "whp_name": "CTDTMP",
+        "whp_unit": "ITS90",
+        "canonical_name": "CTDTMP",
+        "canonical_unit": "ITS-90"
+    },
+    {
+        "whp_name": "CTDTMP",
+        "whp_unit": "ITS-68",
+        "canonical_name": "CTDTMP",
+        "canonical_unit": "IPTS-68"
+    },
+    {
+        "whp_name": "CTDTMP",
+        "whp_unit": "IPTS68",
+        "canonical_name": "CTDTMP",
+        "canonical_unit": "IPTS-68"
+    },
+    {
+        "whp_name": "PH_TEMP",
+        "whp_unit": "DEGC",
+        "canonical_name": "PH_TMP",
+        "canonical_unit": "DEG C"
+    },
+    {
+        "whp_name": "TIME",
+        "whp_unit": "UTC",
+        "canonical_name": "TIME",
+        "canonical_unit": null
+    },
+    {
+        "whp_name": "THETA",
+        "whp_unit": "DEGC",
+        "canonical_name": "THETA",
+        "canonical_unit": "DEG C"
+    },
+    {
+        "whp_name": "THETA",
+        "whp_unit": "DEC C",
+        "canonical_name": "THETA",
+        "canonical_unit": "DEG C"
+    },
+    {
+        "whp_name": "THETA",
+        "whp_unit": "DEC-C",
+        "canonical_name": "THETA",
+        "canonical_unit": "DEG C"
+    },
+    {
+        "whp_name": "AMMONI",
+        "whp_unit": "UMOL/KG",
+        "canonical_name": "NH4",
+        "canonical_unit": "UMOL/KG"
+    },
+    {
+        "whp_name": "DELC13",
+        "whp_unit": "O/OO",
+        "canonical_name": "DELC13",
+        "canonical_unit": "/MILLE"
+    },
+    {
+        "whp_name": "SALNTY",
+        "whp_unit": "PSU",
+        "canonical_name": "SALNTY",
+        "canonical_unit": "PSS-78"
+    },
+    {
+        "whp_name": "CTDRAW",
+        "whp_unit": null,
+        "canonical_name": "CTDRAW",
+        "canonical_unit": "DBAR"
     }
 ]

@@ -153,6 +153,18 @@
   }, 
   {
     "data_type": "decimal", 
+    "description": "The uncorrected pressure as measured by the CTD.", 
+    "field_width": 8, 
+    "flag_w": "woce_ctd", 
+    "note": "Typically does not have quality flags.", 
+    "numeric_max": 10000.0, 
+    "numeric_min": 0.0, 
+    "numeric_precision": 1, 
+    "whp_name": "CTDRAW", 
+    "whp_unit": "DBAR"
+  }, 
+  {
+    "data_type": "decimal", 
     "description": "The corrected temperature as measured by the CTD.", 
     "field_width": 8, 
     "flag_w": "woce_ctd", 
@@ -174,6 +186,18 @@
     "numeric_precision": 4, 
     "whp_name": "CTDTMP", 
     "whp_unit": "IPTS-68"
+  }, 
+  {
+    "data_type": "decimal", 
+    "description": "The corrected temperature as measured by the CTD.", 
+    "field_width": 8, 
+    "flag_w": "woce_ctd", 
+    "note": "Typically does not have quality flags.", 
+    "numeric_max": 35.0, 
+    "numeric_min": -2.0, 
+    "numeric_precision": 4, 
+    "whp_name": "CTDTMP", 
+    "whp_unit": "DEG C"
   }, 
   {
     "data_type": "decimal", 
@@ -277,6 +301,16 @@
     "numeric_min": 0.0, 
     "numeric_precision": 2, 
     "whp_name": "PHSPHT", 
+    "whp_unit": "UMOL/KG"
+  }, 
+  {
+    "data_type": "decimal", 
+    "field_width": 8, 
+    "flag_w": "woce_discrete", 
+    "numeric_max": 5.0, 
+    "numeric_min": 0.0, 
+    "numeric_precision": 2, 
+    "whp_name": "NO2+NO3", 
     "whp_unit": "UMOL/KG"
   }, 
   {
@@ -431,7 +465,8 @@
     "numeric_min": 1.0, 
     "numeric_precision": 4, 
     "whp_name": "HELIUM", 
-    "whp_unit": "NMOL/KG"
+    "whp_unit": "NMOL/KG",
+    "error_name": "HELIER"
   }, 
   {
     "data_type": "decimal", 
@@ -472,6 +507,16 @@
     "numeric_precision": 3, 
     "whp_name": "REVTMP", 
     "whp_unit": "ITS-90"
+  }, 
+  {
+    "data_type": "decimal", 
+    "field_width": 8, 
+    "flag_w": "woce_discrete", 
+    "numeric_max": 35.0, 
+    "numeric_min": -2.0, 
+    "numeric_precision": 3, 
+    "whp_name": "REVTMP", 
+    "whp_unit": "DEG C"
   }, 
   {
     "data_type": "decimal", 
@@ -805,16 +850,6 @@
     "flag_w": "woce_discrete", 
     "whp_name": "QUALT1", 
     "whp_unit": null
-  }, 
-  {
-    "data_type": "decimal", 
-    "field_width": 8, 
-    "flag_w": "woce_ctd", 
-    "numeric_max": 11000.0, 
-    "numeric_min": 0.0, 
-    "numeric_precision": 2, 
-    "whp_name": "CTDRAW", 
-    "whp_unit": "DBAR"
   }, 
   {
     "data_type": "string", 
@@ -1223,5 +1258,41 @@
     "numeric_precision": 4, 
     "whp_name": "BTL_LON", 
     "whp_unit": null
+  },
+  {
+    "data_type": "decimal", 
+    "description": "", 
+    "field_width": 8, 
+    "flag_w": "woce_ctd", 
+    "note": "Typically does not have quality flags.", 
+    "numeric_max": 35.0, 
+    "numeric_min": -2.0, 
+    "numeric_precision": 4, 
+    "whp_name": "THETA", 
+    "whp_unit": "DEG C"
+  },
+  {
+    "data_type": "decimal", 
+    "description": "", 
+    "field_width": 8, 
+    "flag_w": "woce_ctd", 
+    "note": "Typically does not have quality flags.", 
+    "numeric_max": 35.0, 
+    "numeric_min": -2.0, 
+    "numeric_precision": 4, 
+    "whp_name": "THETA", 
+    "whp_unit": "ITS-90"
+  },
+  {
+    "data_type": "decimal", 
+    "description": "", 
+    "field_width": 8, 
+    "flag_w": "woce_ctd", 
+    "note": "Typically does not have quality flags.", 
+    "numeric_max": 35.0, 
+    "numeric_min": -2.0, 
+    "numeric_precision": 4, 
+    "whp_name": "THETA", 
+    "whp_unit": "IPTS-68"
   }
 ]
