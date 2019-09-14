@@ -113,7 +113,8 @@
     "numeric_precision": 4, 
     "warning": "Since this parameter has no units, the positive in the northern hemisphere and negative in the southern hemisphere MUST be strcitly adhered to.\n\nThe geographic coordinate system is not currently reported.", 
     "whp_name": "LATITUDE", 
-    "whp_unit": null
+    "whp_unit": null,
+    "cf_name": "latitude"
   }, 
   {
     "data_type": "decimal", 
@@ -125,7 +126,8 @@
     "numeric_min": -180, 
     "warning": "Since this parameter has no units, the positive in the eastern hemisphere and negative in the western hemisphere convention MUST be strcitly adhered to.\n\nThe geographic coordinate system is not currently reported.", 
     "whp_name": "LONGITUDE", 
-    "whp_unit": null
+    "whp_unit": null,
+    "cf_name": "longitude"
   }, 
   {
     "data_type": "decimal", 
@@ -136,7 +138,8 @@
     "numeric_precision": 1, 
     "warning": "This is NOT the depth of bottle closures.", 
     "whp_name": "DEPTH", 
-    "whp_unit": "METERS"
+    "whp_unit": "METERS",
+    "cf_name": "sea_floor_depth_below_sea_surface"
   }, 
   {
     "cf_name": "sea_water_pressure", 
@@ -149,7 +152,8 @@
     "numeric_min": 0.0, 
     "numeric_precision": 1, 
     "whp_name": "CTDPRS", 
-    "whp_unit": "DBAR"
+    "whp_unit": "DBAR",
+    "cf_name": "sea_water_pressure"
   }, 
   {
     "data_type": "decimal", 
@@ -161,7 +165,8 @@
     "numeric_min": 0.0, 
     "numeric_precision": 1, 
     "whp_name": "CTDRAW", 
-    "whp_unit": "DBAR"
+    "whp_unit": "DBAR",
+    "cf_name": "sea_water_pressure"
   }, 
   {
     "data_type": "decimal", 
@@ -173,7 +178,8 @@
     "numeric_min": -2.0, 
     "numeric_precision": 4, 
     "whp_name": "CTDTMP", 
-    "whp_unit": "ITS-90"
+    "whp_unit": "ITS-90",
+    "cf_name": "sea_water_temperature"
   }, 
   {
     "data_type": "decimal", 
@@ -185,7 +191,8 @@
     "numeric_min": -2.0, 
     "numeric_precision": 4, 
     "whp_name": "CTDTMP", 
-    "whp_unit": "IPTS-68"
+    "whp_unit": "IPTS-68",
+    "cf_name": "sea_water_temperature"
   }, 
   {
     "data_type": "decimal", 
@@ -197,7 +204,8 @@
     "numeric_min": -2.0, 
     "numeric_precision": 4, 
     "whp_name": "CTDTMP", 
-    "whp_unit": "DEG C"
+    "whp_unit": "DEG C",
+    "cf_name": "sea_water_temperature"
   }, 
   {
     "data_type": "decimal", 
@@ -208,7 +216,8 @@
     "numeric_min": 0.0, 
     "numeric_precision": 4, 
     "whp_name": "CTDSAL", 
-    "whp_unit": "PSS-78"
+    "whp_unit": "PSS-78",
+    "cf_name": "sea_water_practical_salinity"
   }, 
   {
     "data_type": "decimal", 
@@ -219,7 +228,8 @@
     "numeric_min": 0.0, 
     "numeric_precision": 4, 
     "whp_name": "SALNTY", 
-    "whp_unit": "PSS-78"
+    "whp_unit": "PSS-78",
+    "cf_name": "sea_water_practical_salinity"
   }, 
   {
     "data_type": "decimal", 
@@ -230,7 +240,8 @@
     "numeric_min": 0.0, 
     "numeric_precision": 4, 
     "whp_name": "CTDOXY", 
-    "whp_unit": "UMOL/KG"
+    "whp_unit": "UMOL/KG",
+    "cf_name": "moles_of_oxygen_per_unit_mass_in_sea_water"
   }, 
   {
     "data_type": "decimal", 
@@ -241,7 +252,8 @@
     "numeric_min": 0.0, 
     "numeric_precision": 4, 
     "whp_name": "CTDOXY", 
-    "whp_unit": "ML/L"
+    "whp_unit": "ML/L",
+    "cf_name": "volume_fraction_of_oxygen_in_sea_water"
   }, 
   {
     "data_type": "decimal", 
@@ -251,7 +263,8 @@
     "numeric_min": 0.0, 
     "numeric_precision": 1, 
     "whp_name": "OXYGEN", 
-    "whp_unit": "UMOL/KG"
+    "whp_unit": "UMOL/KG",
+    "cf_name": "moles_of_oxygen_per_unit_mass_in_sea_water"
   }, 
   {
     "data_type": "decimal", 
@@ -261,7 +274,8 @@
     "numeric_min": 0.0, 
     "numeric_precision": 2, 
     "whp_name": "SILCAT", 
-    "whp_unit": "UMOL/KG"
+    "whp_unit": "UMOL/KG",
+    "cf_name": "moles_of_silicate_per_unit_mass_in_sea_water"
   }, 
   {
     "data_type": "decimal", 
