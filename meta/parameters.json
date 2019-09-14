@@ -486,6 +486,16 @@
     "numeric_min": -3.0, 
     "numeric_precision": 4, 
     "whp_name": "REFTMP", 
+    "whp_unit": "ITS-90"
+  }, 
+  {
+    "data_type": "decimal", 
+    "field_width": 8, 
+    "flag_w": "woce_discrete", 
+    "numeric_max": 35.0, 
+    "numeric_min": -3.0, 
+    "numeric_precision": 4, 
+    "whp_name": "REFTMP", 
     "whp_unit": "DEG C"
   }, 
   {

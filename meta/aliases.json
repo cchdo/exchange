@@ -88,5 +88,29 @@
         "whp_unit": null,
         "canonical_name": "CTDRAW",
         "canonical_unit": "DBAR"
+    },
+    {
+        "whp_name": "CTDTMP",
+        "whp_unit": "ITST90",
+        "canonical_name": "CTDTMP",
+        "canonical_unit": "ITS-90"
+    },
+    {
+        "whp_name": "CTDSAL",
+        "whp_unit": "PSS78",
+        "canonical_name": "CTDSAL",
+        "canonical_unit": "PSS-78"
+    },
+    {
+        "whp_name": "SBE35",
+        "whp_unit": "ITS-90",
+        "canonical_name": "REFTMP",
+        "canonical_unit": "ITS-90"
+    },
+    {
+        "whp_name": "SBE35",
+        "whp_unit": "ITS-90",
+        "canonical_name": "REFTMP",
+        "canonical_unit": "ITS-90"
     }
 ]
