@@ -5,7 +5,8 @@
     "field_width": 14, 
     "flag_w": null, 
     "whp_name": "EXPOCODE", 
-    "whp_unit": null
+    "whp_unit": null,
+    "scope": "profile"
   }, 
   {
     "data_type": "string", 
@@ -14,7 +15,8 @@
     "flag_w": null, 
     "note": "There may be inconsisntency in the how line numbers are represented. For example, ``P02`` might be present as ``P2``, these represent the same SECT_ID. Two digit zero padded line numbers are the canonical representation, please inform the CCHDO if non zero padded line numbers are encountered.", 
     "whp_name": "SECT_ID", 
-    "whp_unit": null
+    "whp_unit": null,
+    "scope": "profile"
   }, 
   {
     "data_type": "string", 
@@ -23,7 +25,8 @@
     "flag_w": null, 
     "note": "Numeric-only station identifiers are preferred by many data users, but provision for non numeric station identifiers is retained to maintain compatibility with WOCE records.", 
     "whp_name": "STNNBR", 
-    "whp_unit": null
+    "whp_unit": null,
+    "scope": "profile"
   }, 
   {
     "data_type": "integer", 
@@ -32,7 +35,8 @@
     "flag_w": null, 
     "note": "Where cast number is unknown a default value of 1 MAY be inserted by data processors.", 
     "whp_name": "CASTNO", 
-    "whp_unit": null
+    "whp_unit": null,
+    "scope": "profile"
   }, 
     {
     "data_type": "integer", 
@@ -40,7 +44,8 @@
     "field_width": 8, 
     "flag_w": null, 
     "whp_name": "BIOS_CASTID", 
-    "whp_unit": null
+    "whp_unit": null,
+    "scope": "profile"
   }, 
   {
     "data_type": "string", 
@@ -49,7 +54,8 @@
     "flag_w": null, 
     "warning": "The value may not be numeric, ensure that any software reading the file can handle UTF-8 data of the specified allowed code points.", 
     "whp_name": "SAMPNO", 
-    "whp_unit": null
+    "whp_unit": null,
+    "scope": "sample"
   }, 
   {
     "data_type": "integer", 
@@ -57,7 +63,8 @@
     "field_width": 8, 
     "flag_w": null, 
     "whp_name": "GEOTR_EVENT", 
-    "whp_unit": null
+    "whp_unit": null,
+    "scope": "profile"
   }, 
   {
     "data_type": "integer", 
@@ -65,7 +72,8 @@
     "field_width": 8, 
     "flag_w": null, 
     "whp_name": "GEOTR_SAMPNO", 
-    "whp_unit": null
+    "whp_unit": null,
+    "scope": "sample"
   }, 
   {
     "data_type": "string", 
@@ -294,7 +302,8 @@
     "numeric_precision": 2, 
     "whp_name": "NITRAT", 
     "whp_unit": "UMOL/KG",
-    "description": "The chemical formula for the nitrate anion is NO3-."
+    "description": "The chemical formula for the nitrate anion is NO3-.",
+    "cf_name": "moles_of_nitrate_per_unit_mass_in_sea_water"
   }, 
   {
     "data_type": "decimal", 
@@ -305,7 +314,8 @@
     "numeric_precision": 2, 
     "whp_name": "NITRIT", 
     "whp_unit": "UMOL/KG",
-    "description": "The chemical formula for the nitrite anion is NO2-."
+    "description": "The chemical formula for the nitrite anion is NO2-.",
+    "cf_name": "moles_of_nitrite_per_unit_mass_in_sea_water"
   }, 
   {
     "data_type": "decimal", 
@@ -315,7 +325,8 @@
     "numeric_min": 0.0, 
     "numeric_precision": 2, 
     "whp_name": "PHSPHT", 
-    "whp_unit": "UMOL/KG"
+    "whp_unit": "UMOL/KG",
+    "cf_name": "moles_of_phosphate_per_unit_mass_in_sea_water"
   }, 
   {
     "data_type": "decimal", 
@@ -325,7 +336,8 @@
     "numeric_min": 0.0, 
     "numeric_precision": 2, 
     "whp_name": "NO2+NO3", 
-    "whp_unit": "UMOL/KG"
+    "whp_unit": "UMOL/KG",
+    "cf_name": "moles_of_nitrate_and_nitrite_per_unit_mass_in_sea_water"
   }, 
   {
     "data_type": "decimal", 
@@ -335,7 +347,8 @@
     "numeric_min": -0.1, 
     "numeric_precision": 3, 
     "whp_name": "CFC-11", 
-    "whp_unit": "PMOL/KG"
+    "whp_unit": "PMOL/KG",
+    "cf_name": "moles_of_cfc11_per_unit_mass_in_sea_water"
   }, 
   {
     "data_type": "decimal", 
@@ -391,7 +404,8 @@
     "flag_w": "woce_discrete", 
     "numeric_precision": 1, 
     "whp_name": "FCO2", 
-    "whp_unit": "UATM"
+    "whp_unit": "UATM",
+    "cf_name": "fugacity_of_carbon_dioxide_in_sea_water"
   }, 
   {
     "data_type": "decimal", 
@@ -409,7 +423,8 @@
     "numeric_min": 50.0, 
     "numeric_precision": 1, 
     "whp_name": "PCO2", 
-    "whp_unit": "UATM"
+    "whp_unit": "UATM",
+    "cf_name": "partial_pressure_of_carbon_dioxide_in_sea_water"
   }, 
   {
     "data_type": "decimal", 
@@ -425,7 +440,8 @@
     "flag_w": "woce_discrete", 
     "numeric_precision": 4, 
     "whp_name": "PH_TOT", 
-    "whp_unit": null
+    "whp_unit": null, 
+    "cf_name": "sea_water_ph_reported_on_total_scale"
   }, 
   {
     "data_type": "decimal", 

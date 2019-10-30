@@ -47,6 +47,9 @@
       },
       "warning": {
         "type": ["string", "null"]
+      },
+      "scope": {
+        "enum": ["cruise", "profile", "sample"]
       }
     },
     "required": [
