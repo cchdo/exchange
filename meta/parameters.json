@@ -150,7 +150,6 @@
     "cf_name": "sea_floor_depth_below_sea_surface"
   }, 
   {
-    "cf_name": "sea_water_pressure", 
     "data_type": "decimal", 
     "description": "The corrected pressure as measured by the CTD.", 
     "field_width": 8, 
