@@ -1,24 +1,17 @@
 import json
+import itertools
+
+flag_refs = {
+    "woce_ctd": ":ref:`CTD Quality Codes`",
+    "woce_discrete": ":ref:`Water Quality Codes`",
+    "woce_bottle": ":ref:`Bottle Quality Codes`",
+}
 
 with open("../meta/parameters.json", 'r') as f:
     parameters = json.load(f)
 
-output = '''
-.. _common-parameters:
 
-Common Parameters
------------------
-This section was generated automatically from a 
-:download:`machine readable list of parameters <../meta/parameters.json>`,
-there is also a
-:download:`validation schema <../meta/parameters.schema.json>` for the
-parameters json.
-
-.. hlist::
-  :columns: 3
-
-'''
-import itertools
+## group the params that only are only different by units into a single param
 params = []
 groups = itertools.groupby(parameters, key=lambda x: x["whp_name"])
 for group in groups:
@@ -38,87 +31,77 @@ for group in groups:
                 first["alt_units"] = [alt["whp_unit"]]
         else:
             params.append(alt)
-for param in params:
-    unit = param.get('whp_unit')
-    if unit is None:
-        output += "  * {0}_\n".format(param["whp_name"])
-    else:
-        output += "  * `{0} ({1})`_\n".format(param["whp_name"], unit)
-
-for param in params:
-    unit = param.get('whp_unit')
-    if unit is None:
-        output += '''
-.. _{0}:
-
-{0}\n'''.format(param["whp_name"])
-    else:
-        output += '''
-.. _{0} ({1}):
-
-{0}\n'''.format(param["whp_name"], unit)
-
-    output += "^" * len(param["whp_name"]) + '\n\n'
-    data_type = param['data_type']
-    quality_flags = str(param['flag_w'])
-
-    unit = str(unit)
-    units_label = "Units"
-    data_label = "Data Type"
-    quality_label = "{}_FLAG_W Definitions".format(param['whp_name'])
-    error_label = "Error Column Label"
-    error = param.get("error_name", "")
-
-    try:
-        alternate_units = ",".join(param["alt_units"])
-    except KeyError:
-        alternate_units = ""
-
-    if quality_flags == "woce_ctd":
-        quality_flags = ":ref:`CTD Quality Codes`"
-    if quality_flags == "woce_discrete":
-        quality_flags = ":ref:`Water Quality Codes`"
-    if quality_flags == "woce_bottle":
-        quality_flags = ":ref:`Bottle Quality Codes`"
-
-    first_col = max(len(units_label), len(data_label), len(quality_label), len(error_label))
-    second_col = max(len(unit), len(data_type), len(quality_flags), len(alternate_units), len(error))
-
-
-
-    output += "=" * first_col + ' ' + "=" * second_col + '\n'
-    output += units_label.ljust(first_col) + ' ' + unit + '\n'
-    output += data_label.ljust(first_col) + ' ' + data_type + '\n'
-    if quality_flags != "None":
-        output += quality_label.ljust(first_col) + ' ' + quality_flags + '\n'
-    if "alt_units" in param:
-        output += "Alternate Units".ljust(first_col) + ' ' + alternate_units + '\n'
-    if "error_name" in param:
-        output += error_label.ljust(first_col) + ' ' + error + '\n'
-
-    output += "=" * first_col + ' ' + "=" * second_col + '\n'
-
-    output += """
-{0}
-""".format(param.get('description', ""))
-
-    if quality_flags == "None":
-        output += ("\n.. warning::\n"
-                   "  ``{name}`` does not have woce quality codes."
-                   "  ``{name}_FLAG_W`` should not appear in data file"
-                   "  :ref:`parameter and unit lines`.\n").format(
-                name=param["whp_name"]
-                )
-    if param.get('note'):
-        output += """\n.. note::\n"""
-        for line in param['note'].split("\n"):
-            output += "  {}\n".format(line)
-    if param.get('warning'):
-        output += """\n.. warning::\n"""
-        for line in param['warning'].split("\n"):
-            output += "  {}\n".format(line)
-
-    output += "\n.. raw:: html\n\n  <hr />\n"
 
 with open('_autogen_paramlist', 'w') as f:
-    f.write(output)
+    f.write('''
+.. _common-parameters:
+
+Common Parameters
+-----------------
+This section was generated automatically from a 
+:download:`machine readable list of parameters <../meta/parameters.json>`,
+there is also a
+:download:`validation schema <../meta/parameters.schema.json>` for the
+parameters json.
+
+.. hlist::
+  :columns: 3
+
+''')
+
+# Make the 3 column list of params at the top of the page
+    for param in params:
+        name = param["whp_name"]
+        unit = param.get('whp_unit')
+        if unit is None:
+            f.write(f"  * {name}_\n")
+        else:
+            f.write(f"  * `{name} ({unit})`_\n")
+
+    for param in params:
+        name = param["whp_name"]
+        unit = param.get('whp_unit')
+
+        ## make the ref and title
+        if unit is None:
+            f.write(f"\n.. _{name}:\n\n{name}\n")
+        else:
+            f.write(f"\n.. _{name} ({unit}):\n\n{name}\n")
+
+        ## Underline that title
+        f.write("^" * len(param["whp_name"]) + '\n\n')
+        data_type = param['data_type']
+        quality_flags = str(param['flag_w'])
+
+        f.write(f":Units: {unit}\n")
+        f.write(f":Data Type: {data_type}\n")
+        if quality_flags != "None":
+            flag_ref = flag_refs[quality_flags]
+            f.write(f":{param['whp_name']}_FLAG_W Definitions: {flag_ref}\n")
+        if "alt_units" in param:
+            f.write(f":Alternate Units: {', '.join(param['alt_units'])}\n")
+        if "error_name" in param:
+            f.write(f":Error Column Label: {param.get('error_name', '')}\n")
+        if "cf_name" in param:
+            f.write(f":CF Standard Name: {param['cf_name']}\n")
+        if "cf_unit" in param:
+            f.write(f":CF Units: {param['cf_unit']}\n")
+
+        f.write(f"\n{param.get('description', '')}\n")
+
+        if quality_flags == "None":
+            f.write((f"\n.. warning::\n"
+                       f"  ``{name}`` does not have woce quality codes."
+                       f"  ``{name}_FLAG_W`` should not appear in data file"
+                       f"  :ref:`parameter and unit lines`.\n"))
+        if param.get('note'):
+            f.write("\n.. note::\n")
+            for line in param['note'].split("\n"):
+                f.write(f"  {line}\n")
+        if param.get('warning'):
+            f.write("\n.. warning::\n")
+            for line in param['warning'].split("\n"):
+                f.write(f"  {line}\n")
+
+        f.write("\n.. raw:: html\n\n  <hr />\n")
+

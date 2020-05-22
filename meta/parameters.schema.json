@@ -22,6 +22,11 @@
         "type": ["string", "null"],
         "minLength": 3
       },
+      "cf_unit": {
+        "type": ["string", "null"],
+        "minLength": 1,
+        "description": "Units to use if the actual unit in a CF-netcdf is different from the cf canonical unit, examples: degC instead of K for sea water temp or even umol/kg insead of mol/kg"
+      },
       "data_type": {
         "enum": ["decimal", "integer", "string"]
       },
