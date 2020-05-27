@@ -14,6 +14,7 @@
 
 import sys
 import os
+from datetime import datetime
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -48,7 +49,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Exchange Format'
-copyright = u'2016, Andrew M. Barna, James H. Swift, Stephen C. Diggs'
+copyright = f'2014-{datetime.now().year}, Andrew M. Barna, James H. Swift, Stephen C. Diggs'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -155,7 +156,7 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
-#html_last_updated_fmt = '%b %d, %Y'
+html_last_updated_fmt = '%b %d, %Y'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
@@ -285,7 +286,7 @@ texinfo_documents = [
 epub_title = u'Exchange Format Description'
 epub_author = u'James H. Swift, Stephen C. Diggs, Andrew M. Barna'
 epub_publisher = u'James H. Swift, Stephen C. Diggs, Andrew M. Barna'
-epub_copyright = u'2016, James H. Swift, Stephen C. Diggs, Andrew M. Barna'
+epub_copyright = f'2014-{datetime.now().year}, James H. Swift, Stephen C. Diggs, Andrew M. Barna'
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = u'Exchange Format'

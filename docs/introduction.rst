@@ -74,4 +74,4 @@ Unicode Representation in this Document
 Character in this document will be defined as unicode points in the format U+#### where the # symbols are hexadecimal numbers.
 Since exchange files are defined to be UTF-8 encoded, this unambiguously specifies the exact bits which must occur in a file.
 
-.. [#f1] As of March 2015, 83.7% of the text on the internet is encoded with UTF-8.
+.. [#f1] As of May 2020, 95.0% of the text on the internet is encoded with UTF-8.
