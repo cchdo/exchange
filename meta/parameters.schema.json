@@ -12,6 +12,10 @@
         "type": ["string", "null"],
         "minLength": 1
       },
+      "whp_number": {
+        "type": ["number"],
+        "description": "The WHP Parameter Number assigned by the WHPO, there is no requirement that all params have a number or for numbers to be unique to a single parameter."
+      },
       "error_name":{
         "type": ["string"]
       },

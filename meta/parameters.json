@@ -248,6 +248,7 @@
     "numeric_precision": 4, 
     "whp_name": "SALNTY", 
     "whp_unit": "PSS-78",
+    "whp_number": 1,
     "cf_name": "sea_water_practical_salinity"
   }, 
   {
@@ -284,6 +285,7 @@
     "numeric_precision": 1, 
     "whp_name": "OXYGEN", 
     "whp_unit": "UMOL/KG",
+    "whp_number": 2,
     "cf_name": "moles_of_oxygen_per_unit_mass_in_sea_water"
   }, 
   {
@@ -296,6 +298,7 @@
     "numeric_precision": 2, 
     "whp_name": "SILCAT", 
     "whp_unit": "UMOL/KG",
+    "whp_number": 3,
     "cf_name": "moles_of_silicate_per_unit_mass_in_sea_water"
   }, 
   {
@@ -305,7 +308,8 @@
     "flag_w": "woce_discrete", 
     "numeric_precision": 2, 
     "whp_name": "NH4", 
-    "whp_unit": "UMOL/KG"
+    "whp_unit": "UMOL/KG",
+    "whp_number": 30
   }, 
   {
     "data_type": "decimal", 
@@ -316,6 +320,7 @@
     "numeric_precision": 2, 
     "whp_name": "NITRAT", 
     "whp_unit": "UMOL/KG",
+    "whp_number": 4,
     "description": "The concentration of dissolved nitrate in sea water. The chemical formula for the nitrate anion is NO3-.",
     "cf_name": "moles_of_nitrate_per_unit_mass_in_sea_water"
   }, 
@@ -328,6 +333,7 @@
     "numeric_precision": 2, 
     "whp_name": "NITRIT", 
     "whp_unit": "UMOL/KG",
+    "whp_number": 5,
     "description": "The concentration of dissolved nitrite in sea water. The chemical formula for the nitrite anion is NO2-.",
     "cf_name": "moles_of_nitrite_per_unit_mass_in_sea_water"
   }, 
@@ -341,6 +347,7 @@
     "numeric_precision": 2, 
     "whp_name": "PHSPHT", 
     "whp_unit": "UMOL/KG",
+    "whp_number": 6,
     "cf_name": "moles_of_phosphate_per_unit_mass_in_sea_water"
   }, 
   {
@@ -365,6 +372,7 @@
     "numeric_precision": 3, 
     "whp_name": "CFC-11", 
     "whp_unit": "PMOL/KG",
+    "whp_number": 7,
     "cf_name": "moles_of_cfc11_per_unit_mass_in_sea_water"
   }, 
   {
@@ -375,7 +383,8 @@
     "numeric_min": -0.1, 
     "numeric_precision": 3, 
     "whp_name": "CFC-12", 
-    "whp_unit": "PMOL/KG"
+    "whp_unit": "PMOL/KG",
+    "whp_number": 8
   }, 
   {
     "data_type": "decimal", 
@@ -385,7 +394,8 @@
     "numeric_min": -0.1, 
     "numeric_precision": 3, 
     "whp_name": "CFC113", 
-    "whp_unit": "PMOL/KG"
+    "whp_unit": "PMOL/KG",
+    "whp_number": 27
   }, 
   {
     "data_type": "decimal", 
@@ -393,7 +403,9 @@
     "flag_w": "woce_discrete", 
     "numeric_precision": 4, 
     "whp_name": "SF6", 
-    "whp_unit": "FMOL/KG"
+    "whp_unit": "FMOL/KG",
+    "whp_number": 63,
+    "description": "Sulfur hexafluoride"
   }, 
   {
     "data_type": "decimal", 
@@ -403,7 +415,8 @@
     "numeric_min": 1100.0, 
     "numeric_precision": 1, 
     "whp_name": "TCARBN", 
-    "whp_unit": "UMOL/KG"
+    "whp_unit": "UMOL/KG",
+    "whp_number": 23
   }, 
   {
     "data_type": "decimal", 
@@ -413,7 +426,8 @@
     "numeric_min": 100.0, 
     "numeric_precision": 1, 
     "whp_name": "ALKALI", 
-    "whp_unit": "UMOL/KG"
+    "whp_unit": "UMOL/KG",
+    "whp_number": 24
   }, 
   {
     "data_type": "decimal", 
@@ -441,6 +455,7 @@
     "numeric_precision": 1, 
     "whp_name": "PCO2", 
     "whp_unit": "UATM",
+    "whp_number": 25,
     "cf_name": "partial_pressure_of_carbon_dioxide_in_sea_water"
   }, 
   {
@@ -458,6 +473,7 @@
     "numeric_precision": 4, 
     "whp_name": "PH_TOT", 
     "whp_unit": null, 
+    "whp_number": 26,
     "cf_name": "sea_water_ph_reported_on_total_scale"
   }, 
   {
@@ -466,7 +482,8 @@
     "flag_w": "woce_discrete", 
     "numeric_precision": 4, 
     "whp_name": "PH_SWS", 
-    "whp_unit": null
+    "whp_unit": null,
+    "whp_number": 26
   }, 
   {
     "data_type": "decimal", 
@@ -484,7 +501,9 @@
     "numeric_min": 30.0, 
     "numeric_precision": 2, 
     "whp_name": "DOC", 
-    "whp_unit": "UMOL/KG"
+    "whp_unit": "UMOL/KG",
+    "whp_number": 43,
+    "description": "Dissolved organic carbon"
   }, 
   {
     "data_type": "decimal", 
@@ -494,15 +513,10 @@
     "numeric_min": -1.0, 
     "numeric_precision": 3, 
     "whp_name": "TRITUM", 
-    "whp_unit": "TU"
-  }, 
-  {
-    "data_type": "decimal", 
-    "field_width": 8, 
-    "flag_w": null, 
-    "numeric_precision": 3, 
-    "whp_name": "TRITER", 
-    "whp_unit": "TU"
+    "whp_unit": "TU",
+    "whp_number": 9,
+    "note": "1 TU is 1 tritium atom per 10\\ :sup:`18` hydrogen atoms",
+    "error_name": "TRITER"
   }, 
   {
     "data_type": "decimal", 
@@ -513,6 +527,7 @@
     "numeric_precision": 4, 
     "whp_name": "HELIUM", 
     "whp_unit": "NMOL/KG",
+    "whp_number": 10,
     "error_name": "HELIER"
   }, 
   {
@@ -523,7 +538,8 @@
     "numeric_min": -10.0, 
     "numeric_precision": 2, 
     "whp_name": "DELHE3", 
-    "whp_unit": "PERCNT"
+    "whp_unit": "PERCNT",
+    "whp_number": 11
   }, 
   {
     "data_type": "decimal", 
@@ -584,6 +600,7 @@
     "numeric_precision": 2, 
     "whp_name": "DELC13", 
     "whp_unit": "/MILLE",
+    "whp_number": 13,
     "error_name": "C13ERR"
   }, 
   {
@@ -595,6 +612,7 @@
     "numeric_precision": 1, 
     "whp_name": "DELC14", 
     "whp_unit": "/MILLE",
+    "whp_number": 12,
     "error_name": "C14ERR"
   }, 
   {
@@ -605,7 +623,9 @@
     "numeric_min": 200.0, 
     "numeric_precision": 2, 
     "whp_name": "DON", 
-    "whp_unit": "UMOL/KG"
+    "whp_unit": "UMOL/KG",
+    "whp_number": 32,
+    "description": "Dissolved organic nitrogen"
   }, 
   {
     "data_type": "string", 
@@ -620,7 +640,9 @@
     "flag_w": "woce_discrete", 
     "numeric_precision": 3, 
     "whp_name": "POC", 
-    "whp_unit": "UG/KG"
+    "whp_unit": "UG/KG",
+    "whp_number": 40,
+    "description": "Particulate organic carbon"
   }, 
   {
     "data_type": "decimal", 
@@ -628,7 +650,9 @@
     "flag_w": "woce_discrete", 
     "numeric_precision": 3, 
     "whp_name": "PON", 
-    "whp_unit": "UG/KG"
+    "whp_unit": "UG/KG",
+    "whp_number": 41,
+    "description": "Particulate organic nitrogen"
   }, 
   {
     "data_type": "decimal", 
@@ -655,7 +679,8 @@
     "numeric_min": 0.0, 
     "numeric_precision": 3, 
     "whp_name": "NEON", 
-    "whp_unit": "NMOL/KG"
+    "whp_unit": "NMOL/KG",
+    "whp_number": 17
   }, 
   {
     "data_type": "decimal", 
@@ -683,7 +708,9 @@
     "numeric_min": -0.1, 
     "numeric_precision": 3, 
     "whp_name": "CCL4", 
-    "whp_unit": "PMOL/KG"
+    "whp_unit": "PMOL/KG",
+    "whp_number": 28,
+    "description": "Carbon tetrachloride"
   }, 
   {
     "data_type": "string", 
@@ -715,7 +742,8 @@
     "flag_w": "woce_discrete", 
     "numeric_precision": 1, 
     "whp_name": "BARIUM", 
-    "whp_unit": "NMOL/KG"
+    "whp_unit": "NMOL/KG",
+    "whp_number": 39
   }, 
   {
     "data_type": "string", 
@@ -789,7 +817,9 @@
     "numeric_min": 3.0, 
     "numeric_precision": 2, 
     "whp_name": "RA-226", 
-    "whp_unit": "DM/.1MG"
+    "whp_unit": "DM/.1MG",
+    "whp_number": 19,
+    "note": "units are disintegrations per minute per 100kg"
   }, 
   {
     "data_type": "decimal", 
@@ -799,7 +829,9 @@
     "numeric_min": -1.0, 
     "numeric_precision": 2, 
     "whp_name": "RA-228", 
-    "whp_unit": "DM/.1MG"
+    "whp_unit": "DM/.1MG",
+    "whp_number": 18,
+    "note": "units are disintegrations per minute per 100kg"
   }, 
   {
     "data_type": "decimal", 
@@ -839,7 +871,9 @@
     "numeric_min": 0.0, 
     "numeric_precision": 1, 
     "whp_name": "AR-39", 
-    "whp_unit": "PCTMOD"
+    "whp_unit": "PCTMOD",
+    "whp_number": 16,
+    "note": "The units mean '% modern'"
   }, 
   {
     "data_type": "decimal", 
@@ -849,7 +883,9 @@
     "numeric_min": 0.0, 
     "numeric_precision": 2, 
     "whp_name": "CS-137", 
-    "whp_unit": "DM/.1MG"
+    "whp_unit": "DM/.1MG",
+    "whp_number": 22,
+    "note": "units are disintegrations per minute per 100kg"
   }, 
   {
     "data_type": "decimal", 
@@ -859,7 +895,8 @@
     "numeric_min": 0.0, 
     "numeric_precision": 2, 
     "whp_name": "KR-85", 
-    "whp_unit": "DM/MG"
+    "whp_unit": "DM/MG",
+    "whp_number": 14
   }, 
   {
     "data_type": "decimal", 
@@ -869,7 +906,9 @@
     "numeric_min": 0.0, 
     "numeric_precision": 2, 
     "whp_name": "SR-90", 
-    "whp_unit": "DM/.1MG"
+    "whp_unit": "DM/.1MG",
+    "whp_number": 21,
+    "note": "units are disintegrations per minute per 100kg"
   }, 
   {
     "data_type": "decimal", 
@@ -878,7 +917,9 @@
     "numeric_max": 200.0, 
     "numeric_min": 1.0, 
     "whp_name": "N2O", 
-    "whp_unit": "NMOL/KG"
+    "whp_unit": "NMOL/KG",
+    "whp_number": 33,
+    "description": "Nitrous oxide"
   }, 
   {
     "data_type": "string", 
@@ -931,7 +972,8 @@
     "numeric_max": 600.0, 
     "numeric_min": 200.0, 
     "whp_name": "IODATE", 
-    "whp_unit": "NMOL/KG"
+    "whp_unit": "NMOL/KG",
+    "whp_number": 29
   }, 
   {
     "data_type": "decimal", 
@@ -940,7 +982,8 @@
     "numeric_max": 300.0, 
     "numeric_min": 0.0, 
     "whp_name": "IODIDE", 
-    "whp_unit": "NMOL/KG"
+    "whp_unit": "NMOL/KG",
+    "whp_number": 29
   }, 
   {
     "data_type": "decimal", 
@@ -950,7 +993,9 @@
     "numeric_min": 0.0, 
     "numeric_precision": 2, 
     "whp_name": "CHLORA", 
-    "whp_unit": "UG/KG"
+    "whp_unit": "UG/KG",
+    "whp_number": 34,
+    "description": "Chlorophyll a"
   }, 
   {
     "data_type": "decimal", 
@@ -958,7 +1003,9 @@
     "flag_w": "woce_discrete", 
     "numeric_precision": 2, 
     "whp_name": "PPHYTN", 
-    "whp_unit": "UG/KG"
+    "whp_unit": "UG/KG",
+    "whp_number": 35,
+    "description": "Phaeophytin"
   }, 
   {
     "data_type": "decimal", 
@@ -975,7 +1022,9 @@
     "numeric_max": 20.0, 
     "numeric_min": 1.0, 
     "whp_name": "CH4", 
-    "whp_unit": "NMOL/KG"
+    "whp_unit": "NMOL/KG",
+    "whp_number": 31,
+    "description": "Methane"
   }, 
   {
     "data_type": "string", 
@@ -1006,7 +1055,8 @@
     "numeric_min": 5.0, 
     "numeric_precision": 2, 
     "whp_name": "ARGON", 
-    "whp_unit": "UMOL/KG"
+    "whp_unit": "UMOL/KG",
+    "whp_number": 15
   }, 
   {
     "data_type": "decimal", 
