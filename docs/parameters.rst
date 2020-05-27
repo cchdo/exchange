@@ -20,22 +20,22 @@ Definitions
 ^^^^^^^^^^^
 Provided with each parameter is a set of information in a table, the information included in that table should be interpreted as follows:
 
-* Units: 
+:Units: 
     These are the common units encountered for this parameter as it will appear in the exchange document itself.
     The special units of "None" means the field will be either blank or contain only whitespace.
-* Data Type: 
+:Data Type: 
     Specifies the allowed type of data in the data records for this parameter.
     There are three types of data, string (str), integers (int), and decimal.
     String data types may be any printing character except a comma ``,`` which is the field seperator.
     Integer data types may only contain numbers without a decimal point, quality flags are usually integers.
     Decimal data types may be any real number (including an integer) and may include decimal point, the precision is not specified.
-* Quality Flags: 
+:Quality Flags: 
     Specifies which set of quality flag definitions should be used to interpret a quality flag column for this parameter (if present).
     Current quality flags are: :ref:`bottle <Bottle Quality Codes>`, :ref:`water <Water Quality Codes>`, :ref:`ctd <CTD Quality Codes>`.
     See the :ref:`Quality Codes` section for more information
-* Alternate Units:
+:Alternate Units:
     Some parameters might have alternate units which might also be in data files.
-* Error Column Label:
+:Error Column Label:
     A parameter might contain an error or uncertanty value associated with it.
     The column which contains the error/uncertanty values for this parameter will have the name listed in this field.
 
