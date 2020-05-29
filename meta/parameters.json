@@ -236,7 +236,8 @@
     "numeric_precision": 4, 
     "whp_name": "CTDSAL", 
     "whp_unit": "PSS-78",
-    "cf_name": "sea_water_practical_salinity"
+    "cf_name": "sea_water_practical_salinity",
+    "reference_scale": "PSS-78"
   }, 
   {
     "data_type": "decimal", 
@@ -249,7 +250,8 @@
     "whp_name": "SALNTY", 
     "whp_unit": "PSS-78",
     "whp_number": 1,
-    "cf_name": "sea_water_practical_salinity"
+    "cf_name": "sea_water_practical_salinity",
+    "reference_scale": "PSS-78"
   }, 
   {
     "data_type": "decimal", 
@@ -564,7 +566,10 @@
     "numeric_min": -3.0, 
     "numeric_precision": 4, 
     "whp_name": "REFTMP", 
-    "whp_unit": "ITS-90"
+    "whp_unit": "ITS-90",
+    "cf_name": "sea_water_temperature",
+    "cf_unit": "degC",
+    "reference_scale": "ITS-90"
   }, 
   {
     "data_type": "decimal", 
@@ -574,7 +579,10 @@
     "numeric_min": -3.0, 
     "numeric_precision": 4, 
     "whp_name": "REFTMP", 
-    "whp_unit": "DEG C"
+    "whp_unit": "DEG C",
+    "cf_name": "sea_water_temperature",
+    "cf_unit": "degC",
+    "reference_scale": "unknown"
   }, 
   {
     "data_type": "decimal", 
@@ -1416,7 +1424,9 @@
     "numeric_min": -2.0, 
     "numeric_precision": 4, 
     "whp_name": "THETA", 
-    "whp_unit": "DEG C"
+    "whp_unit": "DEG C",
+    "cf_name": "sea_water_potential_temperature",
+    "cf_unit": "degC"
   },
   {
     "data_type": "decimal", 
