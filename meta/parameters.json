@@ -253,6 +253,19 @@
   }, 
   {
     "data_type": "decimal", 
+    "description": "Salinity calculated from direct density measurements, also called absolute salinity.", 
+    "field_width": 8, 
+    "flag_w": "woce_discrete", 
+    "numeric_max": 42.0, 
+    "numeric_min": 0.0, 
+    "numeric_precision": 4, 
+    "whp_name": "DNSSAL", 
+    "whp_unit": "G/KG",
+    "whp_number": 92,
+    "cf_name": "sea_water_absolute_salinity"
+  }, 
+  {
+    "data_type": "decimal", 
     "description": "The corrected oxygen measured by the CTD.", 
     "field_width": 9, 
     "flag_w": "woce_ctd", 
@@ -373,7 +386,8 @@
     "whp_name": "CFC-11", 
     "whp_unit": "PMOL/KG",
     "whp_number": 7,
-    "cf_name": "moles_of_cfc11_per_unit_mass_in_sea_water"
+    "cf_name": "moles_of_cfc11_per_unit_mass_in_sea_water",
+    "error_name": "CF11ER"
   }, 
   {
     "data_type": "decimal", 
@@ -384,7 +398,8 @@
     "numeric_precision": 3, 
     "whp_name": "CFC-12", 
     "whp_unit": "PMOL/KG",
-    "whp_number": 8
+    "whp_number": 8,
+    "error_name": "CF12ER"
   }, 
   {
     "data_type": "decimal", 
@@ -580,6 +595,16 @@
     "numeric_precision": 3, 
     "whp_name": "REVTMP", 
     "whp_unit": "ITS-90"
+  }, 
+  {
+    "data_type": "decimal", 
+    "field_width": 8, 
+    "flag_w": "woce_discrete", 
+    "numeric_max": 35.0, 
+    "numeric_min": -2.0, 
+    "numeric_precision": 3, 
+    "whp_name": "REVTMP", 
+    "whp_unit": "IPTS-68"
   }, 
   {
     "data_type": "decimal", 
@@ -819,7 +844,8 @@
     "whp_name": "RA-226", 
     "whp_unit": "DM/.1MG",
     "whp_number": 19,
-    "note": "units are disintegrations per minute per 100kg"
+    "note": "units are disintegrations per minute per 100kg",
+    "error_name": "RA-226E"
   }, 
   {
     "data_type": "decimal", 
@@ -926,14 +952,8 @@
     "field_width": 11, 
     "flag_w": "woce_discrete", 
     "whp_name": "RA-8/6", 
-    "whp_unit": "DM/.1MG"
-  }, 
-  {
-    "data_type": "string", 
-    "field_width": 11, 
-    "flag_w": "woce_discrete", 
-    "whp_name": "RA-8/6E", 
-    "whp_unit": "DM/.1MG"
+    "whp_unit": "DM/.1MG",
+    "error_name": "RA-8/6E"
   }, 
   {
     "data_type": "string", 
@@ -995,6 +1015,17 @@
     "whp_name": "CHLORA", 
     "whp_unit": "UG/KG",
     "whp_number": 34,
+    "description": "Chlorophyll a"
+  }, 
+  {
+    "data_type": "decimal", 
+    "field_width": 8, 
+    "flag_w": "woce_discrete", 
+    "numeric_max": 9.0, 
+    "numeric_min": 0.0, 
+    "numeric_precision": 2, 
+    "whp_name": "CHLORA", 
+    "whp_unit": "UG/L",
     "description": "Chlorophyll a"
   }, 
   {
@@ -1077,6 +1108,14 @@
     "numeric_precision": 1, 
     "whp_name": "D15N_NO3", 
     "whp_unit": null
+  }, 
+  {
+    "data_type": "decimal", 
+    "field_width": 8, 
+    "flag_w": "woce_discrete", 
+    "whp_name": "UREA", 
+    "whp_unit": "UMOL/KG",
+    "description": "Urea has the chemical formula CO(NH\\ :sub:`2`)\\ :sub:`2`"
   }, 
   {
     "data_type": "decimal", 

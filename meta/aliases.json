@@ -1,5 +1,17 @@
 [
     {
+        "whp_name": "LATITUDE",
+        "whp_unit": "DEG",
+        "canonical_name": "LATITUDE",
+        "canonical_unit": null
+    },
+    {
+        "whp_name": "LONGITUDE",
+        "whp_unit": "DEG",
+        "canonical_name": "LONGITUDE",
+        "canonical_unit": null
+    },
+    {
         "whp_name": "DEPTH",
         "whp_unit": null,
         "canonical_name": "DEPTH",
@@ -36,6 +48,12 @@
         "canonical_unit": "IPTS-68"
     },
     {
+        "whp_name": "CTDTMP",
+        "whp_unit": "DEG-C",
+        "canonical_name": "CTDTMP",
+        "canonical_unit": "DEG C"
+    },
+    {
         "whp_name": "PH_TEMP",
         "whp_unit": "DEGC",
         "canonical_name": "PH_TMP",
@@ -66,6 +84,12 @@
         "canonical_unit": "DEG C"
     },
     {
+        "whp_name": "THETA",
+        "whp_unit": "DEC_C",
+        "canonical_name": "THETA",
+        "canonical_unit": "DEG C"
+    },
+    {
         "whp_name": "AMMONI",
         "whp_unit": "UMOL/KG",
         "canonical_name": "NH4",
@@ -78,8 +102,26 @@
         "canonical_unit": "/MILLE"
     },
     {
+        "whp_name": "DELO18",
+        "whp_unit": "O/OO",
+        "canonical_name": "DELO18",
+        "canonical_unit": "/MILLE"
+    },
+    {
+        "whp_name": "DELC14",
+        "whp_unit": "O/OO",
+        "canonical_name": "DELC14",
+        "canonical_unit": "/MILLE"
+    },
+    {
         "whp_name": "SALNTY",
         "whp_unit": "PSU",
+        "canonical_name": "SALNTY",
+        "canonical_unit": "PSS-78"
+    },
+    {
+        "whp_name": "SALNTY",
+        "whp_unit": "PSS78",
         "canonical_name": "SALNTY",
         "canonical_unit": "PSS-78"
     },
@@ -90,10 +132,34 @@
         "canonical_unit": "DBAR"
     },
     {
+        "whp_name": "REVTMP",
+        "whp_unit": null,
+        "canonical_name": "REVTMP",
+        "canonical_unit": "DEG C"
+    },
+    {
+        "whp_name": "REVTMP",
+        "whp_unit": "ITS-68",
+        "canonical_name": "REVTMP",
+        "canonical_unit": "IPTS-68"
+    },
+    {
         "whp_name": "CTDTMP",
         "whp_unit": "ITST90",
         "canonical_name": "CTDTMP",
         "canonical_unit": "ITS-90"
+    },
+    {
+        "whp_name": "CTDTMP",
+        "whp_unit": "DEGC",
+        "canonical_name": "CTDTMP",
+        "canonical_unit": "DEG C"
+    },
+    {
+        "whp_name": "CTDTMP",
+        "whp_unit": "DEG_C",
+        "canonical_name": "CTDTMP",
+        "canonical_unit": "DEG C"
     },
     {
         "whp_name": "CTDSAL",
@@ -112,5 +178,41 @@
         "whp_unit": "ITS-90",
         "canonical_name": "REFTMP",
         "canonical_unit": "ITS-90"
+    },
+    {
+        "whp_name": "XMISS",
+        "whp_unit": "%TRANS",
+        "canonical_name": "CTDXMISS",
+        "canonical_unit": "%TRANS"
+    },
+    {
+        "whp_name": "CFC-12",
+        "whp_unit": "PM/KG",
+        "canonical_name": "CFC-12",
+        "canonical_unit": "PMOL/KG"
+    },
+    {
+        "whp_name": "CFC-11",
+        "whp_unit": "PM/KG",
+        "canonical_name": "CFC-11",
+        "canonical_unit": "PMOL/KG"
+    },
+    {
+        "whp_name": "RA-226",
+        "whp_unit": "DPM/100KG",
+        "canonical_name": "RA-226",
+        "canonical_unit": "DM/.1MG"
+    },
+    {
+        "whp_name": "PCO2TMP",
+        "whp_unit": "DEG_C",
+        "canonical_name": "PCO2TMP",
+        "canonical_unit": "DEG C"
+    },
+    {
+        "whp_name": "NO3+NO2",
+        "whp_unit": "UMOL/KG",
+        "canonical_name": "NO2+NO3",
+        "canonical_unit": "UMOL/KG"
     }
 ]
