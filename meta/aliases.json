@@ -214,5 +214,11 @@
         "whp_unit": "UMOL/KG",
         "canonical_name": "NO2+NO3",
         "canonical_unit": "UMOL/KG"
+    },
+    {
+        "whp_name": "CTDPAR",
+        "whp_unit": "VOLTS",
+        "canonical_name": "CTDPAR",
+        "canonical_unit": null
     }
 ]
