@@ -832,7 +832,7 @@
     "flag_w": "woce_ctd", 
     "note": "From SBE .cnv files, no units ", 
     "numeric_precision": 3, 
-    "whp_name": "PAR", 
+    "whp_name": "CTDPAR", 
     "whp_unit": null
   }, 
   {
