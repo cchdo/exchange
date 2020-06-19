@@ -237,6 +237,7 @@
     "whp_name": "CTDSAL", 
     "whp_unit": "PSS-78",
     "cf_name": "sea_water_practical_salinity",
+    "cf_unit": "1",
     "reference_scale": "PSS-78"
   }, 
   {
@@ -251,6 +252,7 @@
     "whp_unit": "PSS-78",
     "whp_number": 1,
     "cf_name": "sea_water_practical_salinity",
+    "cf_unit": "1",
     "reference_scale": "PSS-78"
   }, 
   {
@@ -532,6 +534,7 @@
     "whp_name": "TRITUM", 
     "whp_unit": "TU",
     "whp_number": 9,
+    "cf_unit": "1e-18",
     "note": "1 TU is 1 tritium atom per 10\\ :sup:`18` hydrogen atoms",
     "error_name": "TRITER"
   }, 
@@ -556,6 +559,7 @@
     "numeric_precision": 2, 
     "whp_name": "DELHE3", 
     "whp_unit": "PERCNT",
+    "cf_unit": "percent",
     "whp_number": 11
   }, 
   {
@@ -602,7 +606,10 @@
     "numeric_min": -2.0, 
     "numeric_precision": 3, 
     "whp_name": "REVTMP", 
-    "whp_unit": "ITS-90"
+    "whp_unit": "ITS-90",
+    "cf_name": "sea_water_temperature",
+    "cf_unit": "degC",
+    "reference_scale": "ITS-90"
   }, 
   {
     "data_type": "decimal", 
@@ -612,7 +619,10 @@
     "numeric_min": -2.0, 
     "numeric_precision": 3, 
     "whp_name": "REVTMP", 
-    "whp_unit": "IPTS-68"
+    "whp_unit": "IPTS-68",
+    "cf_name": "sea_water_temperature",
+    "cf_unit": "degC",
+    "reference_scale": "IPTS-68"
   }, 
   {
     "data_type": "decimal", 
@@ -622,7 +632,10 @@
     "numeric_min": -2.0, 
     "numeric_precision": 3, 
     "whp_name": "REVTMP", 
-    "whp_unit": "DEG C"
+    "whp_unit": "DEG C",
+    "cf_name": "sea_water_temperature",
+    "cf_unit": "degC",
+    "reference_scale": "unknown"
   }, 
   {
     "data_type": "decimal", 
@@ -634,7 +647,8 @@
     "whp_name": "DELC13", 
     "whp_unit": "/MILLE",
     "whp_number": 13,
-    "error_name": "C13ERR"
+    "error_name": "C13ERR",
+    "cf_unit": "1e-3"
   }, 
   {
     "data_type": "decimal", 
@@ -646,7 +660,8 @@
     "whp_name": "DELC14", 
     "whp_unit": "/MILLE",
     "whp_number": 12,
-    "error_name": "C14ERR"
+    "error_name": "C14ERR",
+    "cf_unit": "1e-3"
   }, 
   {
     "data_type": "decimal", 
@@ -731,7 +746,8 @@
     "numeric_min": -6.0, 
     "numeric_precision": 2, 
     "whp_name": "DELO18", 
-    "whp_unit": "/MILLE"
+    "whp_unit": "/MILLE",
+    "cf_unit": "1e-3"
   }, 
   {
     "data_type": "decimal", 
@@ -823,7 +839,8 @@
     "numeric_min": 0.0, 
     "numeric_precision": 4, 
     "whp_name": "CTDFLUOR", 
-    "whp_unit": "0-5VDC"
+    "whp_unit": "0-5VDC",
+    "cf_unit": "volts"
   }, 
   {
     "data_type": "decimal", 
@@ -853,7 +870,8 @@
     "whp_unit": "DM/.1MG",
     "whp_number": 19,
     "note": "units are disintegrations per minute per 100kg",
-    "error_name": "RA-226E"
+    "error_name": "RA-226E",
+    "cf_unit": "0.6 Bq/kg"
   }, 
   {
     "data_type": "decimal", 
@@ -865,7 +883,8 @@
     "whp_name": "RA-228", 
     "whp_unit": "DM/.1MG",
     "whp_number": 18,
-    "note": "units are disintegrations per minute per 100kg"
+    "note": "units are disintegrations per minute per 100kg",
+    "cf_unit": "0.6 Bq/kg"
   }, 
   {
     "data_type": "decimal", 
@@ -875,7 +894,8 @@
     "numeric_min": 0.0, 
     "numeric_precision": 2, 
     "whp_name": "CTDXMISS", 
-    "whp_unit": "%TRANS"
+    "whp_unit": "%TRANS",
+    "cf_unit": "1e-2"
   }, 
   {
     "data_type": "decimal", 
@@ -885,7 +905,8 @@
     "numeric_min": 0.0, 
     "numeric_precision": 2, 
     "whp_name": "CTDXMISS", 
-    "whp_unit": "0-5VDC"
+    "whp_unit": "0-5VDC",
+    "cf_unit": "volts"
   },
   {
     "cf_name": "volume_beam_attenuation_coefficient_of_radiative_flux_in_sea_water_corrected_for_pure_water_attenuance",
@@ -895,7 +916,8 @@
     "numeric_precision": 4, 
     "whp_name": "CTDBEAMCP",
     "whp_unit": "/METER",
-    "description": "Radiative flux is the sum of shortwave and longwave radiative fluxes. In accordance with common usage in geophysical disciplines, \"flux\" implies per unit area, called \"flux density\" in physics. The volume scattering/absorption/attenuation coefficient is the fractional change of radiative flux per unit path length due to the stated process. Coefficients with canonical units of m2 s-1 i.e. multiplied by density have standard names with specific\\ _ instead of volume\\ _. The scattering/absorption/attenuation coefficient is assumed to be an integral over all wavelengths, unless a coordinate of radiation_wavelength is included to specify the wavelength. Attenuation is the sum of absorption and scattering. Attenuation is sometimes called \"extinction\". Beam attenuation refers to the decrease of radiative flux along the direction of the incident path. It is distinguished from attenuation of the downwelling component of radiative flux from any incident direction, also called \"diffuse\" attenuation. Corrected for pure water attendance means the attenuation coefficient has been adjusted/calibrated to remove the influence of absorption/scattering from the water itself."
+    "description": "Radiative flux is the sum of shortwave and longwave radiative fluxes. In accordance with common usage in geophysical disciplines, \"flux\" implies per unit area, called \"flux density\" in physics. The volume scattering/absorption/attenuation coefficient is the fractional change of radiative flux per unit path length due to the stated process. Coefficients with canonical units of m2 s-1 i.e. multiplied by density have standard names with specific\\ _ instead of volume\\ _. The scattering/absorption/attenuation coefficient is assumed to be an integral over all wavelengths, unless a coordinate of radiation_wavelength is included to specify the wavelength. Attenuation is the sum of absorption and scattering. Attenuation is sometimes called \"extinction\". Beam attenuation refers to the decrease of radiative flux along the direction of the incident path. It is distinguished from attenuation of the downwelling component of radiative flux from any incident direction, also called \"diffuse\" attenuation. Corrected for pure water attendance means the attenuation coefficient has been adjusted/calibrated to remove the influence of absorption/scattering from the water itself.",
+    "cf_unit":"m^-1"
   },
   {
     "data_type": "decimal", 
@@ -907,7 +929,8 @@
     "whp_name": "AR-39", 
     "whp_unit": "PCTMOD",
     "whp_number": 16,
-    "note": "The units mean '% modern'"
+    "note": "The units mean '% modern'",
+    "cf_unit": "1e-2"
   }, 
   {
     "data_type": "decimal", 
@@ -919,7 +942,8 @@
     "whp_name": "CS-137", 
     "whp_unit": "DM/.1MG",
     "whp_number": 22,
-    "note": "units are disintegrations per minute per 100kg"
+    "note": "units are disintegrations per minute per 100kg",
+    "cf_unit": "0.6 Bq/kg"
   }, 
   {
     "data_type": "decimal", 
@@ -930,7 +954,8 @@
     "numeric_precision": 2, 
     "whp_name": "KR-85", 
     "whp_unit": "DM/MG",
-    "whp_number": 14
+    "whp_number": 14,
+    "cf_unit": "0.6 Bq/kg"
   }, 
   {
     "data_type": "decimal", 
@@ -942,7 +967,8 @@
     "whp_name": "SR-90", 
     "whp_unit": "DM/.1MG",
     "whp_number": 21,
-    "note": "units are disintegrations per minute per 100kg"
+    "note": "units are disintegrations per minute per 100kg",
+    "cf_unit": "0.6 Bq/kg"
   }, 
   {
     "data_type": "decimal", 
@@ -961,7 +987,8 @@
     "flag_w": "woce_discrete", 
     "whp_name": "RA-8/6", 
     "whp_unit": "DM/.1MG",
-    "error_name": "RA-8/6E"
+    "error_name": "RA-8/6E",
+    "cf_unit": "0.6 Bq/kg"
   }, 
   {
     "data_type": "string", 
@@ -1105,7 +1132,8 @@
     "numeric_min": -1000.0, 
     "numeric_precision": 1, 
     "whp_name": "14C-DOC", 
-    "whp_unit": "/MILLE"
+    "whp_unit": "/MILLE",
+    "cf_unit": "1e-3"
   }, 
   {
     "data_type": "decimal", 
@@ -1426,7 +1454,8 @@
     "whp_name": "THETA", 
     "whp_unit": "DEG C",
     "cf_name": "sea_water_potential_temperature",
-    "cf_unit": "degC"
+    "cf_unit": "degC",
+    "reference_scale": "unknown"
   },
   {
     "data_type": "decimal", 
@@ -1438,7 +1467,10 @@
     "numeric_min": -2.0, 
     "numeric_precision": 4, 
     "whp_name": "THETA", 
-    "whp_unit": "ITS-90"
+    "whp_unit": "ITS-90",
+    "cf_name": "sea_water_potential_temperature",
+    "cf_unit": "degC",
+    "reference_scale": "ITS-90"
   },
   {
     "data_type": "decimal", 
@@ -1450,6 +1482,9 @@
     "numeric_min": -2.0, 
     "numeric_precision": 4, 
     "whp_name": "THETA", 
-    "whp_unit": "IPTS-68"
+    "whp_unit": "IPTS-68",
+    "cf_name": "sea_water_potential_temperature",
+    "cf_unit": "degC",
+    "reference_scale": "IPTS-68"
   }
 ]
