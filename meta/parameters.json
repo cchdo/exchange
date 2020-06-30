@@ -1389,18 +1389,16 @@
     "whp_unit": "MG/M^3"
   }, 
   {
-    "data_type": "decimal", 
+    "data_type": "string", 
     "field_width": 9, 
-    "flag_w": "woce_discrete", 
-    "numeric_precision": 4, 
+    "flag_w": null,
     "whp_name": "BTL_DATE", 
     "whp_unit": null
   }, 
   {
-    "data_type": "decimal", 
+    "data_type": "string", 
     "field_width": 9, 
-    "flag_w": "woce_discrete", 
-    "numeric_precision": 4, 
+    "flag_w": null, 
     "whp_name": "BTL_TIME", 
     "whp_unit": null
   }, 
@@ -1412,6 +1410,14 @@
     "whp_name": "BTL_LAT", 
     "whp_unit": null
   }, 
+  {
+    "data_type": "decimal", 
+    "field_width": 9, 
+    "flag_w": null, 
+    "numeric_precision": 4, 
+    "whp_name": "BTL_LON", 
+    "whp_unit": null
+  },
   {
     "cf_name": "number_of_observations", 
     "data_type": "integer", 
@@ -1434,14 +1440,6 @@
     "whp_name": "CTDETIME", 
     "whp_unit": "SECONDS"
   }, 
-  {
-    "data_type": "decimal", 
-    "field_width": 9, 
-    "flag_w": "woce_discrete", 
-    "numeric_precision": 4, 
-    "whp_name": "BTL_LON", 
-    "whp_unit": null
-  },
   {
     "data_type": "decimal", 
     "description": "", 
