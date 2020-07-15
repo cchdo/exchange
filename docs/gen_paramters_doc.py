@@ -26,9 +26,9 @@ for group in groups:
                 ]
         if all(tests):
             try:
-                first["alt_units"].append(alt["whp_unit"])
+                first["alt_units"].append(str(alt["whp_unit"]))
             except KeyError:
-                first["alt_units"] = [alt["whp_unit"]]
+                first["alt_units"] = [str(alt["whp_unit"])]
         else:
             params.append(alt)
 
