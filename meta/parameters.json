@@ -270,6 +270,19 @@
   }, 
   {
     "data_type": "decimal", 
+    "description": "Salinity calculated from sound velocity and temperature, also called absolute salinity.", 
+    "field_width": 8, 
+    "flag_w": "woce_ctd", 
+    "numeric_max": 42.0, 
+    "numeric_min": 0.0, 
+    "numeric_precision": 4, 
+    "whp_name": "CTDSVLSAL", 
+    "whp_unit": "G/KG",
+    "whp_number": 92,
+    "cf_name": "sea_water_absolute_salinity"
+  }, 
+  {
+    "data_type": "decimal", 
     "description": "The corrected oxygen measured by the CTD.", 
     "field_width": 9, 
     "flag_w": "woce_ctd", 
@@ -845,13 +858,22 @@
   }, 
   {
     "data_type": "decimal", 
-    "description": "PAR/Irradiance, Biospherical/Licor", 
     "field_width": 8, 
     "flag_w": "woce_ctd", 
-    "note": "From SBE .cnv files, no units ", 
+    "numeric_precision": 4, 
+    "whp_name": "CTDFLUOR", 
+    "whp_unit": null
+  }, 
+  {
+    "data_type": "decimal", 
+    "description": "Photosynthetically active radiation. The downwelling photon flux of photons with a wavelength between 400nm and 700nm.", 
+    "field_width": 8, 
+    "flag_w": "woce_ctd", 
     "numeric_precision": 3, 
     "whp_name": "PAR", 
-    "whp_unit": null
+    "whp_unit": "UMOL/M^2/SEC",
+    "cf_name": "downwelling_photosynthetic_photon_flux_in_sea_water",
+    "cf_unit": "umol m-2 s-1"
   }, 
   {
     "data_type": "string", 
@@ -1445,6 +1467,15 @@
     "numeric_precision": 4, 
     "whp_name": "CTDETIME", 
     "whp_unit": "SECONDS"
+  }, 
+  {
+    "data_type": "string", 
+    "description": "The serial number of the CTD. In the case of SBE9plus, this is the serial number of the main housing, not the sensors.", 
+    "flag_w": null, 
+    "whp_name": "INSTRUMENT_ID", 
+    "whp_unit": null,
+    "scope": "profile",
+    "field_width": 9
   }, 
   {
     "data_type": "decimal", 

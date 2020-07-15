@@ -53,15 +53,5 @@ Authors of software which read and write exchange files SHOULD pass though unlis
 .. note::
     This section is intended for software which is used in data management, it does not impose a requirement on authors only wishing to do analysis.
 
-Parameters with Unknown Units
------------------------------
-Sometimes data may have units which are not known.
-For this reason, any parameter, including ones not yet listed in the table
-bellow, MAY have the unit of ``ARBITRARY`` in the unit line.
-
-.. warning::
-    Parameters with ``ARBITRARY`` units are NOT comparable with other
-    ``ARBITRARY`` parameters, including those with the same parameter name.
-
 
 .. include:: _autogen_paramlist

@@ -37,7 +37,31 @@
     },
     {
         "whp_name": "CTDTMP",
+        "whp_unit": "IPTS-90",
+        "canonical_name": "CTDTMP",
+        "canonical_unit": "ITS-90"
+    },
+    {
+        "whp_name": "CTDTMP",
+        "whp_unit": "IT-90",
+        "canonical_name": "CTDTMP",
+        "canonical_unit": "ITS-90"
+    },
+    {
+        "whp_name": "CTDTMP",
+        "whp_unit": "ITS_90",
+        "canonical_name": "CTDTMP",
+        "canonical_unit": "ITS-90"
+    },
+    {
+        "whp_name": "CTDTMP",
         "whp_unit": "ITS-68",
+        "canonical_name": "CTDTMP",
+        "canonical_unit": "IPTS-68"
+    },
+    {
+        "whp_name": "CTDTMP",
+        "whp_unit": "ITS_68",
         "canonical_name": "CTDTMP",
         "canonical_unit": "IPTS-68"
     },
@@ -126,6 +150,12 @@
         "canonical_unit": "PSS-78"
     },
     {
+        "whp_name": "CTDSAL",
+        "whp_unit": "PSU",
+        "canonical_name": "CTDSAL",
+        "canonical_unit": "PSS-78"
+    },
+    {
         "whp_name": "CTDRAW",
         "whp_unit": null,
         "canonical_name": "CTDRAW",
@@ -186,6 +216,12 @@
         "canonical_unit": "%TRANS"
     },
     {
+        "whp_name": "XMISS",
+        "whp_unit": "0-5VDC",
+        "canonical_name": "CTDXMISS",
+        "canonical_unit": "0-5VDC"
+    },
+    {
         "whp_name": "CFC-12",
         "whp_unit": "PM/KG",
         "canonical_name": "CFC-12",
@@ -214,5 +250,71 @@
         "whp_unit": "UMOL/KG",
         "canonical_name": "NO2+NO3",
         "canonical_unit": "UMOL/KG"
+    },
+    {
+        "whp_name": "CTDOXY",
+        "whp_unit": "uMOL/KG",
+        "canonical_name": "CTDOXY",
+        "canonical_unit": "UMOL/KG"
+    },
+    {
+        "whp_name": "CTDETIME",
+        "whp_unit": null,
+        "canonical_name": "CTDETIME",
+        "canonical_unit": "SECONDS"
+    },
+    {
+        "whp_name": "SECT",
+        "whp_unit": null,
+        "canonical_name": "SECT_ID",
+        "canonical_unit": null
+    },
+    {
+        "whp_name": "NUMBER",
+        "whp_unit": "OBS.",
+        "canonical_name": "CTDNOBS",
+        "canonical_unit": null
+    },
+    {
+        "whp_name": "CTDPAR",
+        "whp_unit": "uE/m^2/sec",
+        "canonical_name": "PAR",
+        "canonical_unit": "UMOL/M^2/SEC"
+    },
+    {
+        "whp_name": "CTDPAR",
+        "whp_unit": "UEINSTEINS/M2.SEC",
+        "canonical_name": "PAR",
+        "canonical_unit": "UMOL/M^2/SEC"
+    },
+    {
+        "whp_name": "CTDPAR",
+        "whp_unit": "UMOL/M^2/S",
+        "canonical_name": "PAR",
+        "canonical_unit": "UMOL/M^2/SEC"
+    },
+    {
+        "whp_name": "CTDPAR",
+        "whp_unit": "uE/m^2/sec",
+        "canonical_name": "PAR",
+        "canonical_unit": "UMOL/M^2/SEC"
+    },
+    {
+        "whp_name": "PAR",
+        "whp_unit": "UEINSTEINS/M2.SEC",
+        "canonical_name": "PAR",
+        "canonical_unit": "UMOL/M^2/SEC"
+    },
+    {
+        "whp_name": "PAR",
+        "whp_unit": "uE/m^2/sec",
+        "canonical_name": "PAR",
+        "canonical_unit": "UMOL/M^2/SEC"
+    },
+    {
+        "whp_name": "CTDNOBS",
+        "whp_unit": "ARBITRARY",
+        "canonical_name": "CTDNOBS",
+        "canonical_unit": null
     }
 ]
