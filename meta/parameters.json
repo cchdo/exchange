@@ -1010,10 +1010,11 @@
     "data_type": "string", 
     "field_width": 11, 
     "flag_w": "woce_discrete", 
-    "whp_name": "RA-8/6", 
-    "whp_unit": "DM/.1MG",
+    "whp_name": "RA-8\/6", 
+    "whp_unit": null,
     "error_name": "RA-8/6E",
-    "cf_unit": "0.6 Bq/kg"
+    "cf_unit": "1",
+    "description": "Ratio of :sup:`228`\\ Ra to :sup:`226`\\ Ra"
   }, 
   {
     "data_type": "string", 

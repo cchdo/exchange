@@ -54,7 +54,7 @@ parameters json.
         name = param["whp_name"]
         unit = param.get('whp_unit')
         if unit is None:
-            f.write(f"  * {name}_\n")
+            f.write(f"  * `{name}`_\n")
         else:
             f.write(f"  * `{name} ({unit})`_\n")
 
