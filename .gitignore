@@ -2,3 +2,5 @@
 docs/_build
 docs/_autogen_paramlist
 *.pyc
+docs/parameters.json
+docs/parameters.schema.json

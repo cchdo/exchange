@@ -1,5 +1,6 @@
 import json
 import itertools
+from cchdo.params import WHPNames
 
 flag_refs = {
     "woce_ctd": ":ref:`CTD Quality Codes`",
@@ -7,8 +8,13 @@ flag_refs = {
     "woce_bottle": ":ref:`Bottle Quality Codes`",
 }
 
-with open("../meta/parameters.json", 'r') as f:
-    parameters = json.load(f)
+parameters = WHPNames.legacy_json
+schema = WHPNames.legacy_json_schema
+
+with open("parameters.json", "w") as f:
+    json.dump(parameters, f, indent=2)
+with open("parameters.schema.json", "w") as f:
+    json.dump(schema, f, indent=2)
 
 
 ## group the params that only are only different by units into a single param
@@ -39,9 +45,9 @@ with open('_autogen_paramlist', 'w') as f:
 Common Parameters
 -----------------
 This section was generated automatically from a 
-:download:`machine readable list of parameters <../meta/parameters.json>`,
+:download:`machine readable list of parameters <parameters.json>`,
 there is also a
-:download:`validation schema <../meta/parameters.schema.json>` for the
+:download:`validation schema <parameters.schema.json>` for the
 parameters json.
 
 .. hlist::
