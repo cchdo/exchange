@@ -1,5 +1,6 @@
 import json
 import itertools
+from textwrap import indent, dedent
 from cchdo.params import WHPNames
 
 flag_refs = {
@@ -33,17 +34,46 @@ for group in groups:
         if all(tests):
             try:
                 first["alt_units"].append(str(alt["whp_unit"]))
+                first["alt_cf_units"].append(str(alt.get("cf_unit",)))
+                first["alt_cf_names"].append(str(alt.get("cf_name",)))
             except KeyError:
                 first["alt_units"] = [str(alt["whp_unit"])]
+                first["alt_cf_units"] = [str(alt.get("cf_unit", ))]
+                first["alt_cf_names"] = [str(alt.get("cf_name", ))]
         else:
             params.append(alt)
 
+def gen_cf_table(param):
+    whp_units = [param.get("whp_unit"), *param.get("alt_units", [])]
+    cf_units = [param.get("cf_unit"), *param.get("alt_cf_units", [])]
+    cf_names = [param.get("cf_name"), *param.get("alt_cf_names", [])]
+
+    rows = []
+    for whp, unit, name in zip(whp_units, cf_units, cf_names):
+        rows.append(dedent(f"""\
+        * - ``{whp}``
+          - ``{unit}``
+          - ``{name}``\
+        """))
+    table_body = "\n".join(rows)
+    table_header = dedent("""\
+        .. list-table::
+            :header-rows: 1
+
+            * - ``whp_unit``
+              - ``units``
+              - ``standard_name``\
+        """)
+
+    return "\n".join([table_header, indent(table_body, "    ")])
+
+
 with open('_autogen_paramlist', 'w') as f:
     f.write('''
-.. _common-parameters:
+.. _parameters-list:
 
-Common Parameters
------------------
+Parameters
+----------
 This section was generated automatically from a 
 :download:`machine readable list of parameters <parameters.json>`,
 there is also a
@@ -55,43 +85,38 @@ parameters json.
 
 ''')
 
+
 # Make the 3 column list of params at the top of the page
     for param in params:
         name = param["whp_name"]
-        unit = param.get('whp_unit')
-        if unit is None:
-            f.write(f"  * `{name}`_\n")
-        else:
-            f.write(f"  * `{name} ({unit})`_\n")
+        f.write(f"  * `{name}`_\n")
 
     for param in params:
         name = param["whp_name"]
         unit = param.get('whp_unit')
 
         ## make the ref and title
-        if unit is None:
-            f.write(f"\n.. _{name}:\n\n{name}\n")
-        else:
-            f.write(f"\n.. _{name} ({unit}):\n\n{name}\n")
+        f.write(f"\n.. _{name}:\n\n{name}\n")
 
         ## Underline that title
         f.write("^" * len(param["whp_name"]) + '\n\n')
         data_type = param['data_type']
         quality_flags = str(param['flag_w'])
 
-        f.write(f":Units: {unit}\n")
+        f.write(f":Units:\n  * {unit}\n")
+        if "alt_units" in param:
+            for alt_unit in param["alt_units"]:
+                f.write(f"  * {alt_unit}\n")
+
         f.write(f":Data Type: {data_type}\n")
         if quality_flags != "None":
             flag_ref = flag_refs[quality_flags]
             f.write(f":{param['whp_name']}_FLAG_W Definitions: {flag_ref}\n")
-        if "alt_units" in param:
-            f.write(f":Alternate Units: {', '.join(param['alt_units'])}\n")
+
         if "error_name" in param:
             f.write(f":Error Column Label: {param.get('error_name', '')}\n")
-        if "cf_name" in param:
-            f.write(f":CF Standard Name: {param['cf_name']}\n")
-        if "cf_unit" in param:
-            f.write(f":CF Units: {param['cf_unit']}\n")
+
+        f.write(f"\n:CF/netCDF Attributes:\n{indent(gen_cf_table(param), '  ')}\n")
 
         f.write(f"\n{param.get('description', '')}\n")
 

@@ -33,17 +33,20 @@ Provided with each parameter is a set of information in a table, the information
     Specifies which set of quality flag definitions should be used to interpret a quality flag column for this parameter (if present).
     Current quality flags are: :ref:`bottle <Bottle Quality Codes>`, :ref:`water <Water Quality Codes>`, :ref:`ctd <CTD Quality Codes>`.
     See the :ref:`Quality Codes` section for more information
-:Alternate Units:
-    Some parameters might have alternate units which might also be in data files.
 :Error Column Label:
     A parameter might contain an error or uncertanty value associated with it.
     The column which contains the error/uncertanty values for this parameter will have the name listed in this field.
+:CF/netCDF Attributes:
+    When this parameter appears in a CF netCDF file, the units and standard name are determined by the units of the WHP parameter.
+    Not all parameter/unit pairs have CF standard names yet.
+    Some WHP units are not allowed in the units attribute of valid CF netCDF files, of particular note are the temperature units of ITS-90 and IPTS-68 which are both mapped to degC in CF files.
+    These "units" will instead appear in a ``reference_scale`` attribute of the variable rather than in the ``units`` attribute.
 
 
 Unlisted Parameters
 -------------------
 Otherwise valid exchange files which contain parameters, units, or parameter/unit pairs that are
-not listed in the :ref:`common-parameters` list SHALL NOT cause the file to be
+not listed in the :ref:`parameters-list` list SHALL NOT cause the file to be
 invalid so long as the rest of the specification is adhered to.
 
 Pass Through
