@@ -15,7 +15,7 @@ The basic formula for constructing a quality flag parameter name is:
 
 where ``<PARAMETER_NAME>`` is the parameter for which the quality flags are for.
 
-For example, the quality column for the parameter :ref:`CTDOXY (UMOL/KG)` would be ``CTDOXY_FLAG_W``.
+For example, the quality column for the parameter :ref:`CTDOXY` would be ``CTDOXY_FLAG_W``.
 
 The meaning of the flags is determined by the type of measurement it is.
 Bottles have `Bottle Quality Codes`_, measurements from CTD based instruments use the `CTD Quality Codes`_, and discrete measurements from bottle use the `Water Quality Codes`_.

@@ -66,7 +66,7 @@ The following CTD headers are REQUIRED, see the :ref:`Parameters` section for th
 .. warning::
   There is no support for including units in the CTD headers it is not recommended that any parameters which could have multiple units be included in the CTD headers.
 
-  Usually the optional :ref:`DEPTH <DEPTH (METERS)>` parameter is the only one with units commonly found in CTD headers, it MUST be in meters when included in the CTD headers.
+  Usually the optional :ref:`DEPTH` parameter is the only one with units commonly found in CTD headers, it MUST be in meters when included in the CTD headers.
 
 
 NUMBER_HEADERS
@@ -88,7 +88,7 @@ The following CTD headers are optional, but encountered frequently within ctd ex
 
 * :ref:`SECT_ID`
 * :ref:`TIME`
-* :ref:`DEPTH <DEPTH (METERS)>`
+* :ref:`DEPTH`
 
 
 .. _preferred order:
