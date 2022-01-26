@@ -22,7 +22,7 @@ Each param-value pair ends end with a line-ending character.
 There is no limit to how many headers may be present, as long the `NUMBER_HEADERS`_ value is set correctly.
 
 .. note::
-  Any parameter which has a constant value for the entire cast MAY appear in the CTD Headers.
+  Any parameter which has a constant value for the entire cast MAY appear in the CTD Headers if the parameter has the "profile" scope in the parameters database.
 
 Here is an example of a complete set of CTD headers (note that we have included line numbers, these are not part of the header):
 
@@ -112,14 +112,9 @@ The preferred order after ``NUMBER_HEADERS`` is::
 
 User Headers
 ------------
-Any additional CTD headers may be included as long as they follow the ``PARAM = VALUE`` form specified above and the ``NUMBER_HEADERS`` value is set correctly.
-This may include headers which may only be of use to the data originator, or any other parameter.
-
-.. note::
-  Authors of software which both read and write exchange CTD files SHOULD pass through any undocumented headers without modification.
-
-
-
+Previous versions of this document allowed any number of extra "user defined" headers to appear including undocumented ones.
+This was found to cause problems for implementations which only expected certain specific headers to be present.
+Use the comments field for this extra information.
 
 
 .. _example ctd data:
