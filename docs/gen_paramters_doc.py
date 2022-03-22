@@ -36,7 +36,6 @@ for group in groups:
                 getattr(alt, "warning") == getattr(first, "warning"),
                 ]
         if all(tests):
-            print(alt)
             try:
                 first.__dict__["alt_units"].append(str(alt.whp_unit))
                 first.__dict__["alt_cf_units"].append(str(alt.cf_unit))
