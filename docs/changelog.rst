@@ -1,5 +1,9 @@
 Changelog
 =========
+2022-03-22
+----------
+Update CCHDO params list to 0.1.17
+
 2022-01-25
 ----------
 This is a list of all the relevant changes which have occurred since the last time this log was edited, it was shamefully neglected by the lead author.
