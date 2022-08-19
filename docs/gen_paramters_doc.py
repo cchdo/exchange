@@ -138,7 +138,7 @@ parameters json.
             f.write("\n.. note::\n")
             for line in param.note.split("\n"):
                 f.write(f"  {line}\n")
-        if param.warning is not None:
+        if param.warning is not None and param.warning != "":
             f.write("\n.. warning::\n")
             for line in param.warning.split("\n"):
                 f.write(f"  {line}\n")
