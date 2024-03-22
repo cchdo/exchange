@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you need to cite do so as below"
+authors:
+- family-names: "Barna"
+  given-names: "Andrew"
+  orcid: "https://orcid.org/0000-0002-5203-8954"
+- family-names: "Swift"
+  given-names: "James H."
+  orcid: "https://orcid.org/0000-0003-0957-5444"
+- family-names: "Diggs"
+  given-names: "Stephen C."
+  orcid: "https://orcid.org/0000-0003-3814-6104"
+title: "Description of the WHP-Exchange Format"
+url: "https://github.com/cchdo/exchange"
