@@ -1,5 +1,9 @@
 Changelog
 =========
+2024-03-22 (1.2.1)
+----------
+Update CCHDO Params to 2024.3
+
 2022-03-22
 ----------
 Update CCHDO params list to 0.1.17
