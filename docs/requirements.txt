@@ -1,2 +1,3 @@
-cchdo.params==0.1.21
+cchdo.params==2024.3.0
 furo
+sphinx
