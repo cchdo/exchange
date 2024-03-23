@@ -13,6 +13,7 @@ authors:
 title: "Description of the WHP-Exchange Format"
 license: "CC-BY-4.0"
 repository-code: "https://github.com/cchdo/exchange"
+doi: 10.5281/zenodo.10858845
 preferred-citation:
   type: manual
   authors:
@@ -26,4 +27,5 @@ preferred-citation:
     given-names: "Stephen C."
     orcid: "https://orcid.org/0000-0003-3814-6104"
   title: "Description of the WHP-Exchange Format"
+  doi: 10.5281/zenodo.10858845
   year: 2015
