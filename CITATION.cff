@@ -11,6 +11,7 @@ authors:
   given-names: "Stephen C."
   orcid: "https://orcid.org/0000-0003-3814-6104"
 title: "Description of the WHP-Exchange Format"
+abstract: "A technical description of the WOCE hydrographic program exchange data format which is still in use by programs such as GO-SHIP and GEOTRACES. This includes technical requirements, parameter lists, and recommendations for how to store, share, and use discrete (aka bottle) and continuous (aka ctd) hydrographic data using these data formats."
 license: "CC-BY-4.0"
 repository-code: "https://github.com/cchdo/exchange"
 doi: 10.5281/zenodo.10858845
