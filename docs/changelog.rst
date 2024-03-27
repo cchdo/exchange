@@ -1,5 +1,10 @@
 Changelog
 =========
+2024-??-?? (1.2.2)
+------------------
+* Added versioning policy to introduction.
+* Added parameter database version to the params page.
+
 2024-03-22 (1.2.1)
 ------------------
 Update CCHDO Params to 2024.3

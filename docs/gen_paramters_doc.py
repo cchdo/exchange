@@ -1,7 +1,7 @@
 import json
 import itertools
 from textwrap import indent, dedent
-from cchdo.params import WHPNames
+from cchdo.params import WHPNames, __version__ as params_version
 
 flag_refs = {
     "woce_ctd": ":ref:`CTD Quality Codes`",
@@ -78,7 +78,7 @@ def gen_cf_table(param):
 
 
 with open('_autogen_paramlist', 'w') as f:
-    f.write('''
+    f.write(f'''
 .. _parameters-list:
 
 Parameters
@@ -88,6 +88,8 @@ This section was generated automatically from a
 there is also a
 :download:`validation schema <parameters.schema.json>` for the
 parameters json.
+
+CCHDO Parameter database version: {params_version}.
 
 .. hlist::
   :columns: 3

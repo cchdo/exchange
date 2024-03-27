@@ -74,4 +74,14 @@ Unicode Representation in this Document
 Character in this document will be defined as unicode points in the format U+#### where the # symbols are hexadecimal numbers.
 Since exchange files are defined to be UTF-8 encoded, this unambiguously specifies the exact bits which must occur in a file.
 
-.. [#f1] As of May 2020, 95.0% of the text on the internet is encoded with UTF-8.
+.. [#f1] As of March 2024, 98.2%% of the text on the internet is encoded with UTF-8. https://w3techs.com/technologies/overview/character_encoding
+
+Versioning
+----------
+The format spec follows semantic versioning ``x.y.z`` where:
+
+* ``x`` is the major version number, incrementing this number would be due to breaking changes to the exchange format spec, we do not expect this to happen ever.
+* ``y`` is the minor version number and would indicate "non-breaking" changes to the specification, examples of non-breaking changes could include clarifications, the addition of new synthesized parameters (like _FLAG_W).
+* ``z`` is the release number and would be incremented for things such as grammar changes, spelling corrections, and updating the parameters list, the parameters list is versioned independently.
+
+The components of the numbers are incremented independently, e.g. the version after ``1.0.9`` would be ``1.0.10``.
