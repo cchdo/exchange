@@ -30,6 +30,22 @@ The following descriptions of each quality code is taken from the WOCE manual.
 WOCE Bottle Quality Codes
 -------------------------
 
+.. raw:: html
+
+  <style>
+  dl.woce-flags {
+    display: grid;
+    grid-gap: 0 0.25rem;
+    grid-template-columns: max-content;
+  }
+  dl.woce-flags dd {
+    margin: 0;
+    grid-column-start: 2;
+  }
+  </style>
+
+.. rst-class:: woce-flags
+
 :1: Bottle information unavailable.
 :2: No problems noted.
 :3: Leaking.
@@ -44,6 +60,8 @@ WOCE Bottle Quality Codes
 
 WOCE Water Sample Quality Codes
 -------------------------------
+
+.. rst-class:: woce-flags
 
 :1: Sample for this measurement was drawn from water bottle but analysis not received. 
 :2: Acceptable measurement.
@@ -62,6 +80,8 @@ WOCE Water Sample Quality Codes
 
 WOCE CTD Quality Codes
 ----------------------
+
+.. rst-class:: woce-flags
 
 :1: Not calibrated.
 :2: Acceptable measurement.
